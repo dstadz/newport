@@ -1,0 +1,46 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Navbar{
+  display: flex;
+  justify-content: space-between;
+  background: red;
+
+  .logo {
+    background: blue;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .navlinks{
+    display: flex;
+    background: green;
+    list-style-type: none;
+    justify-content: space-around;
+
+    li{
+      background:yellow;
+      padding: 1rem;
+      margin:auto;
+    }
+
+  }
+}
+
+.slideshow{
+  background: blue;
+  margin:auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  
+  .slide{
+    background:red;
+    width: 30%;
+    height: 15em;
+    margin: 2rem;
+  }
+}
