@@ -7,22 +7,85 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  font-size: 10px;
+}
+
+.words {
+  margin: auto;
+}
+
+.words h1 {
+  color: red;
+}
+
+.words h2 {
+  color: blue;
+}
+
+.words h3 {
+  color: yellow;
+}
+
+.words h4 {
+  color: purple;
+}
+
+.Home {
+  background: green;
+  height: 95vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Home .words {
+  margin: auto;
+}
+
+.Home .words h1 {
+  color: red;
+  font-size: 5rem;
+}
+
+.Home .words h2 {
+  color: blue;
+  font-size: 4rem;
+}
+
+.Home .words h3 {
+  color: yellow;
+  font-size: 3rem;
+}
+
+.Home .words h4 {
+  color: purple;
+  font-size: 2rem;
+}
+
+.section {
+  height: 95vh;
+  width: 100%;
 }
 
 .Navbar {
+  height: 5vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background: red;
+  background: orange;
+  position: fixed;
+  top: 0;
 }
 
 .Navbar .logo {
   background: blue;
-  margin-top: auto;
-  margin-bottom: auto;
+  height: 3vh;
+  margin: auto;
+  margin-left: 3vh;
 }
 
 .Navbar .navlinks {
@@ -37,8 +100,40 @@
 
 .Navbar .navlinks li {
   background: yellow;
-  padding: 1rem;
+  padding: 1vh;
   margin: auto;
+}
+
+.About {
+  background: red;
+}
+
+.About .card-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.About .card-holder .cards {
+  width: 12rem;
+  background: yellow;
+  margin: 5%;
+}
+
+.About .card-holder h1 {
+  font-size: 3rem;
+}
+
+.Projects {
+  background: blue;
 }
 
 .slideshow {

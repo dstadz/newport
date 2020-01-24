@@ -2,17 +2,87 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-size: 10px;
+}
+
+
+.words{
+  margin: auto;
+
+  h1{
+    color:red;
+  }
+
+  h2{
+    color:blue;
+  }
+
+  h3{
+    color:yellow;
+  
+  }
+  h4{
+    color:purple;
+  }
+}
+  
+
+.Home{
+  background: green;
+  height: 95vh;
+  display: flex;
+
+  
+  .words{
+    margin: auto;
+
+    h1{
+      color:red;
+      font-size: 5rem;
+
+    }
+
+    h2{
+      color:blue;
+      font-size: 4rem;
+
+    }
+
+    h3{
+      color:yellow;
+      font-size: 3rem;
+
+    
+    }
+    h4{
+      color:purple;
+      font-size: 2rem;
+
+    }
+  }
+    
+}
+
+.section{
+  height: 95vh;
+  width: 100%;
 }
 
 .Navbar{
+  height: 5vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background: red;
+  background: orange;
+
+  position: fixed;
+  top: 0;
 
   .logo {
     background: blue;
-    margin-top: auto;
-    margin-bottom: auto;
+    height: 3vh;
+    margin: auto;
+    margin-left: 3vh;
   }
 
   .navlinks{
@@ -23,11 +93,37 @@
 
     li{
       background:yellow;
-      padding: 1rem;
+      padding: 1vh;
       margin:auto;
     }
 
   }
+}
+
+.About{
+  background:red;
+
+  .card-holder{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .cards{
+      width: 12rem;
+      background: yellow;
+      margin:5%;
+    }
+
+
+    h1{
+      font-size: 3rem;
+    }
+  }
+}
+
+.Projects{
+  background:blue;
 }
 
 .slideshow{
