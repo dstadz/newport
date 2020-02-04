@@ -1,13 +1,13 @@
 import React from 'react'
-import Slideshow from './Slideshow'
+import * as x from './styles.js'
+
+//import Slideshow from './Slideshow'
 
 const About = () => {
 
   return (
-    <div className='About section'>
-      <div className='cards'>
-        <h1>So you want to know more about me? </h1>
-      </div>
+    <x.about>
+      <x.H1>So you want to know more about me? </x.H1>
       <div className='card-holder'>
         <div className='cards'>
           <h2> I am good at these things. I like those things </h2>
@@ -19,7 +19,7 @@ const About = () => {
           
           Web developement is important to me becuase the internet is where everyone has a voice, and I want to help spread meassages that are worthy of being heard.
           
-          The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' target="_blank">ikigai</a>
+          The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>
           </p>
         </div>
         <div className='cards'>
@@ -31,7 +31,7 @@ const About = () => {
           I ma baller
         </div>
       </div>
-    </div>
+    </x.about>
   )
 }
 
