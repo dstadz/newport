@@ -4,16 +4,40 @@ import * as x from './styles.js'
 
 //import Slideshow from './Slideshow'
 
+const questions = [
+  {
+    question:'What can I tell you about myself?',
+    answer:'I am amazing and super good at things'
+  },{
+    question:'',
+    answer:''
+  },{
+    question:'',
+    answer:''
+  },{
+    question:'',
+    answer:''
+  }
+]
+
+
+
 const About = () => {
 
   return (
     <x.about>
       <x.H1>So you want to know more about me? </x.H1>
+      <h2> All you have to do is ask! </h2>
 
       <div className='card-holder'>
-        <div className='cards'>
-          <h2> I am good at these things. I like those things </h2>
-        </div>
+          {questions.map(q => (
+            <Card question={q.question} answer={q.answer} />
+          ))}
+
+
+
+
+
         <div className='cards'>
           <p> I am new in the industry, but am eagar to learn more to build new applications and contribute to the ever evoling tech world. </p>
           <p> My name is Daniel. 
