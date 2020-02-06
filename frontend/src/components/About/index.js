@@ -9,8 +9,8 @@ const questions = [
     question:'What can I tell you about myself?',
     answer:'I am amazing and super good at things'
   },{
-    question:'',
-    answer:''
+    question:'Why did I get into Software Development?',
+    answer:'Shortly after I started learning UXD, I grew an interest in code, which quickly took over my studies and has had me captivated ever since. '
   },{
     question:'',
     answer:''

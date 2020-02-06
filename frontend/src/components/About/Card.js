@@ -26,9 +26,7 @@ const Card = props => {
         {props.question}
         <button onClick={toggleOpen}>open</button>
       </Question>
-      <Answer>
-        {props.answer}
-      </Answer>
+      {open && <Answer> {props.answer} </Answer>}
     </div>
   )
 }
