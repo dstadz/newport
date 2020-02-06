@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 import * as x from './styles.js'
 
 //import Slideshow from './Slideshow'
@@ -8,6 +9,7 @@ const About = () => {
   return (
     <x.about>
       <x.H1>So you want to know more about me? </x.H1>
+
       <div className='card-holder'>
         <div className='cards'>
           <h2> I am good at these things. I like those things </h2>
