@@ -28,14 +28,15 @@ const App = () => {
   }
   return (
     <Body>
-      <Home 
+    {/* <Home 
         id='Home'
         handleButton = { handleButton } 
       />
       <Nav />
       <About id='About'/>
       <Projects id='Project'/>
-      <Contact id='Contact'/>
+    */}
+    <Contact id='Contact'/>
       <Footer />
     </Body>
   );
