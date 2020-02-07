@@ -17,3 +17,10 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   color:green;
 `
+
+export const cardDeck = styled.div`
+  color:gold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`

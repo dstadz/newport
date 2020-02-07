@@ -28,11 +28,11 @@ const App = () => {
   }
   return (
     <Body>
-      {/*<Home 
-      id='Home'
-      handleButton = { handleButton } 
+      <Home 
+        id='Home'
+        handleButton = { handleButton } 
+      />
       <Nav />
-    />*/}
       <About id='About'/>
       <Projects id='Project'/>
       <Contact id='Contact'/>

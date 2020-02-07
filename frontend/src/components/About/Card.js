@@ -5,11 +5,10 @@ const Question = styled.div`
   border: red 1px solid;
   width:300px;
   justify-content:space-between;
+  margin: 15px;
 `
 const Answer = styled.div`
   border: blue 1px solid;
-  width:300px;
-
 `
 
 const Card = props => {
@@ -25,8 +24,8 @@ const Card = props => {
       <Question>
         {props.question}
         <button onClick={toggleOpen}>open</button>
+        {open && <Answer> {props.answer} </Answer>}
       </Question>
-      {open && <Answer> {props.answer} </Answer>}
     </div>
   )
 }
