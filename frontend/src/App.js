@@ -5,7 +5,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import Home from './components/Home/'
 import About from './components/About/'
 import Projects from './components/Projects'
-import Contact from './components/Contact/ContactForm'
+import Contact from './components/Contact/'
 //import Slideshow from './components/Slideshow'
 import Footer from './components/Footer'
 
@@ -36,7 +36,7 @@ const App = () => {
       <About id='About'/>
       <Projects id='Project'/>
     */}
-    <Contact id='Contact'/>
+      <Contact id='Contact' />
       <Footer />
     </Body>
   );

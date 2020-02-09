@@ -28,15 +28,20 @@ const ContactForm = () => {
       action="https://formspree.io/xknjlwwa"
       method="POST"
     >
-    
-      <label>Name:</label>
-      <input type="name" name="name" />
+      <div>
+        <label>Name:</label>
+        <input type="name" name="name" />
+      </div>
 
-      <label>Email:</label>
-      <input type="email" name="email" />
-
-      <label>Message:</label>
-      <input type="text" name="message" />
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" />
+      </div>
+      
+      <div>
+        <label>Message:</label>
+        <input type="textarea" name="message" />
+      </div>
 
       {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
       {status === "ERROR" && <p>Ooops! There was an error.</p>}
