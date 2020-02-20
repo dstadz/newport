@@ -9,8 +9,8 @@ const Home = props => {
       <x.words>
         <x.H1> Hi there! I'm Daniel</x.H1>
         <x.H2> I am a Full Stack Developer in San Francisco.</x.H2>
-        <h3> I can do UX designs too! </h3>
-        <h4>Don't believe me?</h4>
+        <x.H3> I can do UX designs too! </x.H3>
+        <x.H4>Don't believe me?</x.H4>
         <button onClick={() => 
           props.handleButton()}>Check it out!</button>
       </x.words>

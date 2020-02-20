@@ -1,17 +1,15 @@
 import styled from 'styled-components'
+import * as x from '../../styles'
 
 
-export const hero = styled.section`
-  background: #212140;
-  height:100vh;
-  width: 100%;
+export const hero = styled(x.Section)`
+  background: #2121ff;
   display: inline-flex column;
-  justify-content: center;
   `
 
 export const words = styled.div`
   margin:auto;
-  border: solid red 2px;
+  border: solid red 1vh;
 `
 export const H1 = styled.h1`
   font-size: 5vh;
@@ -19,4 +17,12 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: 4vh;
+`
+
+export const H3 = styled.h3`
+font-size: 3vh;
+`
+
+export const H4 = styled.h4`
+font-size: 2vh;
 `

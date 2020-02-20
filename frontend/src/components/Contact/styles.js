@@ -1,12 +1,10 @@
 import styled from 'styled-components'
+import * as x from '../../styles'
 
 
-export const contact = styled.section`
+export const contact = styled(x.Section)`
   background: #09baae;
-  height:100vh;
   display:flex;
-  justify-content: center;
-  align-items: center;
   `
 
 export const words = styled.div`
@@ -25,4 +23,46 @@ export const cardDeck = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+`
+
+export const Label = styled.label`
+  color: green;
+  align-self: flex-start
+`
+
+export const Input = styled.input`
+  border: 1px solid red;
+  width:100%;
+`
+
+export const MSGBox = styled.textarea`
+  border: 1px solid blue;
+  height: 100px;
+  justify-content: flex-start;
+  width: 100%;
+
+`
+
+export const Form = styled.form`
+  border: purple 1px solid;
+
+
+`
+
+export const Slot = styled.div`
+  border: purple 1px solid;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width:768px){
+    width: 50vw;
+    font-size: 2vh;
+  };
+  @media(min-width:1024px){
+    width: 33vw;
+    font-size: 2vh;
+  }
+
 `

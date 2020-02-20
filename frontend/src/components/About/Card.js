@@ -14,16 +14,17 @@ const Answer = styled.div`
 const Card = props => {
   const [open, setOpen] = useState(false)
 
-  const toggleOpen = () => {
-    setOpen(!open)
-    console.log(open)
-  }
+  const toggleOpen = () => { setOpen(!open) }
 
   return (
     <div>
       <Question>
         {props.question}
-        <button onClick={toggleOpen}>open</button>
+        <button 
+        style={{background:"none", border:'none'}}
+        onClick={toggleOpen}>
+          { open ? '🔺' : '🔻' }
+        </button>
         {open && <Answer> {props.answer} </Answer>}
       </Question>
     </div>

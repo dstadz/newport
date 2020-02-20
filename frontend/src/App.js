@@ -20,6 +20,8 @@ const App = () => {
     display: flex;
     flex-direction: column;
     text-align: center;
+    scroll-snap-type: y-mandatory;
+
   `
 
   const handleButton = e => {
@@ -28,14 +30,14 @@ const App = () => {
   }
   return (
     <Body>
-    {/* <Home 
+      <Home 
         id='Home'
-        handleButton = { handleButton } 
+        handleButton={ handleButton } 
       />
       <Nav />
       <About id='About'/>
       <Projects id='Project'/>
-    */}
+  
       <Contact id='Contact' />
       <Footer />
     </Body>

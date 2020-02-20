@@ -1,5 +1,6 @@
 
 import React, {useState} from "react";
+import * as x from './styles'
 
 const ContactForm = () => {
   const [status, setStatus] = useState('')
@@ -28,20 +29,16 @@ const ContactForm = () => {
       action="https://formspree.io/xknjlwwa"
       method="POST"
     >
-      <div>
-        <label>Name:</label>
-        <input type="name" name="name" />
-      </div>
+      <x.Slot>
+        <x.Label>Name:</x.Label>
+        <x.Input type="name" name="name" placeholder="Who are you?"/>
 
-      <div>
-        <label>Email:</label>
-        <input type="email" name="email" />
-      </div>
-      
-      <div>
-        <label>Message:</label>
-        <input type="textarea" name="message" />
-      </div>
+        <x.Label>Email:</x.Label>
+        <x.Input type="email" name="email" placeholder="How can I reach you? (email prefered)" />
+
+        <x.Label>Message:</x.Label>
+        <x.MSGBox type="textarea" name="message" placeholder="What do you want to tell me?"/>
+      </x.Slot>
 
       {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
       {status === "ERROR" && <p>Ooops! There was an error.</p>}

@@ -26,8 +26,8 @@ const About = () => {
 
   return (
     <x.about>
-    <x.H1>So you want to know more about me? </x.H1>
-    <h2> All you have to do is ask! </h2>
+    <x.H2>So you want to know more about me? </x.H2>
+    <x.H3> All you have to do is ask! </x.H3>
     
     <x.cardDeck>
     {questions.map(q => (

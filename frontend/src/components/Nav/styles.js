@@ -1,35 +1,36 @@
 import styled from 'styled-components'
+import * as x from '../../styles'
 
 
 export const Nav = styled.nav`
-height: 5vh;
-width: 100%;
-display: flex;
-justify-content: space-between;
-background: orange;
-position: fixed;
-top: 0;
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: orange;
+  position: fixed;
+  top: 0;
 `
 export const logo = styled.p`
-background: blue;
-height: 3vh;
-margin: auto;
-margin-left: 3vh;
+  background: blue;
+  height: 3vh;
+  margin: auto;
+  margin-left: 3vh;
 `
 export const Ul = styled.ul`
-display: flex;
-background: red;
-list-style-type: none;
-height: 100%;
-margin: 0 5vh;
-@media (max-width:424px){
-  display:none
-}
+  display: flex;
+  background: red;
+  list-style-type: none;
+  height: 100%;
+  margin: 0 5vh;
+  @media (max-width:424px){
+    display:none
+  }
 `
 export const Li = styled.li`
-background:yellow;
-padding: 1vh;
-margin:auto;
+  background:yellow;
+  padding: 1vh;
+  margin:auto;
 `
 export const StyledMenu = styled.nav`
   display: flex;
@@ -61,48 +62,48 @@ export const StyledMenu = styled.nav`
 `
 
 export const StyledBurger = styled.button`
-position: absolute;
-top: 15%;
-right: 6%;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-width: 2rem;
-height: 2rem;
-background: transparent;
-border: none;
-cursor: pointer;
-padding: 0;
-z-index: 10;
-
-@media (min-width:425px){
-  display:none
-}
-
-&:focus {
-  outline: none;
-}
-
-div {
+  position: absolute;
+  top: 15%;
+  right: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 2rem;
-  height: 0.25rem;
-  background: ${({ open }) => open ? '#0D0C1D' : '#EFFFFA'};
-  border-radius: 10px;
-  transition: all 0.3s linear;
-  position: relative;
-  transform-origin: 1px;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
 
-  :first-child {
-    transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+  @media (min-width:425px){
+    display:none
   }
 
-  :nth-child(2) {
-    opacity: ${({ open }) => open ? '0' : '1'};
-    transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+  &:focus {
+    outline: none;
   }
 
-  :nth-child(3) {
-    transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: ${({ open }) => open ? '#0D0C1D' : '#EFFFFA'};
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => open ? '0' : '1'};
+      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
+    }
   }
-}
 `
