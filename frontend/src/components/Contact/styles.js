@@ -55,14 +55,14 @@ export const Slot = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 2vh;
 
-  @media(min-width:768px){
+  @media(max-width:768px){
+    width: 75vw;
+  };  @media(min-width:768px){
     width: 50vw;
-    font-size: 2vh;
   };
   @media(min-width:1024px){
     width: 33vw;
-    font-size: 2vh;
   }
-
 `
