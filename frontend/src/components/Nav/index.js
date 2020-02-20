@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
+import React/*, { useContext } */from 'react'
 import { NavLink } from 'react-router-dom'
-import {Context} from '../../contexts/Context'
+//import {Context} from '../../contexts/Context'
 import * as x from './styles.js'
 
 
@@ -45,16 +45,16 @@ const Nav = () => {
 
 
 
-    const useOnClickOutside = (ref, handler) => {
-  React.useEffect(() => {
-    const listener = event => {
-      if (!ref.current || ref.current.contains(event.target)) {return}
-      handler(event);
-    };
-    document.addEventListener('mousedown', listener);
+//     const useOnClickOutside = (ref, handler) => {
+//   React.useEffect(() => {
+//     const listener = event => {
+//       if (!ref.current || ref.current.contains(event.target)) {return}
+//       handler(event);
+//     };
+//     document.addEventListener('mousedown', listener);
     
-    return () => { document.removeEventListener('mousedown', listener) };
-  }, [ref, handler]);
-};
+//     return () => { document.removeEventListener('mousedown', listener) };
+//   }, [ref, handler]);
+// };
 
 export default Nav
