@@ -3,7 +3,7 @@ import * as x from '../../styles'
 
 
 export const contact = styled(x.Section)`
-  background: #09baae;
+  background: #00ffff;
   display:flex;
   `
 

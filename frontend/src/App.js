@@ -1,7 +1,7 @@
 import React /*,{useState}*/ from "react";
-/*import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 import { Link, Route, Switch } from "react-router-dom";
-*/import Nav from './components/Nav/'
+import Nav from './components/Nav/'
 import Home from './components/Home/'
 import About from './components/About/'
 import Projects from './components/Projects/'
@@ -30,15 +30,11 @@ const App = () => {
   }
   return (
     <Body>
-      <Home 
-        id='Home'
-        handleButton={ handleButton } 
-      />
       <Nav />
-      <About id='About'/>
-      <Projects id='Project'/>
-  
-      <Contact id='Contact' />
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/projects" component={Projects} />
+      <Route path="/contact" component={Contact} />
       <Footer />
     </Body>
   );
