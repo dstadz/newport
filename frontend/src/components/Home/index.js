@@ -1,6 +1,6 @@
 import React from 'react'
 //import face from '../assets/face.jpg'
-import * as x from './styles.js'
+import * as x from './styles'
 const Home = props => {
 
   return (

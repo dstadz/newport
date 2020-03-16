@@ -1,10 +1,10 @@
-import React /*,{useState}*/ from "react";
+import React , {useState} from "react";
 /*import ReactDOM from "react-dom";
 import { Link, Route, Switch } from "react-router-dom";
 */import Nav from './components/Nav/'
 import Home from './components/Home/'
 import About from './components/About/'
-import Projects from './components/Projects/'
+import Projects from './components/Projects'
 import Contact from './components/Contact/'
 //import Slideshow from './components/Slideshow'
 import Footer from './components/Footer'
@@ -15,7 +15,7 @@ import styled from 'styled-components'
 
 
 const App = () => {
-  //const [state, setState] = useState('state')
+  const [state, setState] = useState('state')
   const Body = styled.div`
     display: flex;
     flex-direction: column;

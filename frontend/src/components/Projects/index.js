@@ -33,11 +33,11 @@ const Project = props => {
 }
 
 
+
 const Projects = () => {
 
   return (
     <div>
-      this is the list things Ive done:
       {ListOfProjects.map(p => (
         <Project 
           title={p.title}
