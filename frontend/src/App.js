@@ -30,14 +30,13 @@ const App = () => {
   }
   return (
     <Body>
-      <Home 
-        id='Home'
-        handleButton={ handleButton } 
-      />
       <Nav />
+      <Home
+        id='Home'
+        handleButton={ handleButton }
+      />
       <About id='About'/>
       <Projects id='Project'/>
-  
       <Contact id='Contact' />
       <Footer />
     </Body>

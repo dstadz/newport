@@ -28,17 +28,21 @@ const Nav = () => {
   const node = React.useRef();
   return (
     <x.Nav>
-      <x.logo>LOGO</x.logo>
+      <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
+
       <x.Ul className='navlinks'>
-        <x.Li><NavLink to='/'>Home</NavLink></x.Li>
         <x.Li><NavLink to='/about'>About</NavLink></x.Li>
         <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
         <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
       </x.Ul>
+
+      <x.H6>other thing</x.H6>
+{/*}
       <div ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
       </div>
+  */}
     </x.Nav>
   )  
 }

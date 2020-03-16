@@ -2,35 +2,29 @@ import styled from 'styled-components'
 import * as x from '../../styles'
 
 
-export const Nav = styled.nav`
-  height: 5vh;
-  width: 100%;
+// height: 5vh;
+export const Nav = styled.div`
   display: flex;
   justify-content: space-between;
-  background: orange;
-  position: fixed;
-  top: 0;
+
+  background: green;
 `
-export const logo = styled.p`
-  background: blue;
-  height: 3vh;
-  margin: auto;
-  margin-left: 3vh;
+export const logo = styled.span`
+  background: red;
+`
+export const H6 = styled.h6`
+background: red;
 `
 export const Ul = styled.ul`
   display: flex;
   background: red;
   list-style-type: none;
-  height: 100%;
-  margin: 0 5vh;
   @media (max-width:424px){
     display:none
   }
 `
 export const Li = styled.li`
   background:yellow;
-  padding: 1vh;
-  margin:auto;
 `
 export const StyledMenu = styled.nav`
   display: flex;
@@ -43,6 +37,9 @@ export const StyledMenu = styled.nav`
   right: 0%;
   transition: transform 0.3s ease-in-out;
 
+  @media (min-width: 577px) {
+    display:none;
+  }
   @media (max-width: 576px) {
       width: 100%;
     }
@@ -60,7 +57,6 @@ export const StyledMenu = styled.nav`
     }
   }
 `
-
 export const StyledBurger = styled.button`
   position: absolute;
   top: 15%;
