@@ -1,6 +1,4 @@
 import React from 'react'
-import * as x from './styles.js'
-
 
 
 const ListOfProjects = [
@@ -10,10 +8,10 @@ const ListOfProjects = [
     url:"https://www.d8picker.com/",
     description:"PWA that creates and applies event templates to user calendars, focusing on irregularly reoccurring events"
   },{
-    title:"Food Mood",
+    title:"",
     github:"",
     url:"",
-    description:"Ever hungry but have no idea what to eat? FoodMood will help dispell your undecisiveness"
+    description:""
   },{
     title:"",
     github:"",
@@ -22,15 +20,15 @@ const ListOfProjects = [
   },
 ]
 
-const Project = ({props}) => {
-  const { title, url, github, description} = props
+const Project = props => {
+
   return (
-    <x.Card>
-      <x.H3>{title}</x.H3>
-      <a href={url} target="_blank"> <x.link /> </a>
-      {github}
-      {description}
-    </x.Card>
+    <div>
+      {props.title}
+      {props.github}
+      {props.url}
+      {props.description}
+    </div>
   )
 }
 
@@ -38,20 +36,17 @@ const Project = ({props}) => {
 const Projects = () => {
 
   return (
-    <x.projects>
-      <h2> This is the list things Ive done: </h2>
-      <x.cardDeck>
+    <div>
+      this is the list things Ive done:
       {ListOfProjects.map(p => (
         <Project 
-        title={p.title}
-        github={p.github}
-        url={p.url}
-        description={p.description}
+          title={p.title}
+          github={p.github}
+          url={p.url}
+          description={p.description}
         />
-        ))}
-      </x.cardDeck>
-    </x.projects>
-    
+      ))}
+    </div>
   )
 }
 
