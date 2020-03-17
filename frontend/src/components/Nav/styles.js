@@ -37,7 +37,6 @@ export const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: orange;
-  
 
   @media (min-width: 425) {
     display:none;

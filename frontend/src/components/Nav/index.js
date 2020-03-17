@@ -29,19 +29,18 @@ const Nav = () => {
 
   return (
     <>
-    <x.Nav>
-      <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
+      <x.Nav>
+        <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
 
-      <x.Ul className='navlinks'>
-        <x.Li><NavLink to='/about'>About</NavLink></x.Li>
-        <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
-        <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
-      </x.Ul>
-      
-      <x.H6>other thing</x.H6>
-      <Burger open={open} setOpen={setOpen} />
+        <x.Ul className='navlinks'>
+          <x.Li><NavLink to='/about'>About</NavLink></x.Li>
+          <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
+          <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
+        </x.Ul>
+
+        <x.H6>other thing</x.H6>
+        <Burger open={open} setOpen={setOpen} />
       </x.Nav>
-      
       <div ref={node}>
         <Menu open={open} setOpen={setOpen} />
       </div>
