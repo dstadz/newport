@@ -4,7 +4,7 @@ import * as x from '../../styles'
 
 // height: 5vh;
 export const Nav = styled.div`
-
+  height: 10vh;
   display: flex;
   justify-content: space-around;
   background: black;
