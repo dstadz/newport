@@ -14,6 +14,12 @@ export const logo = styled.span`
 `
 export const H6 = styled.h6`
 background: red;
+@media (min-width: 767px) {
+  display:flex;
+}
+@media (max-width: 768px) {
+  display:none;
+  }
 `
 export const Ul = styled.ul`
   display: flex;
@@ -27,20 +33,16 @@ export const Li = styled.li`
   background:yellow;
 `
 export const StyledMenu = styled.nav`
-  display: flex;
+  display: ${({ open }) => open ? 'flex' : 'none'};
   flex-direction: column;
   justify-content: center;
-  background: #EFFFFA;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-  position: absolute;
-  top: 0;
-  right: 0%;
-  transition: transform 0.3s ease-in-out;
+  background: orange;
+  
 
-  @media (min-width: 577px) {
+  @media (min-width: 425) {
     display:none;
   }
-  @media (max-width: 576px) {
+  @media (max-width: 426px) {
       width: 100%;
     }
 
@@ -58,9 +60,7 @@ export const StyledMenu = styled.nav`
   }
 `
 export const StyledBurger = styled.button`
-  position: absolute;
-  top: 15%;
-  right: 6%;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

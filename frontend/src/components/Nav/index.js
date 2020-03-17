@@ -26,7 +26,9 @@ const Burger = ({ open, setOpen }) => { return (
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
+
   return (
+    <>
     <x.Nav>
       <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
 
@@ -35,16 +37,16 @@ const Nav = () => {
         <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
         <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
       </x.Ul>
-
+      
       <x.H6>other thing</x.H6>
-{/*}
+      <Burger open={open} setOpen={setOpen} />
+      </x.Nav>
+      
       <div ref={node}>
-        <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
       </div>
-  */}
-    </x.Nav>
-  )  
+    </>
+  )
 }
 
 
@@ -56,7 +58,7 @@ const Nav = () => {
       handler(event);
     };
     document.addEventListener('mousedown', listener);
-    
+
     return () => { document.removeEventListener('mousedown', listener) };
   }, [ref, handler]);
 };
