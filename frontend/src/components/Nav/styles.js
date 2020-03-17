@@ -4,16 +4,18 @@ import * as x from '../../styles'
 
 // height: 5vh;
 export const Nav = styled.div`
-  display: flex;
-  justify-content: space-between;
 
-  background: green;
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  align-items: center;
 `
 export const logo = styled.span`
   background: red;
 `
 export const H6 = styled.h6`
 background: red;
+margin: 0
 @media (min-width: 767px) {
   display:flex;
 }
@@ -23,14 +25,14 @@ background: red;
 `
 export const Ul = styled.ul`
   display: flex;
-  background: red;
   list-style-type: none;
   @media (max-width:424px){
     display:none
   }
 `
 export const Li = styled.li`
-  background:yellow;
+  color:white
+  margin: 0 5rem
 `
 export const StyledMenu = styled.nav`
   display: ${({ open }) => open ? 'flex' : 'none'};

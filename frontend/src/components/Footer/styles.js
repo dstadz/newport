@@ -2,9 +2,17 @@ import styled from 'styled-components'
 import * as x from '../../styles'
 
 
-export const hero = styled(x.Section)`
-  background: #2121ff;
+export const Div = styled.div`
+  position: sticky;
+  bottom: 0;
   display: inline-flex column;
+  align-items:center;
+  justify-content: center;
+  height: 6.25rem;
+  background: green;
+  color: white
+
+
   `
 
 export const words = styled.div`

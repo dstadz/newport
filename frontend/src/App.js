@@ -7,7 +7,7 @@ import About from './components/About/'
 import Projects from './components/Projects'
 import Contact from './components/Contact/'
 //import Slideshow from './components/Slideshow'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 
 import styled from 'styled-components'
 //import './App.css'
@@ -20,7 +20,9 @@ const App = () => {
     display: flex;
     flex-direction: column;
     text-align: center;
-    scroll-snap-type: y-mandatory;
+    background:red;
+    height: 100%
+
 
   `
 
@@ -31,13 +33,18 @@ const App = () => {
   return (
     <Body>
       <Nav />
-      <Home
-        id='Home'
-        handleButton={ handleButton }
-      />
-      <About id='About'/>
-      <Projects id='Project'/>
-      <Contact id='Contact' />
+      <Route
+        path="/"
+        render={props => {
+          return <Home {...props} 
+          id='Home'
+          handleButton={ handleButton }
+          />;
+        }}/>
+      <Route exact path="/about" component={About} />
+      <Route exact path="/projects" component={Projects} />
+      <Route exact path="/contact" component={Contact} />
+
       <Footer />
     </Body>
   );

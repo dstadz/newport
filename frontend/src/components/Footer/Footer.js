@@ -1,11 +1,11 @@
 import React from 'react'
-
+import * as x from './styles'
 
 const Footer = () => {
   return (
-    <div>
+    <x.Div>
     2019 Daniel Stadler. All rights reserved. 
-    </div>
+    </x.Div>
   )
 }
 export default Footer
