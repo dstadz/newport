@@ -7,7 +7,7 @@ const Home = props => {
     <x.hero>
       {/*<img src={face} style={{width:"80%"}}/> */}
       <x.words>
-        <x.H1> Hi there! I'm Daniel</x.H1>
+        <x.H1> Hey there! I'm Daniel</x.H1>
         <x.H2> I am a Full Stack Developer in San Francisco.</x.H2>
         <x.H3> I can do UX designs too! </x.H3>
         <x.H4>Don't believe me?</x.H4>
