@@ -3,16 +3,15 @@ import * as x from '../../styles'
 
 
 export const Div = styled.div`
-  position: sticky;
+  position: absolute;
   bottom: 0;
   display: inline-flex column;
   align-items:center;
   justify-content: center;
-  height: 6.25rem;
-  background: green;
+  height: 10vh;
+  width: 100%
+  background: black;
   color: white
-
-
   `
 
 export const words = styled.div`
