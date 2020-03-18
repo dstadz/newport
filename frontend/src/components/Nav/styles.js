@@ -6,10 +6,13 @@ import * as x from '../../styles'
 export const Nav = styled.div`
   height: 10vh;
   display: flex;
-  justify-content: space-around;
   background: black;
   align-items: center;
-`
+  justify-content: space-around;
+  @media (max-width: 767px) {
+    justify-content: space-between;
+  }
+    `
 export const logo = styled.span`
   background: red;
 `
@@ -19,14 +22,14 @@ margin: 0
 @media (min-width: 767px) {
   display:flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   display:none;
   }
 `
 export const Ul = styled.ul`
   display: flex;
   list-style-type: none;
-  @media (max-width:424px){
+  @media (max-width:767px){
     display:none
   }
 `
@@ -40,10 +43,10 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background: orange;
 
-  @media (min-width: 425) {
+  @media (min-width: 768px) {
     display:none;
   }
-  @media (max-width: 426px) {
+  @media (max-width: 767px) {
       width: 100%;
     }
 
@@ -73,7 +76,7 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
 
-  @media (min-width:425px){
+  @media (min-width:767px){
     display:none
   }
 

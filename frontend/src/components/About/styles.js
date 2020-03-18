@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import * as x from '../../styles'
 
 export const about = styled(x.Section)`
-  background: #214021;
   `
 
 export const words = styled.div`
