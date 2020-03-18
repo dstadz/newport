@@ -10,7 +10,7 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  background:red;
+  background: ${hue => hsl({hue},50%, 50%)};
   height: calc(100vh);
   margin:0
   padding:0

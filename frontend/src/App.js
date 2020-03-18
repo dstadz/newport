@@ -15,7 +15,7 @@ import styled from 'styled-components'
 
 
 const App = () => {
-  const [state, setState] = useState('state')
+  const [hue, setHue] = useState(30)
 
   const handleButton = e => {
     //e.preventDefault();
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <x.Body>
       <Nav />
-      <Route path="/" render={props => {
+      <Route exact path="/" render={props => {
         return <Home {...props} 
           id='Home'
           handleButton={ handleButton }

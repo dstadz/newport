@@ -20,9 +20,9 @@ const Card = props => {
     <div>
       <Question>
         {props.question}
-        <button 
-        style={{background:"none", border:'none'}}
-        onClick={toggleOpen}>
+        <button
+          style={{background:"none", border:'none'}}
+          onClick={toggleOpen}>
           { open ? '🔺' : '🔻' }
         </button>
         {open && <Answer> {props.answer} </Answer>}

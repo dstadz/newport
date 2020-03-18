@@ -3,7 +3,6 @@ import * as x from '../../styles'
 
 
 export const hero = styled(x.Section)`
-  background: #2121ff;
   display: inline-flex column;
   `
 
