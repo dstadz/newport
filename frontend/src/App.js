@@ -15,14 +15,21 @@ import styled from 'styled-components'
 
 
 const App = () => {
-  const [hue, setHue] = useState(30)
+  const [hue, setHue] = useState(0)
 
   const handleButton = e => {
     //e.preventDefault();
     console.log('it fires')
-  } 
+  }
+  const colorShift = () => {
+    hue < 330 ?setHue(hue+30) :setHue(0)
+  }
+
   return (
-    <x.Body>
+    <x.Body
+      style={{background: `hsl(${hue},75%,50%)`}}
+      onClick={() => colorShift()}
+    >
       <Nav />
       <Route exact path="/" render={props => {
         return <Home {...props} 
