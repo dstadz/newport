@@ -3,13 +3,11 @@ import * as x from '../../styles'
 
 
 export const hero = styled(x.Section)`
-  background: #2121ff;
   display: inline-flex column;
   `
 
 export const words = styled.div`
   margin:auto;
-  border: solid red 1vh;
 `
 export const H1 = styled.h1`
   font-size: 5vh;

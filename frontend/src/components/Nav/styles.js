@@ -2,48 +2,60 @@ import styled from 'styled-components'
 import * as x from '../../styles'
 
 
-export const Nav = styled.nav`
-  height: 5vh;
-  width: 100%;
+// height: 5vh;
+export const Nav = styled.div`
+  height: 10vh;
   display: flex;
-  justify-content: space-between;
-  background: orange;
-  position: fixed;
-  top: 0;
+  background: black;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 767px) {
+    justify-content: space-between;
+  }
+    `
+export const logo = styled.span`
+  background: red;
 `
-export const logo = styled.p`
-  background: blue;
-  height: 3vh;
-  margin: auto;
-  margin-left: 3vh;
+export const H6 = styled.h6`
+background: red;
+margin: 0
+@media (min-width: 767px) {
+  display:flex;
+}
+@media (max-width: 767px) {
+  display:none;
+  }
 `
 export const Ul = styled.ul`
   display: flex;
-  background: red;
   list-style-type: none;
-  height: 100%;
-  margin: 0 5vh;
-  @media (max-width:424px){
+  @media (max-width:767px){
     display:none
   }
 `
 export const Li = styled.li`
-  background:yellow;
-  padding: 1vh;
-  margin:auto;
+  color:white;
+  margin: 0 5rem;
+
+   a{
+    color:white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+  }
 `
 export const StyledMenu = styled.nav`
-  display: flex;
+  display: ${({ open }) => open ? 'flex' : 'none'};
   flex-direction: column;
   justify-content: center;
-  background: #EFFFFA;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
-  position: absolute;
-  top: 0;
-  right: 0%;
-  transition: transform 0.3s ease-in-out;
+  background: orange;
 
-  @media (max-width: 576px) {
+  @media (min-width: 768px) {
+    display:none;
+  }
+  @media (max-width: 767px) {
       width: 100%;
     }
 
@@ -60,11 +72,8 @@ export const StyledMenu = styled.nav`
     }
   }
 `
-
 export const StyledBurger = styled.button`
-  position: absolute;
-  top: 15%;
-  right: 6%;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -76,7 +85,7 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
 
-  @media (min-width:425px){
+  @media (min-width:767px){
     display:none
   }
 

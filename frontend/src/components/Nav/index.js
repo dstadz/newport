@@ -26,21 +26,27 @@ const Burger = ({ open, setOpen }) => { return (
 const Nav = () => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
+
   return (
-    <x.Nav>
-      <x.logo>LOGO</x.logo>
-      <x.Ul className='navlinks'>
-        <x.Li><NavLink to='/'>Home</NavLink></x.Li>
-        <x.Li><NavLink to='/about'>About</NavLink></x.Li>
-        <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
-        <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
-      </x.Ul>
-      <div ref={node}>
+    <>
+      <x.Nav>
+        <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
+
+        <x.Ul className='navlinks'>
+          <x.Li><NavLink style={{  color:'white' }} to='/about'>About</NavLink></x.Li>
+          <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
+          <x.Li><NavLink to='/projects'>Projects</NavLink></x.Li>
+          <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
+        </x.Ul>
+
+        <x.H6>other thing</x.H6>
         <Burger open={open} setOpen={setOpen} />
+      </x.Nav>
+      <div ref={node}>
         <Menu open={open} setOpen={setOpen} />
       </div>
-    </x.Nav>
-  )  
+    </>
+  )
 }
 
 
@@ -52,7 +58,7 @@ const Nav = () => {
       handler(event);
     };
     document.addEventListener('mousedown', listener);
-    
+
     return () => { document.removeEventListener('mousedown', listener) };
   }, [ref, handler]);
 };

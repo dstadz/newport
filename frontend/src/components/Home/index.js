@@ -11,7 +11,7 @@ const Home = props => {
         <x.H2> I am a Full Stack Developer in San Francisco.</x.H2>
         <x.H3> I can do UX designs too! </x.H3>
         <x.H4>Don't believe me?</x.H4>
-        <button onClick={() => 
+        <button onClick={() =>
           props.handleButton()}>Check it out!</button>
       </x.words>
 
