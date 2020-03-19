@@ -33,8 +33,9 @@ const Nav = () => {
         <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
 
         <x.Ul className='navlinks'>
-          <x.Li><NavLink to='/about'>About</NavLink></x.Li>
+          <x.Li><NavLink style={{  color:'white' }} to='/about'>About</NavLink></x.Li>
           <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
+          <x.Li><NavLink to='/projects'>Projects</NavLink></x.Li>
           <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
         </x.Ul>
 

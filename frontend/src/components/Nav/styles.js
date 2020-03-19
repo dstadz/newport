@@ -34,8 +34,17 @@ export const Ul = styled.ul`
   }
 `
 export const Li = styled.li`
-  color:white
-  margin: 0 5rem
+  color:white;
+  margin: 0 5rem;
+
+   a{
+    color:white;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
+  }
 `
 export const StyledMenu = styled.nav`
   display: ${({ open }) => open ? 'flex' : 'none'};

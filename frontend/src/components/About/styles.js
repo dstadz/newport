@@ -23,17 +23,15 @@ export const H4 = styled.h4`
 font-size: 2vh;
 `
 export const cardDeck = styled.div`
-  color:gold;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;  
+  justify-content: space-around;
 `
 export const Card = styled.div`
-
+  width:50%
   @media()
 `
 
 export const Button = styled.button`
-  background:blue;
   transform: ${({ open }) => open ? 'rotate(0deg)' : 'rotate(180deg)'};
 `
