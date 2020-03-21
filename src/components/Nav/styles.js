@@ -19,67 +19,15 @@ export const Nav = styled.nav`
 @media (max-width: 767px) {
   justify-content: space-between;
 }
+
 * {
   box-sizing: border-box;
   transition: all .35s ease;
 }
 
-li {
-  display: inline-block;
-  list-style: outside none none;
-  margin: .5em 1em;
-  paddin: 0;
-}
-  
-a {
-  padding: .5em .8em;
-  color: rgba(255,255,255,.5);
-  position: relative;
-  text-decoration: none;
-  font-size: 20px;
-}
-a::before,
-a::after {
-  content: '';
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  transition: all .35s ease;
-  opacity: 0;
-}
 
-a::before {
-  content: '';
-  right: 0;
-  top: 0;
-  border-top: 3px solid #3E8914;
-  border-right: 3px solid #2E640F;
-  transform: translate(-100%, 50%);
-}
 
-a:after {
-  content: '';
-  left: 0;
-  bottom: 0;
-  border-bottom: 3px solid #2E640F;
-  border-left: 3px solid #3E8914;
-  transform: translate(100%, -50%)
-}
 
-a:hover:before,
-a:hover:after{
-  transform: translate(0,0);
-  opacity: 1;
-}
-
-a:hover {
-  color: #3DA35D;
-}
-  
-  
-  
-  
-  
   }
     `
 export const logo = styled.span`
@@ -103,14 +51,53 @@ export const Ul = styled.ul`
   }
 `
 export const Li = styled.li`
-  margin: 0 5rem;
 
-   a{
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  paddin: 0;
+
+  a{
     text-decoration: none;
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    padding: .5em .8em;
+    color: rgba(255,255,255,.5);
+    position: relative;
+    text-decoration: none;
+    font-size: 20px;
 
+  ::before,
+  ::after {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+  ::before {
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 3px solid #3E8914;
+    border-right: 3px solid #2E640F;
+    transform: translate(-100%, 50%);
+  }
+  :after {
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid #2E640F;
+    border-left: 3px solid #3E8914;
+    transform: translate(100%, -50%)
+  }
+  :hover:before,
+  :hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+  }
   }
 `
 export const StyledMenu = styled.nav`
