@@ -3,14 +3,83 @@ import * as x from '../../styles'
 
 
 // height: 5vh;
-export const Nav = styled.div`
+export const Nav = styled.nav`
   height: 10vh;
   display: flex;
   background: black;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 767px) {
-    justify-content: space-between;
+  
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  justify-content: space-between;
+}
+* {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  paddin: 0;
+}
+  
+a {
+  padding: .5em .8em;
+  color: rgba(255,255,255,.5);
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
+}
+a::before,
+a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #3E8914;
+  border-right: 3px solid #2E640F;
+  transform: translate(-100%, 50%);
+}
+
+a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #2E640F;
+  border-left: 3px solid #3E8914;
+  transform: translate(100%, -50%)
+}
+
+a:hover:before,
+a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+a:hover {
+  color: #3DA35D;
+}
+  
+  
+  
+  
+  
   }
     `
 export const logo = styled.span`
@@ -34,11 +103,9 @@ export const Ul = styled.ul`
   }
 `
 export const Li = styled.li`
-  color:white;
   margin: 0 5rem;
 
    a{
-    color:white;
     text-decoration: none;
     font-size: 2rem;
     font-family: 'Roboto', sans-serif;
