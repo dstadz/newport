@@ -8,44 +8,28 @@ import * as x from './styles.js'
 
 
 
-const Menu = ({ open }) => { return (
-  <x.StyledMenu open={open}>
-    <a href="/"> <span role="img" aria-label="about us">💁🏻‍♂️</span> Home </a>
-    <a href="/"> <span role="img" aria-label="price">💸</span> About </a>
-    <a href="/"> <span role="img" aria-label="contact">📩</span> Resume </a>
-    <a href="/"> <span role="img" aria-label="contact">📩</span> Contact </a>
-  </x.StyledMenu>
-)}
-  
+
 const Burger = ({ open, setOpen }) => { return (
   <x.StyledBurger open={open} onClick={() => setOpen(!open)}>
     <div /> <div /> <div />
   </x.StyledBurger>
 )}
 
-const Nav = () => {
+const Nav = ({ hue }) => {
   const [open, setOpen] = React.useState(false);
-  const node = React.useRef();
 
   return (
-    <>
-      <x.Nav>
-        <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
-
-        <x.Ul>
-          <x.Li><NavLink to='/about'>About</NavLink></x.Li>
-          <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
-          <x.Li><NavLink to='/projects'>Projects</NavLink></x.Li>
-          <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
-        </x.Ul>
-
-        <x.H6>other thing</x.H6>
-        <Burger open={open} setOpen={setOpen} />
-      </x.Nav>
-      <div ref={node}>
-        <Menu open={open} setOpen={setOpen} />
-      </div>
-    </>
+    <x.Nav hue={hue} open={open} setOpen={setOpen}>
+      <span className='logo'><NavLink to='/'>LOGO</NavLink></span>
+      <Burger open={open} setOpen={setOpen} />
+      <ul open={open}>
+        <li><NavLink to='/about'>About</NavLink></li>
+        <li><NavLink to='/resume'>Resume</NavLink></li>
+        <li><NavLink to='/projects'>Projects</NavLink></li>
+        <li><NavLink to='/contact'>Contact</NavLink></li>
+      </ul>
+      <h6>other thing</h6>
+    </x.Nav>
   )
 }
 

@@ -22,14 +22,14 @@ const App = () => {
     //e.preventDefault();
     console.log('it fires')
   }
-  const colorShift = () => { hue < 330 ? setHue(hue+3) : setHue(0) }
+  const colorShift = () => { hue < 330 ? setHue(hue+12) : setHue(0)}
 
   return (
     <x.Body
-      style={{background: `hsl(${hue}, 100%, 50%)`}}
+      style={{background: `hsl(${hue}, 75%, 40%)`}}
       onClick={() => colorShift()}
     >
-      <Nav />
+      <Nav hue = {hue}/>
       <Route exact path="/" render={props => {
         return <Home {...props}
           id='Home'
