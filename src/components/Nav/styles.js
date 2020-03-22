@@ -36,7 +36,7 @@ export const Ul = styled.ul`
     margin: .5em 1em;
     paddin: 0;
     a{
-      color: ${props => props.color || "white"};
+      color: ${props => `hsl(${props.color},50%,60%)` || "white"};
       text-decoration: none;
       font-size: 2rem;
       font-family: 'Roboto', sans-serif;
