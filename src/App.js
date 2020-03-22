@@ -23,7 +23,7 @@ const App = () => {
     console.log('it fires')
   }
   const colorShift = () => { hue < 330 ? setHue(hue+12) : setHue(0)}
-  
+
   return (
     <x.Body
       style={{background: `hsl(${hue}, 75%, 40%)`}}

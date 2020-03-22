@@ -3,6 +3,7 @@ import * as x from '../../styles'
 
 // height: 5vh;
 export const Nav = styled.nav`
+${props => console.log(props)}
   height: 10vh;
   display: flex;
   background: black;
@@ -12,31 +13,29 @@ export const Nav = styled.nav`
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
-  @media (max-width: 767px) { justify-content: space-between }
   * {
     box-sizing: border-box;
     transition: all .35s ease;
   }
   .logo {
-    color: ${props => `hsl(${props.color+120},100%,60%)`};
+    color: ${props => `hsl(${props.hue+120},100%,60%)`};
   }
   h6 {
-    background: ${props => `hsl(${props.color+240},100%,60%)`};
-    @media (min-width: 767px) { display:flex }
+    background: ${props => `hsl(${props.hue+240},100%,60%)`};
+    @media (min-width: 768px) { display:flex }
     @media (max-width: 767px) { display:none }
   }
   ul{
     display: flex;
     justify-content:space-between;
     list-style-type: none;
-    @media (max-width:767px){ display:none }
     li {
       display: inline-block;
       list-style: outside none none;
       margin: .5em 1em;
       padding: 0;
       a{
-        color: ${props => `hsl(${props.color-180},100%,50%)`};
+        color: ${props => `hsl(${props.hue-180},100%,50%)`};
         text-decoration: none;
         font-size: 2rem;
         font-family: 'Roboto', sans-serif;
@@ -56,19 +55,19 @@ export const Nav = styled.nav`
         ::before {
           right: 0;
           top: 0;
-          border-top: 3px solid ${props => `hsl(${props.color+60},100%,60%)`};
-          border-right: 3px solid ${props => `hsl(${props.color+60},100%,30%)`};
+          border-top: 3px solid ${props => `hsl(${props.hue+60},100%,60%)`};
+          border-right: 3px solid ${props => `hsl(${props.hue+60},100%,30%)`};
           transform: translate(-100%, 50%);
         }
         :after {
           left: 0;
           bottom: 0;
-          border-bottom: 3px solid ${props => `hsl(${props.color-60},100%,30%)`};
-          border-left: 3px solid ${props => `hsl(${props.color-60},100%,60%)`};
+          border-bottom: 3px solid ${props => `hsl(${props.hue-60},100%,30%)`};
+          border-left: 3px solid ${props => `hsl(${props.hue-60},100%,60%)`};
           transform: translate(100%, -50%)
         }
         :hover {
-          color: ${props => `hsla(${props.color},100%,50%,1)`};
+          color: ${props => `hsla(${props.hue},100%,50%,1)`};
           ::before, ::after{
             transform: translate(0,0);
             opacity: 1;
@@ -76,8 +75,34 @@ export const Nav = styled.nav`
         }
       }
     }
+    @media (max-width: 767px) {
+      display: ${({ open }) => open ? 'flex' : 'none'};
+      justify-content: space-between
+    }
+  @media (max-width:767px){
+    background:'white'
+  }
+  `
+
+
+export const StyledMenu = styled.ul`
+
+  background: orange;
+  display: ${({ open }) => open ? 'flex' : 'none'};
+  flex-direction: column;
+  justify-content: center;
+  @media (min-width: 768px) { display:none }
+  @media (max-width: 767px) { width: 100% }
+  a {
+    transition: color 0.3s linear;
+    &:hover { color: #343078 }
+    @media (max-width: 576px) {
+      font-size: 1.5rem;
+      text-align: center;
+    }
   }
 `
+
 export const StyledBurger = styled.button`
   margin: 1rem;
   display: flex;
@@ -91,7 +116,7 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
   &:focus { outline: none }
-  @media (min-width:767px) { display:none }
+  @media (min-width:768px) { display:none }
   div {
     width: 2rem;
     height: 0.25rem;
@@ -106,23 +131,5 @@ export const StyledBurger = styled.button`
       transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
     }
     :nth-child(3) { transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'} }
-  }
-`
-
-export const StyledMenu = styled.ul`
-
-  display: ${({ open }) => open ? 'flex' : 'none'};
-  flex-direction: column;
-  justify-content: center;
-  background: orange;
-  @media (min-width: 768px) { display:none }
-  @media (max-width: 767px) { width: 100% }
-  a {
-    transition: color 0.3s linear;
-    &:hover { color: #343078 }
-    @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
   }
 `
