@@ -22,11 +22,14 @@ const App = () => {
     //e.preventDefault();
     console.log('it fires')
   }
-  const colorShift = () => { hue < 330 ? setHue(hue+12) : setHue(0)}
+  const colorShift = () => { hue <= 359 ? setHue(hue+2) : setHue(0)}
 
+
+  //background: linear-gradient(to right top, `hsl(${hue}, 75%, 40%)`, #004d7a);
+  //background: `hsl(${hue}, 75%, 40%)`
   return (
     <x.Body
-      style={{background: `hsl(${hue}, 75%, 40%)`}}
+      hue={hue}
       onClick={() => colorShift()}
     >
       <Nav hue = {hue}/>

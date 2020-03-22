@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import {Context} from '../../contexts/Context'
 import * as x from './styles.js'
+import logo from '../../assets/Screenshot (27).png'
 
 
 
@@ -20,7 +21,7 @@ const Nav = ({ hue }) => {
 
   return (
     <x.Nav hue={hue} open={open} setOpen={setOpen}>
-      <span className='logo'><NavLink to='/'>LOGO</NavLink></span>
+      <div><NavLink to='/'><img src={logo} /></NavLink></div>
       <Burger open={open} setOpen={setOpen} />
       <ul open={open}>
         <li><NavLink to='/about'>About</NavLink></li>
