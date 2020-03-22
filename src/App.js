@@ -29,7 +29,7 @@ const App = () => {
       style={{background: `hsl(${hue}, 100%, 50%)`}}
       onClick={() => colorShift()}
     >
-      <Nav />
+      <Nav hue = {hue}/>
       <Route exact path="/" render={props => {
         return <Home {...props}
           id='Home'

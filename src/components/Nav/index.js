@@ -23,7 +23,7 @@ const Burger = ({ open, setOpen }) => { return (
   </x.StyledBurger>
 )}
 
-const Nav = () => {
+const Nav = ({ hue }) => {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
 
@@ -31,12 +31,11 @@ const Nav = () => {
     <>
       <x.Nav>
         <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
-
-        <x.Ul>
-          <x.Li><NavLink to='/about'>About</NavLink></x.Li>
-          <x.Li><NavLink to='/resume'>Resume</NavLink></x.Li>
-          <x.Li><NavLink to='/projects'>Projects</NavLink></x.Li>
-          <x.Li><NavLink to='/contact'>Contact</NavLink></x.Li>
+        <x.Ul color={hue}>
+          <li><NavLink to='/about'>About</NavLink></li>
+          <li><NavLink to='/resume'>Resume</NavLink></li>
+          <li><NavLink to='/projects'>Projects</NavLink></li>
+          <li><NavLink to='/contact'>Contact</NavLink></li>
         </x.Ul>
 
         <x.H6>other thing</x.H6>
