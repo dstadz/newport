@@ -13,6 +13,7 @@ export const Body = styled.div`
   height: calc(100vh);
   margin:0
   padding:0
+  background: ${props => ` linear-gradient(${props.hue/7}deg,  hsl(${props.hue+60}, 75%, 40%), hsl(${props.hue}, 75%, 40%)`});
 `
 const styles = {
   App: { text_align: "center" },

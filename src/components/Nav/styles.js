@@ -4,11 +4,10 @@ import * as x from '../../styles'
 // height: 5vh;
 export const Nav = styled.nav`
 ${props => console.log(props)}
-  height: 10vh;
   display: flex;
   background: black;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   font-family: 'Titillium Web';
   text-transform: uppercase;
   text-align: center;
@@ -17,18 +16,30 @@ ${props => console.log(props)}
     box-sizing: border-box;
     transition: all .35s ease;
   }
-  .logo {
-    color: ${props => `hsl(${props.hue+120},100%,60%)`};
+  img {
+    margin: 16px
+    height: 75px;
+    filter: blur(2px);
+
+    @media (min-width: 768px) { flex-grow: 1 }
+
   }
   h6 {
     background: ${props => `hsl(${props.hue+240},100%,60%)`};
+    flex-grow: 1;
+    justify-content:center
+    align-items:center
+
     @media (min-width: 768px) { display:flex }
     @media (max-width: 767px) { display:none }
   }
   ul{
     display: flex;
+    flex-grow: 3;
+
     justify-content:space-between;
     list-style-type: none;
+    padding:0
     li {
       display: inline-block;
       list-style: outside none none;
@@ -76,11 +87,13 @@ ${props => console.log(props)}
       }
     }
     @media (max-width: 767px) {
+      flex-wrap:wrap;
       display: ${({ open }) => open ? 'flex' : 'none'};
-      justify-content: space-between
+      justify-content: space-evenly
     }
+  }
   @media (max-width:767px){
-    background:'white'
+    flex-wrap:wrap;
   }
   `
 
