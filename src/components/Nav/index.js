@@ -10,10 +10,10 @@ import * as x from './styles.js'
 
 const Menu = ({ open }) => { return (
   <x.StyledMenu open={open}>
-    <a href="/"> <span role="img" aria-label="about us">💁🏻‍♂️</span> Home </a>
-    <a href="/"> <span role="img" aria-label="price">💸</span> About </a>
-    <a href="/"> <span role="img" aria-label="contact">📩</span> Resume </a>
-    <a href="/"> <span role="img" aria-label="contact">📩</span> Contact </a>
+  <li><NavLink to='/about'>About</NavLink></li>
+  <li><NavLink to='/resume'>Resume</NavLink></li>
+  <li><NavLink to='/projects'>Projects</NavLink></li>
+  <li><NavLink to='/contact'>Contact</NavLink></li>
   </x.StyledMenu>
 )}
   
@@ -25,23 +25,21 @@ const Burger = ({ open, setOpen }) => { return (
 
 const Nav = ({ hue }) => {
   const [open, setOpen] = React.useState(false);
-  const node = React.useRef();
 
   return (
     <>
-      <x.Nav>
-        <x.logo><NavLink to='/'>LOGO</NavLink></x.logo>
-        <x.Ul color={hue}>
+      <x.Nav color={hue}>
+        <span className='logo'><NavLink to='/'>LOGO</NavLink></span>
+        <ul>
           <li><NavLink to='/about'>About</NavLink></li>
           <li><NavLink to='/resume'>Resume</NavLink></li>
           <li><NavLink to='/projects'>Projects</NavLink></li>
           <li><NavLink to='/contact'>Contact</NavLink></li>
-        </x.Ul>
-
-        <x.H6>other thing</x.H6>
+        </ul>
+        <h6>other thing</h6>
         <Burger open={open} setOpen={setOpen} />
       </x.Nav>
-      <div ref={node}>
+      <div>
         <Menu open={open} setOpen={setOpen} />
       </div>
     </>
