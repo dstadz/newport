@@ -3,7 +3,6 @@ import * as x from '../../styles'
 
 
 export const Div = styled.div`
-  position: absolute;
   bottom: 0;
   display: inline-flex column;
   align-items:center;

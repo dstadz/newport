@@ -20,7 +20,7 @@ const App = () => {
 
   const handleButton = e => {
     //e.preventDefault();
-    console.log('it fires')
+    console.log("This proves I'm a good developer ;)")
   }
   const colorShift = () => { hue <= 359 ? setHue(hue+2) : setHue(0)}
 
