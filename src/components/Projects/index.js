@@ -1,4 +1,5 @@
 import React from 'react'
+import { Card, Container } from './styles'
 
 
 const ListOfProjects = [
@@ -7,7 +8,7 @@ const ListOfProjects = [
     github:"",
     url:"https://www.d8picker.com/",
     description:"PWA that creates and applies event templates to user calendars, focusing on irregularly reoccurring events"
-  },{
+  }/*,{
     title:"",
     github:"",
     url:"",
@@ -17,18 +18,18 @@ const ListOfProjects = [
     github:"",
     url:"",
     description:""
-  },
+  },*/
 ]
 
 const Project = props => {
 
   return (
-    <div>
-      {props.title}
+    <Card href={props.url}>
+      <h1> {props.title} </h1>
+      <div></div>
       {props.github}
-      {props.url}
       {props.description}
-    </div>
+    </Card>
   )
 }
 
@@ -37,16 +38,16 @@ const Project = props => {
 const Projects = () => {
 
   return (
-    <div>
+    <Container>
       {ListOfProjects.map(p => (
-        <Project 
+        <Project
           title={p.title}
           github={p.github}
           url={p.url}
           description={p.description}
         />
       ))}
-    </div>
+    </Container>
   )
 }
 

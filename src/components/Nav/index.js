@@ -28,8 +28,12 @@ const Nav = ({ hue }) => {
         <li><NavLink to='/resume'>Resume</NavLink></li>
         <li><NavLink to='/projects'>Projects</NavLink></li>
         <li><NavLink to='/contact'>Contact</NavLink></li>
-        </ul>
-        <h6>other thing</h6>
+      </ul>
+      {
+        window.innerWidth >= 768
+          ?<div />
+          :<h6>Lol I wasn't expecting you to use a tablet</h6>
+      }
     </x.Nav>
   )
 }
