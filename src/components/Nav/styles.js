@@ -17,9 +17,8 @@ ${props => console.log(props)}
     transition: all .35s ease;
   }
   img {
-    margin: 16px
+    margin: 8px
     height: 75px;
-    filter: blur(2px);
 
     @media (min-width: 768px) { flex-grow: 1 }
 
