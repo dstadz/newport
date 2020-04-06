@@ -13,9 +13,3 @@ color:white;
 text-decoration: none;
 border: 3px solid green
 `
-
-export const Container = styled.div`
-background: white;
-margin: auto;
-justify-content: space-between;
-`

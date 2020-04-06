@@ -24,8 +24,6 @@ const App = () => {
   const colorShift = () => { hue <= 359 ? setHue(hue+2) : setHue(0)}
 
 
-  //background: linear-gradient(to right top, `hsl(${hue}, 75%, 40%)`, #004d7a);
-  //background: `hsl(${hue}, 75%, 40%)`
   return (
     <Body
       hue={hue}
@@ -41,7 +39,6 @@ const App = () => {
       <Route path="/projects" component={Projects} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
-
       <Footer />
     </Body>
   );

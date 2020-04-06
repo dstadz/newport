@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  scroll-snap-align: start;
-  justify-content: center;
-  align-items: center;
-  flex-grow;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-between;
 
 `
 export const Body = styled.div`

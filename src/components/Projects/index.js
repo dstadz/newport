@@ -1,5 +1,6 @@
 import React from 'react'
-import { Card, Container } from './styles'
+import { Section } from '../../styles'
+import { Card } from './styles'
 
 
 const ListOfProjects = [
@@ -38,7 +39,7 @@ const Project = props => {
 const Projects = () => {
 
   return (
-    <Container>
+    <Section>
       {ListOfProjects.map(p => (
         <Project
           title={p.title}
@@ -47,7 +48,7 @@ const Projects = () => {
           description={p.description}
         />
       ))}
-    </Container>
+    </Section>
   )
 }
 
