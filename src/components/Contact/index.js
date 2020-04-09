@@ -21,7 +21,6 @@ const Contact = () => {
         setStatus("SUCCESS");
       } else setStatus("ERROR");
     };
-    console.log(status, data)
     xhr.send(data);
   }
 

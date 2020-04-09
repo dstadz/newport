@@ -2,23 +2,6 @@ import styled from 'styled-components'
 import * as x from '../../styles'
 
 
-export const contact = styled(x.Section)`
-  display:flex;
-  `
-export const words = styled.div`
-  margin:auto;
-`
-export const H1 = styled.h1`
-  color:red;
-`
-export const H2 = styled.h2`
-  color:green;
-`
-export const cardDeck = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`
 export const Label = styled.label`
   align-self: flex-start
 `
