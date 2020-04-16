@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { Section } from '../../styles'
-import * as x from  './styles'
+import * as x from '../styles'
+import { Section } from  '../styles'
 
 
 

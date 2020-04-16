@@ -1,6 +1,6 @@
 import React from 'react'
-import { Section } from '../../styles'
-import * as x from './styles'
+import { Section } from '../styles'
+import * as x from '../styles'
 const Home = props => {
 
   return (
@@ -9,9 +9,9 @@ const Home = props => {
       <x.H2> I am a Full Stack Developer in San Francisco.</x.H2>
       <x.H3> I can do UX designs too! </x.H3>
       <x.H4>Don't believe me?</x.H4>
-      <x.Button onClick={() => props.handleButton()}>
+      <x.Button2 onClick={() => props.handleButton()}>
         Check it out!
-      </x.Button>
+      </x.Button2>
     </Section>
   )
 }
