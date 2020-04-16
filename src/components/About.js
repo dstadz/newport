@@ -1,7 +1,6 @@
 import React from 'react'
-import Card from './Card'
-import { Section } from '../../styles'
-import { about, cardDeck} from './styles.js'
+import Card from './Segments/Card'
+import { Section } from '../styles/'
 
 //import Slideshow from './Slideshow'
 

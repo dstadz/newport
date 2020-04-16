@@ -1,6 +1,6 @@
 import React from 'react'
-import pdf from '../../../src/assets/resume.pdf'
-import { Section } from '../../styles'
+import pdf from '../../src/assets/resume.pdf'
+import { Section } from '../styles'
 import styled from 'styled-components'
 
 

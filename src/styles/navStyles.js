@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import * as x from '../../styles'
 
 // height: 5vh;
 export const Nav = styled.nav`

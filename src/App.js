@@ -1,17 +1,15 @@
 import React , {useState} from "react";
 import ReactDOM from "react-dom";
 import { Link, Route, Switch } from "react-router-dom";
-import Nav from './components/Nav/'
-import Home from './components/Home/'
-import About from './components/About/'
-import Projects from './components/Projects/'
-import Resume from './components/Resume/'
-import Contact from './components/Contact/'
-import Footer from './components/Footer/Footer'
+import Nav from './components/Nav'
+import Home from './components/Home'
+import About from './components/About'
+import Projects from './components/Project'
+import Resume from './components/Resume'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 import { Body } from './styles'
 
-import styled from 'styled-components'
-//import './App.css'
 
 
 

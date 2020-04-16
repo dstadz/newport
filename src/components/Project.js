@@ -1,6 +1,6 @@
 import React from 'react'
-import { Section } from '../../styles'
-import { Card } from './styles'
+import { Section } from '../styles'
+import { Card } from '../styles'
 
 
 const ListOfProjects = [
