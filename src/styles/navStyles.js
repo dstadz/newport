@@ -18,7 +18,6 @@ ${props => console.log(props)}
   img {
     margin: 8px
     height: 75px;
-
     @media (min-width: 768px) { flex-grow: 1 }
 
   }
@@ -33,9 +32,9 @@ ${props => console.log(props)}
   }
   ul{
     display: flex;
-    flex-grow: 3;
+    flex-grow: 1;
 
-    justify-content:space-between;
+    justify-content: space-between;
     list-style-type: none;
     padding:0
     li {
@@ -51,7 +50,6 @@ ${props => console.log(props)}
         font-weight: bold;
         padding: .5em .8em;
         position: relative;
-        text-decoration: none;
         font-size: 20px;
         ::before, ::after {
           content: '';
@@ -146,7 +144,13 @@ export const StyledBurger = styled.button`
 `
 
 export const Spacer = styled.div`
-  width: 60%
+  font-size: 20px;
+  flex-grow: 3;
+
+  ::before, ::after {
+    content: '';
+    height: 14px;
+    width: 14px;  background:blue;
   @media (max-width:768px) {
     display:none }
 

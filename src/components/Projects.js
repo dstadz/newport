@@ -1,6 +1,10 @@
 import React from 'react'
+import { Link, Route, Switch } from "react-router-dom";
+
 import { Section } from '../styles'
 import { Card } from '../styles'
+import Sorts from './Sorts'
+
 
 
 const ListOfProjects = [
@@ -47,7 +51,8 @@ const Projects = () => {
           url={p.url}
           description={p.description}
         />
-      ))}
+        ))}
+      <Route path="/sorts" component={Sorts} />
     </Section>
   )
 }
