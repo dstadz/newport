@@ -144,3 +144,10 @@ export const StyledBurger = styled.button`
     :nth-child(3) { transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'} }
   }
 `
+
+export const Spacer = styled.div`
+  width: 60%
+  @media (max-width:768px) {
+    display:none }
+
+`
