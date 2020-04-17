@@ -21,19 +21,15 @@ const Nav = ({ hue }) => {
 
   return (
     <x.Nav hue={hue} open={open} setOpen={setOpen}>
-      <div> <NavLink to='/'><img src={logo} /></NavLink> </div>
-      <Burger open={open} setOpen={setOpen} />
+      <div> <NavLink to='/'><img src={logo} alt='Return to home page'/></NavLink> </div>
+      <x.Spacer/>
+      <Burger className='Navbar-Toggle'open={open} setOpen={setOpen} />
       <ul open={open}>
-        <li><NavLink to='/about'>About</NavLink></li>
-        <li><NavLink to='/resume'>Resume</NavLink></li>
-        <li><NavLink to='/projects'>Projects</NavLink></li>
-        <li><NavLink to='/contact'>Contact</NavLink></li>
+      <li><NavLink to='/about'>About</NavLink></li>
+      <li><NavLink to='/resume'>Resume</NavLink></li>
+      <li><NavLink to='/projects'>Projects</NavLink></li>
+      <li><NavLink to='/contact'>Contact</NavLink></li>
       </ul>
-      {
-        window.innerWidth >= 768
-          ?<div />
-          :<h6>Lol I wasn't expecting you to use a tablet</h6>
-      }
     </x.Nav>
   )
 }
