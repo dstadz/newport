@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link, Route, Switch } from "react-router-dom";
 
-import { Section } from '../styles'
-import { Card } from '../styles'
-import Sorts from './Sorts'
+import { Section, Card } from '../styles'
 
 
 
@@ -13,12 +11,12 @@ const ListOfProjects = [
     github:"",
     url:"https://www.d8picker.com/",
     description:"PWA that creates and applies event templates to user calendars, focusing on irregularly reoccurring events"
-  }/*,{
-    title:"",
-    github:"",
-    url:"",
-    description:""
   },{
+    title:"Soring algorithms",
+    github:"",
+    url:'/sortingAlgorithms',
+    description:"A couple doodles to display some SA."
+  },/*{
     title:"",
     github:"",
     url:"",
@@ -26,10 +24,12 @@ const ListOfProjects = [
   },*/
 ]
 
+{/*props.url[0] == '/' ? : target='_blank'*/}
 const Project = props => {
-
+  const local = props.url[0] == '/'
+  console.log(local)
   return (
-    <Card href={props.url}>
+    <Card target={local ?'_self' :'_blank'} href={props.url}>
       <h1> {props.title} </h1>
       <div></div>
       {props.github}
@@ -44,15 +44,19 @@ const Projects = () => {
 
   return (
     <Section>
+      <div>
       {ListOfProjects.map(p => (
         <Project
-          title={p.title}
-          github={p.github}
-          url={p.url}
-          description={p.description}
+        title={p.title}
+        github={p.github}
+        url={p.url}
+        description={p.description}
         />
         ))}
-      <Route path="/sorts" component={Sorts} />
+        </div>
+        <div>
+        
+        </div>
     </Section>
   )
 }

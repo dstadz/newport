@@ -8,6 +8,8 @@ import Projects from './Projects'
 import Resume from './Resume'
 import Contact from './Contact'
 import Footer from './Footer'
+import Sorts from './SortingAlgorithms'
+
 import { Body } from '../styles'
 
 
@@ -35,6 +37,8 @@ const App = () => {
       <Route path="/projects" component={Projects} />
       <Route path="/resume" component={Resume} />
       <Route path="/contact" component={Contact} />
+      <Route path="/sortingAlgorithms" component={Sorts} />
+
       <Footer />
     </Body>
   );
