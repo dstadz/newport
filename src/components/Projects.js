@@ -24,12 +24,11 @@ const ListOfProjects = [
   },*/
 ]
 
-{/*props.url[0] == '/' ? : target='_blank'*/}
 const Project = props => {
   const local = props.url[0] == '/'
   console.log(local)
   return (
-    <Card target={local ?'_self' :'_blank'} href={props.url}>
+    <Card target={local ? false :'_blank'} href={props.url}>
       <h1> {props.title} </h1>
       <div></div>
       {props.github}
@@ -53,9 +52,6 @@ const Projects = () => {
         description={p.description}
         />
         ))}
-        </div>
-        <div>
-        
         </div>
     </Section>
   )

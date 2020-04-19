@@ -4,7 +4,7 @@ import { Section, Card } from '../styles'
 
 
 
-const Sort = () => {
+const SortingPage = () => {
   return (
     <Section>
       <div>sort</div>
@@ -12,4 +12,4 @@ const Sort = () => {
   )
 }
 
-export default Sort
+export default SortingPage
