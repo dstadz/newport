@@ -1,6 +1,4 @@
-import Sorts from './SortingAlgorithms'
-
-const quicksort = {
+const quick = {
   id: 4,
   title: "Quick Sort",
   emoji: "🐇",
@@ -98,4 +96,4 @@ const quicksort = {
   },
 };
 
-export default quicksort;
+export default quick

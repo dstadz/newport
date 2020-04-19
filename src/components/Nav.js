@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
-import {Context} from '../contexts/Context'
 import * as x from '../styles/navStyles.js'
 import logo from '../assets/coin.png'
 
