@@ -84,8 +84,8 @@ export const Div = styled.div`
   background: black;
   color: white
   `
-
-  export const Card = styled.a`
+const Link = styled.a``
+export const Card = styled(Link)`
 width: 300px;
 margin: 30px;
 display: flex;
