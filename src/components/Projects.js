@@ -52,7 +52,7 @@ const Projects = () => {
         description={p.description}
         />
         ))}
-        </div>
+      </div>
     </Section>
   )
 }
