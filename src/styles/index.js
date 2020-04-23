@@ -14,7 +14,7 @@ export const Body = styled.div`
   height: 100vh;
   margin:0
   padding:0
-  background: ${props => ` linear-gradient(${props.hue/7}deg, hsl(${props.hue+60}, 75%, 40%), hsl(${props.hue}, 75%, 40%)`});
+  background: ${props => ` linear-gradient(${props.hue/8}deg, hsl(${props.hue+60}, 75%, 40%), hsl(${props.hue}, 75%, 40%)`});
 `
 
 
@@ -97,3 +97,12 @@ color:white;
 text-decoration: none;
 border: 3px solid green
 `
+export const SortContainer = styled.div`
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  flex-wrap: wrap;
+  background: red;
+  height: 100%;
+  
+  `
+//  overflow: scroll;

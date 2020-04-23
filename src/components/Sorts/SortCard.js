@@ -1,18 +1,19 @@
 import React from 'react'
+import { Card } from '../../styles'
 import { Title, ButtonBar, Code, CompTable } from './sortstyles'
 
 
-const SortCard = () => {
-
+const SortCard = props => {
+  console.log(props)
 
   return (
-    <>
+    <Card>
       <canvas />
-      <Title />
+      <Title>{props.title}</Title>
       <ButtonBar />
       <Code />
       <CompTable />
-    </>
+    </Card>
   )
 }
 
