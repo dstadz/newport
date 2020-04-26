@@ -98,11 +98,14 @@ text-decoration: none;
 border: 3px solid green
 `
 export const SortContainer = styled.div`
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+  display: flex;
   flex-wrap: wrap;
-  background: red;
-  height: 100%;
-  
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
   `
-//  overflow: scroll;
+
+export const SortBase = styled.div`
+  border: 1px solid white
+  margin: auto
+`

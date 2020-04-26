@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card } from '../../styles'
+import { SortBase } from '../../styles'
 import { Title, ButtonBar, Code, CompTable } from './sortstyles'
 
 
@@ -7,13 +7,13 @@ const SortCard = props => {
   console.log(props)
 
   return (
-    <Card>
+    <SortBase>
       <canvas />
       <Title>{props.title}</Title>
       <ButtonBar />
       <Code />
       <CompTable />
-    </Card>
+    </SortBase>
   )
 }
 
