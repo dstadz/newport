@@ -16,7 +16,6 @@ const SortingPage = () => {
       {sorts.map(s => (
         <SortCard
         key={s.id} title={s.title} fn={s.fn} table={s.table}>
-        
         </SortCard>
         ))}
       </SortContainer>
