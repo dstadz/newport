@@ -102,7 +102,7 @@ export const SortContainer = styled.div`
   flex-wrap: wrap;
   border: 1px solid black;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   `
 
 export const SortBase = styled.div`
