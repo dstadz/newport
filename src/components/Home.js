@@ -1,6 +1,7 @@
 import React from 'react'
 import { Section } from '../styles'
 import * as x from '../styles'
+import Menagerie from './Menagerie'
 const Home = props => {
 
   return (
@@ -12,6 +13,7 @@ const Home = props => {
       <x.Button2 onClick={() => props.handleButton()}>
         Check it out!
       </x.Button2>
+      <Menagerie />
     </Section>
   )
 }
