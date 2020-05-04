@@ -1,4 +1,5 @@
 import React , { useState, useEffect, useRef } from 'react'
+import Sketch from "react-p5";
 
 import * as x from '../styles/canvasStyles'
 import { Section } from '../styles'
@@ -24,6 +25,8 @@ function draw(ctx, location) {
 
 
 const Menagerie = () => {
+  let y = 0
+  let dir= '^'
   const [locations, setLocations] = useState([])
   const canvasRef = useRef(null)
 
@@ -48,7 +51,26 @@ const Menagerie = () => {
         ref={canvasRef}
         onClick={handleCanvasClick}
       />
+
+      <Sketch
+        setup={(p5, parentRef) => {
+          p5.createCanvas(200, 200).parent(parentRef);
+        }}
+        draw={p5 => {
+          p5.background(0);
+          p5.fill(255, y*1.3, 0);
+          p5.ellipse(p5.width / 2, y, 50);
+          if (y > p5.height) dir = '';
+          if (y < 0) dir = '^';
+          if (dir === '^') y = y+8
+          else y = y-4;
+        }}
+      />
     </Section>
   )
 }
+
+
+
+
 export  default Menagerie
