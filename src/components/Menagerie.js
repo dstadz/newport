@@ -3,6 +3,7 @@ import Sketch from "react-p5";
 
 import * as x from '../styles/canvasStyles'
 import { Section } from '../styles'
+import utils from './CanvasUtils'
 
 
 const HOOK_PATH = new Path2D(x.HOOK_SVG)
@@ -10,7 +11,16 @@ const SCALE = 0.3
 const OFFSET = 80
 
 
-function draw(ctx, location) {
+let flock;
+
+
+
+
+
+
+
+
+const draw = (ctx, location) => {
   ctx.fillStyle = 'deepskyblue'
   ctx.shadowColor = 'dodgerblue'
   ctx.shadowBlur = 20
@@ -35,9 +45,12 @@ const Menagerie = () => {
     c.clearRect(0, 0, window.innerHeight, window.innerWidth)
     locations.forEach(location => draw(c, location))
     c.beginPath()
-    c.arc(300,300,30, 0, Math.PI *2,false)
-    c.strokeStyle = 'blue'
-    c.stroke()
+    c.arc(300,300,30, 0, Math.PI*2,false)
+    c.fillStyle = 'blue'
+    c.fill()
+
+    c.font = "30px Arial";
+    c.fillText("🐷", 0, window.innerHeight);
   })
 
 
@@ -73,6 +86,8 @@ const Menagerie = () => {
         const canvas = canvasRef.current
         const ctx = canvas.getContext('2d')
         draw(ctx, { x: e.clientX, y: e.clientY })
+        console.log(e.clientY, e.clientX)
+        utils.log()
       }}
     />
 
