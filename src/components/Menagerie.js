@@ -22,55 +22,62 @@ function draw(ctx, location) {
 }
 
 
-
-
 const Menagerie = () => {
-  let y = 0
-  let dir= '^'
   const [locations, setLocations] = useState([])
   const canvasRef = useRef(null)
 
+  // useEffect(() => {
+  //   initCanvas()
+  // }, [])
   useEffect(() => {
     const canvas = canvasRef.current
-    const ctx = canvas.getContext('2d')
-    ctx.clearRect(0, 0, window.innerHeight, window.innerWidth)
-    locations.forEach(location => draw(ctx, location))
+    const c = canvas.getContext('2d')
+    c.clearRect(0, 0, window.innerHeight, window.innerWidth)
+    locations.forEach(location => draw(c, location))
+    c.beginPath()
+    c.arc(300,300,30, 0, Math.PI *2,false)
+    c.strokeStyle = 'blue'
+    c.stroke()
   })
+
+
+
   function handleCanvasClick(e) {
     console.log(locations)
     const newLocation = { x: e.clientX, y: e.clientY }
     setLocations([...locations, newLocation])
+    const c = canvasRef
+    c.beginPath()
+    c.arc(300,300,30,0,Math.PI*2, false)
+    c.strokeStyle = 'blue'
+    c.stroke()
   }
   function handleClear() {
     setLocations([])
   }
   return (
     <Section>
-      <button onClick={handleClear}>Clear</button>
+{/*
+      <div>
+        <button onClick={handleClear}>Clear</button>
+        <button onClick={handleClear}>Clear</button>
+        <button onClick={handleClear}>Clear</button>
+        <button onClick={handleClear}>Clear</button>
+      </div>
+*/}
       <x.Canvas
-        ref={canvasRef}
-        onClick={handleCanvasClick}
-      />
+      ref={canvasRef}
+      width={window.innerWidth}
+      height={window.innerHeight}
+      onClick={e => {
+        const canvas = canvasRef.current
+        const ctx = canvas.getContext('2d')
+        draw(ctx, { x: e.clientX, y: e.clientY })
+      }}
+    />
 
-      <Sketch
-        setup={(p5, parentRef) => {
-          p5.createCanvas(200, 200).parent(parentRef);
-        }}
-        draw={p5 => {
-          p5.background(0);
-          p5.fill(255, y*1.3, 0);
-          p5.ellipse(p5.width / 2, y, 50);
-          if (y > p5.height) dir = '';
-          if (y < 0) dir = '^';
-          if (dir === '^') y = y+8
-          else y = y-4;
-        }}
-      />
     </Section>
   )
 }
-
-
-
 
 export  default Menagerie
