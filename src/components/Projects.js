@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, Route, Switch } from "react-router-dom";
+//import { Link, Route, Switch } from "react-router-dom";
 
 import { Section, Card } from '../styles'
 
@@ -25,7 +25,7 @@ const ListOfProjects = [
 ]
 
 const Project = props => {
-  const local = props.url[0] == '/'
+  const local = props.url[0] === '/'
   console.log(local)
   return (
     <Card target={local ? false :'_blank'} href={props.url}>

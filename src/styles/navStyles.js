@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 // height: 5vh;
 export const Nav = styled.nav`
-${props => console.log(props)}
   display: flex;
   background: black;
   align-items: center;

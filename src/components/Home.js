@@ -3,7 +3,6 @@ import { Section } from '../styles'
 import * as x from '../styles'
 import { Link } from 'react-router-dom'
 
-import Menagerie from './Menagerie'
 const Home = props => {
 
   return (

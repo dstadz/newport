@@ -1,60 +1,80 @@
 import React , { useState, useEffect, useRef } from 'react'
 import Sketch from "react-p5";
 
-import * as x from '../styles/canvasStyles'
+import {Canvas} from '../styles/canvasStyles'
 import { Section } from '../styles'
+import utils from '../utils/CanvasUtils'
 
 
-const HOOK_PATH = new Path2D(x.HOOK_SVG)
-const SCALE = 0.3
-const OFFSET = 80
 
 
-function draw(ctx, location) {
-  ctx.fillStyle = 'deepskyblue'
-  ctx.shadowColor = 'dodgerblue'
-  ctx.shadowBlur = 20
-  ctx.save()
-  ctx.scale(SCALE, SCALE)
-  ctx.translate(location.x / SCALE - OFFSET, location.y / SCALE - OFFSET)
-  ctx.fill(HOOK_PATH)
-  ctx.restore()
-}
 
 
 const Menagerie = () => {
   const [locations, setLocations] = useState([])
   const canvasRef = useRef(null)
-
-  // useEffect(() => {
-  //   initCanvas()
-  // }, [])
+  
   useEffect(() => {
-    const canvas = canvasRef.current
+    const canvas = document.querySelector('canvas')
     const c = canvas.getContext('2d')
-    c.clearRect(0, 0, window.innerHeight, window.innerWidth)
-    locations.forEach(location => draw(c, location))
-    c.beginPath()
-    c.arc(300,300,30, 0, Math.PI *2,false)
-    c.strokeStyle = 'blue'
-    c.stroke()
-  })
+    console.log('canvas')
+    let innerWidth = window.innerWidth
+    let innerHeight = window.innerHeight
+    
+    canvas.width = innerWidth
+    canvas.height = innerHeight
+    
+    let mouse = {
+      x: innerWidth / 2,
+      y: innerHeight / 2
+    }
+    window.addEventListener('mousemove', function(e){
+      mouse.x = e.clientX;
+      mouse.y = e.clientY
+    })
+    
+    window.addEventListener('resize', function(){
+      canvas.width = this.innerWidth;
+      canvas.height = this.innerHeight;
+    
+      init()
+    })
+    
+    
+    return(canvas)
+  }, [])
 
-
-
-  function handleCanvasClick(e) {
-    console.log(locations)
-    const newLocation = { x: e.clientX, y: e.clientY }
-    setLocations([...locations, newLocation])
-    const c = canvasRef
-    c.beginPath()
-    c.arc(300,300,30,0,Math.PI*2, false)
-    c.strokeStyle = 'blue'
-    c.stroke()
+  const Object = (x,y,r, c, color) => {
+    this.x = x
+    this.y = y
+    this.r = r
+    this.color = color
+  
+    this.update = () => { this.draw() }
+  
+    this.draw = () => {
+      c.beginPath()
+      c.arc(this.x, this.y, this.r,0, Math.PI*2)
+      c.fillStyle = this.color
+      c.fill()
+      c.closePath()
+    }
   }
-  function handleClear() {
-    setLocations([])
+  let c1;
+  function init() {
+    c1 = new Object(300,300,100,canvas, 'blue')
   }
+  
+  function animate() {
+    requestAnimationFrame(animate)
+    c.clearRect(0,0,canvas.width, canvas.height)
+    c.fillText("testing", mouse.x, mouse.y)
+    c1.update()
+  }
+  
+  init()
+  animate()
+
   return (
     <Section>
 {/*
@@ -65,17 +85,9 @@ const Menagerie = () => {
         <button onClick={handleClear}>Clear</button>
       </div>
 */}
-      <x.Canvas
-      ref={canvasRef}
-      width={window.innerWidth}
-      height={window.innerHeight}
-      onClick={e => {
-        const canvas = canvasRef.current
-        const ctx = canvas.getContext('2d')
-        draw(ctx, { x: e.clientX, y: e.clientY })
-      }}
-    />
-
+      <Canvas
+        onClick={()=> console.log('click')}
+      />
     </Section>
   )
 }
