@@ -1,13 +1,13 @@
 import React from 'react'
-import pdf from '../../src/assets/resume.pdf'
+// import pdf from '../../src/assets/resume.pdf'
 import { Section } from '../styles'
-import styled from 'styled-components'
+//import styled from 'styled-components'
 
 
-const PDF = styled.iframe`
-  width:800px
-  height:800px
-`
+// const PDF = styled.iframe`
+//   width:800px
+//   height:800px
+// `
 
 const Resume = () => {
 

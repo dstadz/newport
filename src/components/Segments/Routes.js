@@ -1,6 +1,5 @@
-import React , {useState} from "react";
-import ReactDOM from "react-dom";
-import { Link, Route, Switch } from "react-router-dom";
+import React  from "react";
+import { Route } from "react-router-dom";
 
 import About from '../About'
 import Contact from '../Contact'

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Section, SortContainer } from '../styles'
 import SortCard from './Sorts/SortCard'
 import bogo from './Sorts/algos/bogosort'

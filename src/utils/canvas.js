@@ -1,12 +1,14 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
+console.log('canvas')
+
 canvas.width = innerWidth
 canvas.height = innerHeight
 
 let mouse = {
   x: innerWidth / 2,
-  y = innerHeight / 2
+  y: innerHeight / 2
 }
 addEventListener('mousemove', function(e){
   mouse.x = e.clientX;
@@ -26,9 +28,7 @@ const Object = (x,y,r, color) => {
   this.r = r
   this.color = color
 
-  this.update = () => {
-    this.draw()
-  }
+  this.update = () => { this.draw() }
 
   this.draw = () => {
     c.beginPath()
@@ -47,6 +47,7 @@ function animate() {
   requestAnimationFrame(animate)
   c.clearRect(0,0,canvas.width, canvas.height)
   c.fillText("testing", mouse.x, mouse.y)
+  c1.update()
 }
 
 init()
