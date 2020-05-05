@@ -7,7 +7,22 @@ import utils from '../utils/CanvasUtils'
 
 
 
+// const Object = (x,y,r, c, color) => {
+//   this.x = x
+//   this.y = y
+//   this.r = r
+//   this.color = color
 
+//   this.update = () => { this.draw() }
+
+//   this.draw = () => {
+//     c.beginPath()
+//     c.arc(this.x, this.y, this.r,0, Math.PI*2)
+//     c.fillStyle = this.color
+//     c.fill()
+//     c.closePath()
+//   }
+// }
 
 
 const Menagerie = () => {
@@ -37,43 +52,25 @@ const Menagerie = () => {
       canvas.width = this.innerWidth;
       canvas.height = this.innerHeight;
     
-      init()
+      //init()
     })
-    
-    
-    return(canvas)
   }, [])
 
-  const Object = (x,y,r, c, color) => {
-    this.x = x
-    this.y = y
-    this.r = r
-    this.color = color
+ 
+  // let c1;
+  // function init() {
+  //   c1 = new Object(300,300,100,canvas, 'blue')
+  // }
   
-    this.update = () => { this.draw() }
+  // // function animate() {
+  //   requestAnimationFrame(animate)
+  //   c.clearRect(0,0,canvas.width, canvas.height)
+  //   c.fillText("testing", mouse.x, mouse.y)
+  //   c1.update()
+  // }
   
-    this.draw = () => {
-      c.beginPath()
-      c.arc(this.x, this.y, this.r,0, Math.PI*2)
-      c.fillStyle = this.color
-      c.fill()
-      c.closePath()
-    }
-  }
-  let c1;
-  function init() {
-    c1 = new Object(300,300,100,canvas, 'blue')
-  }
-  
-  function animate() {
-    requestAnimationFrame(animate)
-    c.clearRect(0,0,canvas.width, canvas.height)
-    c.fillText("testing", mouse.x, mouse.y)
-    c1.update()
-  }
-  
-  init()
-  animate()
+  // init()
+  // animate()
 
   return (
     <Section>
