@@ -22,7 +22,7 @@ class Animal  {
     this.c.closePath()
   }
   create = () => {
-    console.log(this.x)
+    console.log(this.x,this.y)
     this.c.fillText("Animal", this.x, this.y);  }
   log = () => { console.log(this.x, this.y)}
 }
@@ -31,7 +31,14 @@ class Animal  {
 const Menagerie = () => {
   // const [locations, setLocations] = useState([])
   // const canvasRef = useRef(null)
+  let ref = useRef();
 
+
+    return (
+      <Section>
+        <Canvas Animal={Animal}/>
+      </Section>
+    )
   // useEffect(() => {
   //   const canvas = document.querySelector('canvas')
   //   const c = canvas.getContext('2d')
@@ -71,11 +78,6 @@ const Menagerie = () => {
   //   //draw(ctx, { x: e.clientX, y: e.clientY })
 
   // }
-  return (
-    <Section>
-      <Canvas/>
-    </Section>
-  )
 }
 
 export  default Menagerie
