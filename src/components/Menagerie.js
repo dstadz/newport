@@ -1,90 +1,79 @@
 import React , { useState, useEffect, useRef } from 'react'
-import Sketch from "react-p5";
+//import Sketch from "react-p5";
 
-import {Canvas} from '../styles/canvasStyles'
 import { Section } from '../styles'
-import utils from '../utils/CanvasUtils'
+import Canvas from './Canvas'
+//import utils from '../utils/CanvasUtils'
 
 
 
-// const Object = (x,y,r, c, color) => {
-//   this.x = x
-//   this.y = y
-//   this.r = r
-//   this.color = color
-
-//   this.update = () => { this.draw() }
-
-//   this.draw = () => {
-//     c.beginPath()
-//     c.arc(this.x, this.y, this.r,0, Math.PI*2)
-//     c.fillStyle = this.color
-//     c.fill()
-//     c.closePath()
-//   }
-// }
+class Animal  {
+  constructor(x,y,c,emoji) {
+    this.x = x
+    this.y = y
+    this.c = c
+    this.animal = emoji
+  }
+  draw = () => {
+    this.c.beginPath()
+    this.c.arc(this.x, this.y, this.r,0, Math.PI*2)
+    this.c.fillStyle = this.color
+    this.c.fill()
+    this.c.closePath()
+  }
+  create = () => {
+    console.log(this.x)
+    this.c.fillText("Animal", this.x, this.y);  }
+  log = () => { console.log(this.x, this.y)}
+}
 
 
 const Menagerie = () => {
-  const [locations, setLocations] = useState([])
-  const canvasRef = useRef(null)
-  
-  useEffect(() => {
-    const canvas = document.querySelector('canvas')
-    const c = canvas.getContext('2d')
-    console.log('canvas')
-    let innerWidth = window.innerWidth
-    let innerHeight = window.innerHeight
-    
-    canvas.width = innerWidth
-    canvas.height = innerHeight
-    
-    let mouse = {
-      x: innerWidth / 2,
-      y: innerHeight / 2
-    }
-    window.addEventListener('mousemove', function(e){
-      mouse.x = e.clientX;
-      mouse.y = e.clientY
-    })
-    
-    window.addEventListener('resize', function(){
-      canvas.width = this.innerWidth;
-      canvas.height = this.innerHeight;
-    
-      //init()
-    })
-  }, [])
+  // const [locations, setLocations] = useState([])
+  // const canvasRef = useRef(null)
 
- 
-  // let c1;
-  // function init() {
-  //   c1 = new Object(300,300,100,canvas, 'blue')
-  // }
-  
-  // // function animate() {
-  //   requestAnimationFrame(animate)
-  //   c.clearRect(0,0,canvas.width, canvas.height)
-  //   c.fillText("testing", mouse.x, mouse.y)
-  //   c1.update()
-  // }
-  
-  // init()
-  // animate()
+  // useEffect(() => {
+  //   const canvas = document.querySelector('canvas')
+  //   const c = canvas.getContext('2d')
+  //   c.font = "50px Arial";
+  //   let innerWidth = window.innerWidth
+  //   let innerHeight = window.innerHeight
 
+
+  //   let middle = new Animal (innerWidth / 2, innerHeight / 2, c, "pig")
+  //   middle.create()
+  //   middle.log()
+  //   canvas.width = innerWidth
+  //   canvas.height = innerHeight
+  //   let mouse = {
+  //     x: innerWidth / 2,
+  //     y: innerHeight / 2
+  //   }
+  //   window.addEventListener('mousemove', function(e){
+  //     mouse.x = e.clientX;
+  //     mouse.y = e.clientY
+  //   })
+
+  //   window.addEventListener('resize', function(){
+  //     canvas.width = this.innerWidth;
+  //     canvas.height = this.innerHeight;
+
+  //     //init()
+
+  //     c.fillText("Hello World",500,500);
+
+  //   })
+  // }, [])
+
+
+  // const handleClick = e => {
+  //   console.log(e.clientX, e.clientY)
+  //   //draw(ctx, { x: e.clientX, y: e.clientY })
+
+  // }
   return (
     <Section>
-{/*
-      <div>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleClear}>Clear</button>
-      </div>
-*/}
-      <Canvas
-        onClick={()=> console.log('click')}
-      />
+      <Canvas/>
     </Section>
   )
 }
