@@ -1,95 +1,68 @@
 import React , { useState, useEffect, useRef } from 'react'
-import Sketch from "react-p5";
+//import Sketch from "react-p5";
 
-import {Canvas} from '../styles/canvasStyles'
 import { Section } from '../styles'
-import utils from '../utils/CanvasUtils'
+import Canvas from './Canvas'
+//import utils from '../utils/CanvasUtils'
 
 
 
-
+class Animal  {
+  constructor(x,y,c,emoji) {
+    this.x = x
+    this.y = y
+    this.c = c
+    this.animal = emoji
+  }
+  draw = () => {
+    this.c.beginPath()
+    this.c.arc(this.x, this.y, this.r,0, Math.PI*2)
+    this.c.fillStyle = this.color
+    this.c.fill()
+    this.c.closePath()
+  }
+  create = () => {
+    console.log("create",this.x,this.y)
+    this.c.fillText(this.animal, this.x, this.y);  }
+  log = () => { console.log(this.x, this.y)}
+}
 
 
 const Menagerie = () => {
-  const [locations, setLocations] = useState([])
-  const canvasRef = useRef(null)
-  
-  useEffect(() => {
-    const canvas = document.querySelector('canvas')
-    const c = canvas.getContext('2d')
-    console.log('canvas')
-    let innerWidth = window.innerWidth
-    let innerHeight = window.innerHeight
-    
-    canvas.width = innerWidth
-    canvas.height = innerHeight
-    
-    let mouse = {
-      x: innerWidth / 2,
-      y: innerHeight / 2
-    }
-    window.addEventListener('mousemove', function(e){
-      mouse.x = e.clientX;
-      mouse.y = e.clientY
-    })
-    
-    window.addEventListener('resize', function(){
-      canvas.width = this.innerWidth;
-      canvas.height = this.innerHeight;
-    
-      init()
-    })
-    
-    
-    return(canvas)
-  }, [])
+  const [animals, setAnimals] = useState([])
+  const[x,setX] = useState(200)
 
-  const Object = (x,y,r, c, color) => {
-    this.x = x
-    this.y = y
-    this.r = r
-    this.color = color
-  
-    this.update = () => { this.draw() }
-  
-    this.draw = () => {
-      c.beginPath()
-      c.arc(this.x, this.y, this.r,0, Math.PI*2)
-      c.fillStyle = this.color
-      c.fill()
-      c.closePath()
-    }
-  }
-  let c1;
-  function init() {
-    c1 = new Object(300,300,100,canvas, 'blue')
-  }
-  
-  function animate() {
-    requestAnimationFrame(animate)
-    c.clearRect(0,0,canvas.width, canvas.height)
-    c.fillText("testing", mouse.x, mouse.y)
-    c1.update()
-  }
-  
-  init()
-  animate()
+  // const canvasRef = useRef(null)
+  let ref = useRef();
 
-  return (
-    <Section>
-{/*
-      <div>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleClear}>Clear</button>
-      </div>
-*/}
-      <Canvas
-        onClick={()=> console.log('click')}
-      />
-    </Section>
-  )
+
+    return (
+      <Section>
+        <Canvas Animal={Animal} x={x} setX={setX}/>
+      </Section>
+    )
+  //   window.addEventListener('mousemove', function(e){
+  //     mouse.x = e.clientX;
+  //     mouse.y = e.clientY
+  //   })
+
+  //   window.addEventListener('resize', function(){
+  //     canvas.width = this.innerWidth;
+  //     canvas.height = this.innerHeight;
+
+  //     //init()
+
+  //     c.fillText("Hello World",500,500);
+
+  //   })
+  // }, [])
+
+
+  // const handleClick = e => {
+  //   console.log(e.clientX, e.clientY)
+  //   //draw(ctx, { x: e.clientX, y: e.clientY })
+
+  // }
 }
 
 export  default Menagerie
