@@ -22,40 +22,25 @@ class Animal  {
     this.c.closePath()
   }
   create = () => {
-    console.log(this.x,this.y)
-    this.c.fillText("Animal", this.x, this.y);  }
+    console.log("create",this.x,this.y)
+    this.c.fillText(this.animal, this.x, this.y);  }
   log = () => { console.log(this.x, this.y)}
 }
 
 
 const Menagerie = () => {
-  // const [locations, setLocations] = useState([])
+  const [animals, setAnimals] = useState([])
+  const[x,setX] = useState(200)
+
   // const canvasRef = useRef(null)
   let ref = useRef();
 
 
     return (
       <Section>
-        <Canvas Animal={Animal}/>
+        <Canvas Animal={Animal} x={x} setX={setX}/>
       </Section>
     )
-  // useEffect(() => {
-  //   const canvas = document.querySelector('canvas')
-  //   const c = canvas.getContext('2d')
-  //   c.font = "50px Arial";
-  //   let innerWidth = window.innerWidth
-  //   let innerHeight = window.innerHeight
-
-
-  //   let middle = new Animal (innerWidth / 2, innerHeight / 2, c, "pig")
-  //   middle.create()
-  //   middle.log()
-  //   canvas.width = innerWidth
-  //   canvas.height = innerHeight
-  //   let mouse = {
-  //     x: innerWidth / 2,
-  //     y: innerHeight / 2
-  //   }
   //   window.addEventListener('mousemove', function(e){
   //     mouse.x = e.clientX;
   //     mouse.y = e.clientY
