@@ -11,6 +11,10 @@ class Animal  {
   constructor(x,y,c,emoji) {
     this.x = x
     this.y = y
+
+    this.dx = Math.cos(Math.random() * 2 * Math.PI)
+    this.dy = Math.sqrt(1 - (this.dx * this.dx))
+
     this.c = c
     this.animal = emoji
   }
@@ -22,15 +26,18 @@ class Animal  {
     this.c.closePath()
   }
   create = () => {
-    console.log("create",this.x,this.y)
+    //console.log("create",this.x,this.y, this.dx, this.dy)
     this.c.fillText(this.animal, this.x, this.y);  }
   log = () => { console.log(this.x, this.y)}
 }
 
+const Buttonbar = () => {
+
+}
 
 const Menagerie = () => {
   const [animals, setAnimals] = useState([])
-  const[x,setX] = useState(200)
+  const[loc, setLoc] = useState({x:200, y:400})
 
   // const canvasRef = useRef(null)
   let ref = useRef();
@@ -38,7 +45,7 @@ const Menagerie = () => {
 
     return (
       <Section>
-        <Canvas Animal={Animal} x={x} setX={setX}/>
+        <Canvas Animal={Animal} loc={loc} setLoc={setLoc} animals={animals} setAnimals={setAnimals}/>
       </Section>
     )
   //   window.addEventListener('mousemove', function(e){

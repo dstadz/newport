@@ -1,5 +1,6 @@
-import React , {useState} from "react";
+import React , {useState, useContext} from "react";
 //import ReactDOM from "react-dom";
+import { HueContext } from '../utils/Context'
 import { Route } from "react-router-dom";
 import Nav from './Nav'
 import Home from './Home'
@@ -13,8 +14,7 @@ import { Body } from '../styles'
 
 
 const App = () => {
-  const [hue, setHue] = useState(Math.floor(Math.random() * 360))
-
+  const { hue, setHue } = useContext(HueContext)
   const handleButton = e => {
     console.log("This proves I'm a good developer ;)")
   }
@@ -22,16 +22,18 @@ const App = () => {
 
 
   return (
-    <Body hue={hue} onClick={() => colorShift()} >
-      <Nav hue={hue}/>
-      <Route exact path="/" render={props => {
-        return <Home {...props}
+    <HueContext.Provider>
+      <Body hue={hue} onClick={() => colorShift()} >
+        <Nav hue={hue}/>
+        <Route exact path="/" render={props => {
+          return <Home {...props}
           id='Home'
           handleButton={ handleButton }
-      /> }}/>
-      <Routes/>
-      <Footer />
-    </Body>
+          /> }}/>
+        <Routes/>
+        <Footer />
+      </Body>
+    </HueContext.Provider>
   );
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+
+import { HueContext } from './utils/Context'
 import App from './components/App';
 
 const AppWithRouter = withRouter(App);

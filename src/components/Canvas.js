@@ -1,12 +1,14 @@
 import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
-
+import utils from '../utils/CanvasUtils'
 const Canvas = (props = {}) => {
   const {
     width = 900,
     height = 600,
     pixelRatio = window.devicePixelRatio,
-    x,
-    setX
+    loc,
+    setLoc,
+    animals,
+    setAnimals
   } = props;
 
   // const {x, setX} = props
@@ -14,28 +16,26 @@ const Canvas = (props = {}) => {
 
 
   useEffect(() => {
-    
     let ref = canvas.current;
     let ctx = ref.getContext('2d');
     ctx.clearRect(0,0,width, height)
-    ctx.font = "15pt Roboto";
-    ctx.strokeStyle = "red";
-    console.log('useeffect x:',x,ctx)
-    
-    ctx.beginPath();
-    ctx.arc(250, 500, 50, 0, 2 * Math.PI);
-    ctx.stroke();
 
-    ctx.fill();
+    ctx.font = "32px Roboto";
+    ctx.textAlign = 'center';
 
 
-    
-    let pig = new props.Animal(350,x,ctx, '🐺')
-    pig.create()
-    //setX(x+1)
-  },[x]);
+    console.log('useeffect x:',loc.x,ctx)
+
+
+
+
+    let wolf = new props.Animal(loc.x,loc.y,ctx, '🐺')
+
+    wolf.create()
+    //setLoc({x:wolf.x+wolf.dx,y:wolf.y+wolf.dy})
+  },[loc]);
   
-  let ref = canvas.current;
+  //let ref = canvas.current;
 
   const dw = Math.floor(pixelRatio * width);
   const dh = Math.floor(pixelRatio * height);
