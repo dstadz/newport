@@ -1,6 +1,6 @@
 import React from 'react'
 // import pdf from '../../src/assets/resume.pdf'
-import { Section } from '../styles'
+import { Section, Skills, Projects, Education, Employment, Interests } from '../styles'
 //import styled from 'styled-components'
 
 
@@ -13,9 +13,11 @@ const Resume = () => {
 
   return (
     <Section>
-    SKILLS
+    <Skills>
     React || Hooks || Node || Javascript || HTML || CSS || Figma
     Python || GitHub || Agile || REST
+    </Skills>
+    SKILLS
     
     PROJECTS
     D8 Picker												            GitHub

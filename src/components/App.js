@@ -14,7 +14,8 @@ import { Body } from '../styles'
 
 
 const App = () => {
-  const { hue, setHue } = useContext(HueContext)
+  //const { hue, setHue } = useContext(HueContext)
+  const [hue, setHue] = useState(Math.floor(Math.random() * 360))
   const handleButton = e => {
     console.log("This proves I'm a good developer ;)")
   }

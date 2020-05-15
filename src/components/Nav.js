@@ -16,8 +16,8 @@ const Burger = ({ open, setOpen }) => { return (
   </x.StyledBurger>
 )}
 
-const Nav = () => {
-  const { hue } = useContext(HueContext)
+const Nav = ({hue}) => {
+  //const { hue } = useContext(HueContext)
   const [open, setOpen] = React.useState(false);
 
   return (
