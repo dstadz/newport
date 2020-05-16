@@ -110,7 +110,7 @@ export const SortBase = styled.div`
   margin: auto
 `
 
-export const Skills = styled.div`
+export const Skills = styled.ul`
 `
 export const Projects = styled.div`
 `
