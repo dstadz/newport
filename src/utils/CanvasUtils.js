@@ -7,12 +7,7 @@ const utils = {
   c.font = "30px Arial";
   c.fillText("🐷",x,y);
   },
-  distance: (x1, y1, x2, y2) => {
-    const xDist = x2 - x1;
-    const yDist = y2 - y1;
-
-    return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
-  },
+  distance: (x1, y1, x2, y2) => { Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow( y2 - y1, 2)) },
   rotateVelocities: (velocity, theta) => {
       const rotatedVelocity = {
         x: velocity.x * Math.cos(theta) - velocity.y * Math.sin(theta),
@@ -203,4 +198,4 @@ const utils = {
 
 // init();
 // animate();
-// export default utils
+export default utils

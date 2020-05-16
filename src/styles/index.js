@@ -109,3 +109,14 @@ export const SortBase = styled.div`
   border: 1px solid white
   margin: auto
 `
+
+export const Skills = styled.ul`
+`
+export const Projects = styled.div`
+`
+export const Education = styled.div`
+`
+export const Employment = styled.div`
+`
+export const Interests = styled.div`
+`
