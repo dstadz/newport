@@ -34,7 +34,7 @@ export const Nav = styled.nav`
     flex-grow: 1;
 
     justify-content: space-between;
-    list-style-type: none;
+    list-style: none;
     padding:0
     li {
       display: inline-block;

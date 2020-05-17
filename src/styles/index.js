@@ -111,6 +111,9 @@ export const SortBase = styled.div`
 `
 
 export const Skills = styled.ul`
+  columns: 100px 3;
+  padding: 0;
+  list-style:none;
 `
 export const Projects = styled.div`
 `
