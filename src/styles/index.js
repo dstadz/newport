@@ -122,26 +122,31 @@ export const Projects = styled.div`
   justify-content: center
 
   div {
-    margin:auto
+    position: relative;
+
+    width: 30%
+    @media(max-width:768px){ width: 90vw; }
+
+    margin:.5em auto
     background: red;
-    h3 {
-      display: inline
-    }
-    a {
-      display: inline
-      float: right
-    }
+    padding:.5em
+
     ol{
       list-style:none;
       padding: 0;
+      display: inline
+
       li{
         display: inline
       }
     }
 
     ul{
-      list-style:none;
-      padding: 0;
+
+      li{
+        text-align: left
+      }
+      
     }
   }
 `

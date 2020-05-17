@@ -8,26 +8,40 @@ import { Section, Skills, Projects, Education, Employment, Interests } from '../
 //   width:800px
 //   height:800px
 // `
-const skills = ['React','Hooks','Node','Javascript','HTML','CSS','Figma','Python','GitHub','Agile','REST']
+const skills = [
+  'React','Hooks','Node','Javascript','HTML','CSS','Figma','Python','GitHub','Agile','REST'
+]
 const projects = [
   {
     title:'D8 Picker',
     github:'https://github.com/Lambda-School-Labs/school-calendar-fe',
     desc:'Progressive Web App that creates and stores event templates to apply to your calendar for irregularly repeating events.',
     stack:['React','Node','MongoDB'],
-    duties:['Used OAuth to connect to Google Cal API','Developed Front End Components, testing for Front and Back End','Crafted interface for users to interact with the calendar','Organized PVD through AGILE workflow']
+    duties:[
+      'Used OAuth to connect to Google Cal API',
+      'Developed Front End Components, testing for Front and Back End',
+      'Crafted interface for users to interact with the calendar',
+      'Organized PVD through AGILE workflow']
   }, {
     title:'Foodie Fun Six',
     github:'',
     desc:'Yelp clone to store and review visited restaurants and meals',
     stack:['Node','Knex'],
-    duties:['Handled server-side routing by using Knex, which led to data transfer across Front & Back end','Managed data persistence across the app','Used HTTP Protocol methods to access user data']
+    duties:[
+      'Handled server-side routing with Knex',
+      'Managed data persistence across the app',
+      'Used HTTP Protocol methods to access user data'
+    ]
   }, {
     title:'Key Conservation',
     github:'',
     desc:'Mobile app designed to allow conservation efforts to communicate directly to followers',
     stack:['Figma'],
-    duties:['Designed & Integrated comment section to text and video posts','Graphical overhaul & UI redesign','Worked with a group of 5 developers']
+    duties:[
+      'Designed & Integrated comment section to text and video posts',
+      'Graphical overhaul & UI redesign',
+      'Worked with a group of 5 developers'
+    ]
   }
 ]
 const education = [
@@ -70,8 +84,7 @@ const Project = ({props}) => {
 
   return (
   <div>
-    <h3>{title}</h3>
-    <a href={github} target='_blank'>GitHub</a>
+    <h3> <a href={github} target='_blank'>{title}</a> </h3>
     <p>{desc}</p>
     <ol>
       {stack.map( s => ( <li> { s } </li> ) )}
@@ -104,8 +117,8 @@ const Job = ({props}) => {
 const Resume = () => { return (
   <Section>
 
+    SKILLS
     <Skills>
-      SKILLS
       { skills.map( s => ( <li> { s } </li> ) ) }
     </Skills>
 
@@ -114,19 +127,19 @@ const Resume = () => { return (
       { projects.map( s => ( <Project props={s} /> ) ) }
     </Projects>
 
+    EDUCATION
     <Education>
-      EDUCATION
       { education.map( e => ( <School props={e} /> ) ) }
     </Education>
 
+    EMPLOYMENT
     <Employment>
-      EMPLOYMENT
       { employment.map( e => ( <Job props={e} /> ) ) }
     </Employment>
 
+    INTERESTS
     <Interests>
-      INTERESTS
-      { interests.map( i => ( <li> { i } </li> ) ) }
+    { interests.map( i => ( <li> { i } </li> ) ) }
     </Interests>
 
   </Section>
