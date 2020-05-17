@@ -12,7 +12,7 @@ const skills = ['React','Hooks','Node','Javascript','HTML','CSS','Figma','Python
 const projects = [
   {
     title:'D8 Picker',
-    github:'',
+    github:'https://github.com/Lambda-School-Labs/school-calendar-fe',
     desc:'Progressive Web App that creates and stores event templates to apply to your calendar for irregularly repeating events.',
     stack:['React','Node','MongoDB'],
     duties:['Used OAuth to connect to Google Cal API','Developed Front End Components, testing for Front and Back End','Crafted interface for users to interact with the calendar','Organized PVD through AGILE workflow']
@@ -26,7 +26,7 @@ const projects = [
     title:'Key Conservation',
     github:'',
     desc:'Mobile app designed to allow conservation efforts to communicate directly to followers',
-    stack:['figma'],
+    stack:['Figma'],
     duties:['Designed & Integrated comment section to text and video posts','Graphical overhaul & UI redesign','Worked with a group of 5 developers']
   }
 ]
@@ -70,7 +70,15 @@ const Project = ({props}) => {
 
   return (
   <div>
-  {title}, {github},{desc}, {stack}, {duties}
+    <h3>{title}</h3>
+    <a href={github} target='_blank'>GitHub</a>
+    <p>{desc}</p>
+    <ol>
+      {stack.map( s => ( <li> { s } </li> ) )}
+    </ol>
+    <ul>
+      {duties.map( d => ( <li> { d } </li> ) )}
+    </ul>
   </div>
 )}
 const School = ({props}) => {
@@ -101,8 +109,8 @@ const Resume = () => { return (
       { skills.map( s => ( <li> { s } </li> ) ) }
     </Skills>
 
+    PROJECTS
     <Projects>
-      PROJECTS
       { projects.map( s => ( <Project props={s} /> ) ) }
     </Projects>
 
@@ -111,17 +119,16 @@ const Resume = () => { return (
       { education.map( e => ( <School props={e} /> ) ) }
     </Education>
 
-
     <Employment>
       EMPLOYMENT
       { employment.map( e => ( <Job props={e} /> ) ) }
     </Employment>
 
-
     <Interests>
       INTERESTS
       { interests.map( i => ( <li> { i } </li> ) ) }
     </Interests>
+
   </Section>
 )}
 
