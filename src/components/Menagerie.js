@@ -1,4 +1,4 @@
-import React , { useState, useEffect, useRef } from 'react'
+import React , { useState, useRef } from 'react'
 //import Sketch from "react-p5";
 
 import { Section } from '../styles'
@@ -32,7 +32,11 @@ class Animal  {
 }
 
 const Buttonbar = () => {
-
+  return (
+    <div>
+      <button>click me</button>
+    </div>
+  )
 }
 
 const Menagerie = () => {
@@ -45,6 +49,7 @@ const Menagerie = () => {
 
     return (
       <Section>
+        <Buttonbar/>
         <Canvas Animal={Animal} loc={loc} setLoc={setLoc} animals={animals} setAnimals={setAnimals}/>
       </Section>
     )

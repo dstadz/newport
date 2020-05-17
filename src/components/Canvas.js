@@ -1,14 +1,14 @@
-import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
-import utils from '../utils/CanvasUtils'
+import React, { useRef, useEffect } from "react";
+//import utils from '../utils/CanvasUtils'
 const Canvas = (props = {}) => {
   const {
     width = 900,
     height = 600,
     pixelRatio = window.devicePixelRatio,
     loc,
-    setLoc,
+    /*setLoc,
     animals,
-    setAnimals
+    setAnimals*/
   } = props;
 
   // const {x, setX} = props
@@ -33,7 +33,7 @@ const Canvas = (props = {}) => {
 
     wolf.create()
     //setLoc({x:wolf.x+wolf.dx,y:wolf.y+wolf.dy})
-  },[loc]);
+  },[]);
   
   //let ref = canvas.current;
 

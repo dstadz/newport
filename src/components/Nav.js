@@ -1,8 +1,7 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import * as x from '../styles/navStyles.js'
 import logo from '../assets/coin.png'
-import { HueContext } from '../utils/Context.js'
 
 
 

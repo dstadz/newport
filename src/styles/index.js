@@ -77,11 +77,11 @@ export const Slot = styled.div`
 `
 export const Div = styled.div`
   display: inline-flex column;
-  align-items:center;
   justify-content: center;
+  align-items:center;
+  background: black;
   height: 10vh;
   width: 100%
-  background: black;
   color: white
   `
 const Link = styled.a``
@@ -115,7 +115,35 @@ export const Skills = styled.ul`
   padding: 0;
   list-style:none;
 `
+
 export const Projects = styled.div`
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  div {
+    margin:auto
+    background: red;
+    h3 {
+      display: inline
+    }
+    a {
+      display: inline
+      float: right
+    }
+    ol{
+      list-style:none;
+      padding: 0;
+      li{
+        display: inline
+      }
+    }
+
+    ul{
+      list-style:none;
+      padding: 0;
+    }
+  }
 `
 export const Education = styled.div`
 `

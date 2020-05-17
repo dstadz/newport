@@ -1,6 +1,5 @@
-import React , {useState, useContext} from "react";
+import React , {useState} from "react";
 //import ReactDOM from "react-dom";
-import { HueContext } from '../utils/Context'
 import { Route } from "react-router-dom";
 import Nav from './Nav'
 import Home from './Home'
@@ -23,18 +22,16 @@ const App = () => {
 
 
   return (
-    <HueContext.Provider>
-      <Body hue={hue} onClick={() => colorShift()} >
-        <Nav hue={hue}/>
-        <Route exact path="/" render={props => {
-          return <Home {...props}
-          id='Home'
-          handleButton={ handleButton }
-          /> }}/>
-        <Routes/>
-        <Footer />
-      </Body>
-    </HueContext.Provider>
+    <Body hue={hue} onClick={() => colorShift()} >
+      <Nav hue={hue}/>
+      <Route exact path="/" render={props => {
+        return <Home {...props}
+        id='Home'
+        handleButton={ handleButton }
+        /> }}/>
+      <Routes/>
+      <Footer />
+    </Body>
   );
 }
 
