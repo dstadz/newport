@@ -77,11 +77,11 @@ export const Slot = styled.div`
 `
 export const Div = styled.div`
   display: inline-flex column;
-  align-items:center;
   justify-content: center;
+  align-items:center;
+  background: black;
   height: 10vh;
   width: 100%
-  background: black;
   color: white
   `
 const Link = styled.a``
