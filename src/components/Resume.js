@@ -30,17 +30,27 @@ const projects = [
     duties:['Designed & Integrated comment section to text and video posts','Graphical overhaul & UI redesign','Worked with a group of 5 developers']
   }
 ]
+
+const Project = ({props}) => {
+  const {title, github, desc, stack, duties} = props
+  
+  return (
+  <div>
+  {title}, {github},{desc}, {stack}, {duties}
+  </div>
+)}
+
+
+
 const Resume = () => { return (
   <Section>
     SKILLS
     <Skills>
       {skills.map(s => ( <li> {s} </li> ))}
     </Skills>
-    {/*
       <Projects>
-    {projects.map(s => ( <li> {s} </li> ))}
+    { projects.map( s => (<Project props={s} />) ) }
     </Projects>
-    */}
     <Education>
     EDUCATION
     Lambda School										    April 2019 - Present
