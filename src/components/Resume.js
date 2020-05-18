@@ -1,6 +1,6 @@
 import React from 'react'
 // import pdf from '../../src/assets/resume.pdf'
-import { Section, Skills, Projects, Education, Employment, Interests } from '../styles'
+import { Section, Skills, ResSec } from '../styles'
 //import styled from 'styled-components'
 
 
@@ -9,7 +9,7 @@ import { Section, Skills, Projects, Education, Employment, Interests } from '../
 //   height:800px
 // `
 const skills = [
-  'React','Hooks','Node','Javascript','HTML','CSS','Figma','Python','GitHub','Agile','REST'
+  'React (+Hooks)','Node','Javascript','HTML','CSS','Figma','Python','GitHub','Agile','REST'
 ]
 const projects = [
   {
@@ -49,12 +49,17 @@ const education = [
     school:'Lambda School',
     dates:'April 2019 - Present',
     title:'Full Stack Web Development & Computer Science',
-    desc:'9+ month accelerated program with an immersive (full-time, 40+ hours/week) hands-on curriculum with a focus on computer science, software engineering, and web development. Additional UX Design program focused on Principles of design and aesthetics'
+    duties:[
+      '9+ month accelerated program with an immersive (full-time, 40+ hours/week) hands-on curriculum with a focus on computer science, software engineering, and web development.',
+      'Additional UX Design program focused on Principles of design and aesthetics'
+    ]
   },{
     school:'Case Western Reserve University',
     dates:'August 2012 - May 2014',
     title:'Mechanical Engineering',
-    desc:' Completed 64 credits including: Multivariable Calculus, Newtonian Classical Mechanics Thermodynamics'
+    duties:[
+      'Completed 64 credits including: Multivariable Calculus, Newtonian Classical Mechanics Thermodynamics'
+    ]
   }
 ]
 const employment = [
@@ -78,7 +83,6 @@ const interests = [
 ]
 
 
-
 const Project = ({props}) => {
   const {title, github, desc, stack, duties} = props
 
@@ -94,24 +98,19 @@ const Project = ({props}) => {
     </ul>
   </div>
 )}
-const School = ({props}) => {
-  const {school, dates, desc} = props
-
-  return(
-    <div>
-    {school} {dates} {desc}
-    </div>
-  )
-}
-const Job = ({props}) => {
+const History = ({props}) => {
   const {location, dates, title, duties} = props
-
+  
   return(
     <div>
-    {location} {dates} {title} {duties}
+      <div>{location} {dates}</div>
+        {title}
+      <ul>
+        {duties.map( d => ( <li> { d } </li> ) )}
+      </ul>
     </div>
-  )
-}
+    )
+  }
 
 
 const Resume = () => { return (
@@ -123,24 +122,24 @@ const Resume = () => { return (
     </Skills>
 
     PROJECTS
-    <Projects>
+    <ResSec>
       { projects.map( s => ( <Project props={s} /> ) ) }
-    </Projects>
-
-    EDUCATION
-    <Education>
-      { education.map( e => ( <School props={e} /> ) ) }
-    </Education>
+    </ResSec>
 
     EMPLOYMENT
-    <Employment>
-      { employment.map( e => ( <Job props={e} /> ) ) }
-    </Employment>
+    <ResSec>
+    { employment.map( e => ( <History props={e} /> ) ) }
+    </ResSec>
+
+    EDUCATION
+    <ResSec>
+      { education.map( e => ( <History props={e} /> ) ) }
+    </ResSec>
 
     INTERESTS
-    <Interests>
+    <Skills>
     { interests.map( i => ( <li> { i } </li> ) ) }
-    </Interests>
+    </Skills>
 
   </Section>
 )}

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState} from 'react'
 import { NavLink } from 'react-router-dom'
+import { useRecoilState } from 'recoil'
+
 import * as x from '../styles/navStyles.js'
 import logo from '../assets/coin.png'
-
+import { hueState } from './App'
 
 
 
@@ -15,9 +17,10 @@ const Burger = ({ open, setOpen }) => { return (
   </x.StyledBurger>
 )}
 
-const Nav = ({hue}) => {
-  //const { hue } = useContext(HueContext)
-  const [open, setOpen] = React.useState(false);
+const Nav = () => {
+  const [hue, setHue] = useRecoilState(hueState)
+
+  const [open, setOpen] = useState(false);
 
   return (
     <x.Nav hue={hue} open={open} setOpen={setOpen}>
@@ -26,7 +29,6 @@ const Nav = ({hue}) => {
       <Burger className='Navbar-Toggle'open={open} setOpen={setOpen} />
       <ul open={open}>
       <li><NavLink to='/about'>About</NavLink></li>
-      <li><NavLink to='/resume'>Resume</NavLink></li>
       <li><NavLink to='/projects'>Projects</NavLink></li>
       <li><NavLink to='/contact'>Contact</NavLink></li>
       </ul>

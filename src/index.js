@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, withRouter } from 'react-router-dom';
-
+import { RecoilRoot } from 'recoil'
 import App from './components/App';
 
 const AppWithRouter = withRouter(App);
 
 ReactDOM.render(
-	<Router>
-		<AppWithRouter />
-	</Router>,
-	document.getElementById('root')
+	<RecoilRoot>
+		<Router>
+			<AppWithRouter />
+		</Router>
+	</RecoilRoot>
+	,document.getElementById('root')
 );

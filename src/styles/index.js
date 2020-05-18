@@ -5,7 +5,6 @@ export const Section = styled.section`
   flex-direction: column;
   margin: auto;
   justify-content: space-between;
-
 `
 export const Body = styled.div`
   display: flex;
@@ -116,15 +115,13 @@ export const Skills = styled.ul`
   list-style:none;
 `
 
-export const Projects = styled.div`
+export const ResSec = styled.div`
   display: flex
   flex-wrap: wrap
   justify-content: center
 
   div {
-    position: relative;
-
-    width: 30%
+    width: 25%
     @media(max-width:768px){ width: 90vw; }
 
     margin:.5em auto
@@ -142,17 +139,10 @@ export const Projects = styled.div`
     }
 
     ul{
-
+      padding-left: 20px
       li{
         text-align: left
       }
-      
     }
   }
-`
-export const Education = styled.div`
-`
-export const Employment = styled.div`
-`
-export const Interests = styled.div`
 `
