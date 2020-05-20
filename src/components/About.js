@@ -43,13 +43,17 @@ const About = () => {
 
   return (
     <Section>
-    <img src={face} />
-
+    <x.AboutTop>
+      <img src={face} />
+      <div>
       <h2>Wanna to know more about me? </h2>
       <h3> All you have to do is ask! </h3>
       Here is a list of my skills:
+      <x.Skills>
       { skills.map( s => ( <li> { s } </li> ) ) }
-
+      </x.Skills>
+      </div>
+    </x.AboutTop>
       <x.CardDeck>
       {questions.map(q => (
         <Card question={q.question} answer={q.answer} />

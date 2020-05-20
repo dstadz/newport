@@ -19,7 +19,7 @@ export const Body = styled.div`
   height: 100vh;
   margin:0
   padding:0
-  background: ${props => ` linear-gradient(${props.hue/8}deg, hsl(${props.hue+60}, 75%, 40%), hsl(${props.hue}, 75%, 40%)`});
+  background: ${props => ` linear-gradient(${props.hue/8}deg, hsl(${props.hue+60}, 75%, 60%), hsl(${props.hue}, 75%, 60%)`});
 `
 
 
@@ -116,7 +116,7 @@ export const SortBase = styled.div`
 `
 
 export const Skills = styled.ul`
-  columns: 100px 3;
+  columns: 100px 2;
   padding: 0;
   list-style:none;
 `
@@ -150,5 +150,14 @@ export const ResSec = styled.div`
         text-align: left
       }
     }
+  }
+`
+
+export const AboutTop = styled.div`
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-around
+  div{
+    margin: auto
   }
 `
