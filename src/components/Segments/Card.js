@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Question = styled.div`
   border: red 1px solid;
-  width:300px;
+  width:350px;
   justify-content:space-between;
   margin: 15px;
 `
@@ -18,13 +18,9 @@ const Card = props => {
 
   return (
     <div>
-      <Question>
+      <Question onClick={toggleOpen} >
         {props.question}
-        <button
-          style={{background:"none", border:'none'}}
-          onClick={toggleOpen}>
-          { open ? '🔺' : '🔻' }
-        </button>
+        <button style={{background:"none", border:'none'}} > { open ? '🔺' : '🔻' } </button>
         {open && <Answer> {props.answer} </Answer>}
       </Question>
     </div>

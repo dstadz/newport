@@ -45,6 +45,12 @@ const Contact = () => {
         {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
+      <div>
+      also catch me on these cool sites:
+      {/* <Linkedin /> */}
+      <a href="https://www.linkedin.com/in/danstad/" target="_blank"><button>Linkedin</button></a>
+      <a href="https://github.com/dstadz/" target="_blank"><button>Github</button></a>
+      </div>
     </Section>
     );
   }

@@ -6,6 +6,11 @@ export const Section = styled.section`
   margin: auto;
   justify-content: space-between;
 
+  img{
+    height:300px
+    width:300px
+    margin:auto;
+  }
 `
 export const Body = styled.div`
   display: flex;
@@ -18,8 +23,9 @@ export const Body = styled.div`
 `
 
 
-export const cardDeck = styled.div`
+export const CardDeck = styled.div`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 `
@@ -33,12 +39,11 @@ export const H1 = styled.h1`
 `
 export const H2 = styled.h2`
   font-size: 4vh;
+  margin:0
 `
 export const H3 = styled.h3`
 font-size: 3vh;
-`
-export const H4 = styled.h4`
-font-size: 2vh;
+margin:0
 `
 export const Button2 = styled.button`
   border: 1px red solid
@@ -116,38 +121,34 @@ export const Skills = styled.ul`
   list-style:none;
 `
 
-export const Projects = styled.div`
+export const ResSec = styled.div`
   display: flex
   flex-wrap: wrap
   justify-content: center
 
   div {
-    margin:auto
+    width: 25%
+    @media(max-width:768px){ width: 90vw; }
+
+    margin:.5em auto
     background: red;
-    h3 {
-      display: inline
-    }
-    a {
-      display: inline
-      float: right
-    }
+    padding:.5em
+
     ol{
       list-style:none;
       padding: 0;
+      display: inline
+
       li{
         display: inline
       }
     }
 
     ul{
-      list-style:none;
-      padding: 0;
+      padding-left: 20px
+      li{
+        text-align: left
+      }
     }
   }
-`
-export const Education = styled.div`
-`
-export const Employment = styled.div`
-`
-export const Interests = styled.div`
 `
