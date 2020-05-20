@@ -1,7 +1,6 @@
 import React from 'react'
 import {
-  atom,
-  useRecoilState
+  atom
 } from 'recoil'
 
 

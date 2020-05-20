@@ -5,6 +5,12 @@ export const Section = styled.section`
   flex-direction: column;
   margin: auto;
   justify-content: space-between;
+
+  img{
+    height:300px
+    width:300px
+    margin:auto;
+  }
 `
 export const Body = styled.div`
   display: flex;
@@ -17,8 +23,9 @@ export const Body = styled.div`
 `
 
 
-export const cardDeck = styled.div`
+export const CardDeck = styled.div`
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 `
@@ -32,12 +39,11 @@ export const H1 = styled.h1`
 `
 export const H2 = styled.h2`
   font-size: 4vh;
+  margin:0
 `
 export const H3 = styled.h3`
 font-size: 3vh;
-`
-export const H4 = styled.h4`
-font-size: 2vh;
+margin:0
 `
 export const Button2 = styled.button`
   border: 1px red solid
