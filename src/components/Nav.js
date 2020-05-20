@@ -1,15 +1,10 @@
 import React, { useState} from 'react'
 import { NavLink } from 'react-router-dom'
-import { useRecoilState } from 'recoil'
+import { useRecoilValue } from 'recoil'
 
 import * as x from '../styles/navStyles.js'
 import logo from '../assets/coin.png'
-import { hueState } from './App'
-
-
-
-
-
+import { hueState } from '../utils/store'
 
 const Burger = ({ open, setOpen }) => { return (
   <x.StyledBurger open={open} onClick={() => setOpen(!open)}>
@@ -18,8 +13,7 @@ const Burger = ({ open, setOpen }) => { return (
 )}
 
 const Nav = () => {
-  const [hue, setHue] = useRecoilState(hueState)
-
+  const hue = useRecoilValue(hueState)
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,9 +22,9 @@ const Nav = () => {
       <x.Spacer/>
       <Burger className='Navbar-Toggle'open={open} setOpen={setOpen} />
       <ul open={open}>
-      <li><NavLink to='/about'>About</NavLink></li>
-      <li><NavLink to='/projects'>Projects</NavLink></li>
-      <li><NavLink to='/contact'>Contact</NavLink></li>
+        <li><NavLink to='/about'>About</NavLink></li>
+        <li><NavLink to='/projects'>Projects</NavLink></li>
+        <li><NavLink to='/contact'>Contact</NavLink></li>
       </ul>
     </x.Nav>
   )

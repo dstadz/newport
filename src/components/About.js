@@ -12,8 +12,8 @@ const questions = [
     question:'Why did I get into Software Development?',
     answer:'Shortly after I started learning UXD, I grew an interest in code, which quickly took over my studies and has had me captivated ever since. '
   },{
-    question:'',
-    answer:''
+    question:'What did I do before I got into tech?',
+    answer:'I worked as a Safeway Night Operations Manager for over 4 years '
   },{
     question:'',
     answer:''
@@ -33,7 +33,7 @@ const About = () => {
         <Card question={q.question} answer={q.answer} />
         ))}
       </cardDeck>
-      <div className='cards'>
+      <div>
         <p> I am new in the industry, but am eagar to learn more to build new applications and contribute to the ever evoling tech world. </p>
         <p> My name is Daniel.
         I am currently enrolled in Lambda School, studying Full Stack Wed Development, after previously studying UX Design.

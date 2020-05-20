@@ -14,19 +14,16 @@ import Footer from './Footer'
 
 import Routes from './Segments/Routes'
 import { Body } from '../styles'
+import { hueState } from '../utils/store'
 
 
-export const hueState = atom({
-  key: 'hueState',
-  default: Math.floor(Math.random() * 360)
-});
 
 const App = () => {
   const [hue, setHue] = useRecoilState(hueState)
   const handleButton = e => {
     console.log("This proves I'm a good developer ;)")
   }
-  const colorShift = () => { hue <= 359 ? setHue(hue+2) : setHue(0)}
+  const colorShift = () => { hue <= 359 ? setHue(hue+20) : setHue(0)}
 
 
   return (
