@@ -23,8 +23,8 @@ const questions = [
     question:'Where do I see myself in 5 years?',
     answer:'A senior level engineer at your company, working on a project that will improve upon the lives of our customers'
   },{
-    question:'',
-    answer:''
+    question:'Why is web developement is important to me?',
+    answer:'The internet is where everyone has a voice. It is the great equalizer in this era,  and I want to help spread meassages that are worthy of being heard.'
   },{
     question:'',
     answer:''
@@ -43,22 +43,29 @@ const About = () => {
 
   return (
     <Section>
-    <img src={face} />
+      <x.AboutTop>
+        <img src={face} alt='my beautiful face'/>
+        <div>
+        <h2>Wanna to know more about me? </h2>
+        <h3> All you have to do is ask! </h3>
+        Here is a list of my skills:
+        <x.Skills>
+        { skills.map( s => ( <li> { s } </li> ) ) }
+        </x.Skills>
+        </div>
+      </x.AboutTop>
 
-      <h2>Wanna to know more about me? </h2>
-      <h3> All you have to do is ask! </h3>
-      Here is a list of my skills:
-      { skills.map( s => ( <li> { s } </li> ) ) }
-
+      <p> I am new in the industry, but eagar to learn more to build new applications and contribute to the ever evoling tech world. </p>
       <x.CardDeck>
       {questions.map(q => (
         <Card question={q.question} answer={q.answer} />
         ))}
       </x.CardDeck>
       <div>
-        <p> I am new in the industry, but eagar to learn more to build new applications and contribute to the ever evoling tech world. </p>
         <p>
-        My name is Daniel. I am currently enrolled in Lambda School, studying Full Stack Wed Development, after previously studying UX Design. Web developement is important to me becuase the internet is where everyone has a voice, and I want to help spread meassages that are worthy of being heard. The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>
+        My name is Daniel. I am a recent graduate from Lambda School, studying Full Stack Wed Development, after previously studying UX Design.
+
+          The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>
         </p>
       </div>
     </Section>
