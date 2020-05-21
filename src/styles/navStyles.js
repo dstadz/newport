@@ -42,7 +42,7 @@ export const Nav = styled.nav`
       margin: .5em 1em;
       padding: 0;
       a{
-        color: ${props => `hsl(${props.hue-180},100%,50%)`};
+        color: white;
         text-decoration: none;
         font-size: 2rem;
         font-family: 'Roboto', sans-serif;
@@ -73,7 +73,6 @@ export const Nav = styled.nav`
           transform: translate(100%, -50%)
         }
         :hover {
-          color: ${props => `hsla(${props.hue},100%,50%,1)`};
           ::before, ::after{
             transform: translate(0,0);
             opacity: 1;

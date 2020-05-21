@@ -9,9 +9,11 @@ const Contact = () => {
 
   const submitForm = (ev) => {
     ev.preventDefault();
+
     const form = ev.target;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
+
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
     xhr.onreadystatechange = () => {
@@ -26,31 +28,36 @@ const Contact = () => {
 
   return (
     <Section>
-      <form
+      <x.Form
       onSubmit={submitForm}
       action="https://formspree.io/xknjlwwa"
       method="POST"
       >
-      <x.Slot>
-          <x.Label>Name:</x.Label>
-          <x.Input type="name" name="name" placeholder="Who are you?"/>
+        <x.Label>Name:</x.Label>
+        <x.Input type="name" name="name" placeholder="Who are you?"/>
 
-          <x.Label>Email:</x.Label>
-          <x.Input type="email" name="email" placeholder="How can I reach you? (email prefered)" />
+        <x.Label>Email:</x.Label>
+        <x.Input type="email" name="email" placeholder="How can I reply to you?" />
 
-          <x.Label>Message:</x.Label>
-          <x.MSGBox type="textarea" name="message" placeholder="What do you want to tell me?"/>
-        </x.Slot>
+        <x.Label>Message:</x.Label>
+        <x.MSGBox type="textarea" name="message" placeholder="What do you want to tell me?"/>
 
         {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
-      </form>
-      <div>
-      also catch me on these cool sites:
+      </x.Form>
+
+      <br/>
+
+      <p>Check me out on these cool sites:</p>
       {/* <Linkedin /> */}
-      <a href="https://www.linkedin.com/in/danstad/" target="_blank"><button>Linkedin</button></a>
-      <a href="https://github.com/dstadz/" target="_blank"><button>Github</button></a>
+      <div>
+        <a href="https://www.linkedin.com/in/danstad/" target="_blank"><img src="https://img.icons8.com/nolan/64/linkedin.png"/></a>
+
+        <a href="https://github.com/dstadz/" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/></a>
+
+        <a href='https://docs.google.com/document/d/1jUh-UOutPwEgQLuAgDGplY_aNtly6W5RUd2zIlLJI4E/edit?usp=sharing' target="_blank"><img src="https://img.icons8.com/nolan/64/google-docs.png"/></a>
       </div>
+      <a href="https://icons8.com/icon/44019/linkedin">Icons by Icons8</a>
     </Section>
     );
   }

@@ -1,41 +1,60 @@
 import React from 'react'
 //import { Link, Route, Switch } from "react-router-dom";
 
-import { Section, Card } from '../styles'
+import { Section, ResSec } from '../styles'
 
 
 
-const ListOfProjects = [
+const projectList = [
   {
-    title:"D8 Picker",
-    github:"",
-    url:"https://www.d8picker.com/",
-    description:"PWA that creates and applies event templates to user calendars, focusing on irregularly reoccurring events"
-  },{
-    title:"Soring algorithms",
-    github:"",
-    url:'/sortingAlgorithms',
-    description:"A couple doodles to display some SA."
-  },/*{
-    title:"",
-    github:"",
-    url:"",
-    description:""
-  },*/
+    title:'D8 Picker',
+    github:'https://github.com/Lambda-School-Labs/school-calendar-fe',
+    desc:'PWA calendar extension to handle irregularly repeating events.',
+    stack:['React','Node','MongoDB'],
+    duties:[
+      'Used OAuth to connect to Google Cal API',
+      'Developed Front End Components',
+      'Crafted user interface for interaction with calendar',
+    ]
+  }, {
+    title:'Foodie Fun Six',
+    github:'',
+    desc:'Yelp clone made to store and review visited restaurants and meals',
+    stack:['Node','Knex'],
+    duties:[
+      'Handled server-side routing with Knex',
+      'Managed data persistence across the app',
+      'Used HTTP Protocol methods to access user data'
+    ]
+  }, {
+    title:'Key Conservation',
+    github:'',
+    desc:'Mobile app designed to allow conservation efforts to communicate directly to followers',
+    stack:['Figma'],
+    duties:[
+      'Designed & Integrated comment section to text and video posts',
+      'Graphical overhaul & UI redesign',
+      'Worked with a group of 5 developers'
+    ]
+  }
 ]
 
-const Project = props => {
-  const local = props.url[0] === '/'
-  console.log(local)
+
+const Project = ({props}) => {
+  const {title, github, desc, stack, duties} = props
+
   return (
-    <Card target={local ? false :'_blank'} href={props.url}>
-      <h1> {props.title} </h1>
-      <div></div>
-      {props.github}
-      {props.description}
-    </Card>
-  )
-}
+  <div>
+    <h3> <a href={github} target='_blank'>{title}</a> </h3>
+    <p>{desc}</p>
+    <ol>
+      {stack.map( s => ( <li> { s } </li> ) ) }
+    </ol>
+    <ul>
+      {duties.map( d => ( <li> { d } </li> ) ) }
+    </ul>
+  </div>
+)}
 
 
 
@@ -43,16 +62,9 @@ const Projects = () => {
 
   return (
     <Section>
-      <div>
-      {ListOfProjects.map(p => (
-        <Project
-        title={p.title}
-        github={p.github}
-        url={p.url}
-        description={p.description}
-        />
-        ))}
-      </div>
+      <ResSec>
+        { projectList.map( s => ( <Project props={s} /> ) ) }
+      </ResSec>
     </Section>
   )
 }
