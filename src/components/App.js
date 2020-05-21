@@ -20,10 +20,9 @@ import { hueState } from '../utils/store'
 
 const App = () => {
   const [hue, setHue] = useRecoilState(hueState)
-  const handleButton = e => {
-    console.log("This proves I'm a good developer ;)")
-  }
-  const colorShift = () => { hue <= 359 ? setHue(hue + 5) : setHue(0)}
+
+  const handleButton = e => { console.log("This proves I'm a good developer ;)") }
+  const colorShift = () => { hue <= 359 ? setHue(hue + 5) : setHue(0) }
 
 
   return (

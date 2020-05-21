@@ -81,7 +81,7 @@ export const Slot = styled.div`
   }
 `
 export const Div = styled.div`
-  display: inline-flex column;
+  display: flex;
   justify-content: center;
   align-items:center;
   background: black;
@@ -158,6 +158,6 @@ export const AboutTop = styled.div`
   flex-wrap:wrap;
   justify-content:space-around
   div{
-    margin: auto
+    margin:auto
   }
 `
