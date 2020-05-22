@@ -2,13 +2,12 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 
 const Question = styled.div`
-  border: red 1px solid;
+  border: black 1px solid;
+  background: white
   width:360px;
-  justify-content:space-between;
+  justify-content: space-between;
   margin: 15px auto;
-`
-const Answer = styled.div`
-  border: blue 1px solid;
+  padding: 5px 10px
 `
 
 const Card = props => {
@@ -21,7 +20,8 @@ const Card = props => {
       <Question onClick={toggleOpen} >
         <span>{props.question}</span>
         <button style={{background:"none", border:'none'}} > { open ? '🔺' : '🔻' } </button>
-        {open && <Answer> {props.answer} </Answer>}
+        <br/>
+        {open && <span> {props.answer} </span>}
       </Question>
     </div>
   )

@@ -10,6 +10,7 @@ export const Section = styled.section`
   margin: auto;
   justify-content: space-between;
 
+
   img{
     height:250px
     width:250px
@@ -34,6 +35,10 @@ export const Body = styled.div`
   padding:0
   background: ${props => `linear-gradient(${props.hue/8}deg, hsl(${props.hue+90}, 75%, 60%), hsl(${props.hue}, 75%, 60%)`});
   height: 100vh;
+
+  h1{
+    margin-bottom: 0
+  }
 
   @media(max-width:750px){
     height: 100%;
@@ -146,17 +151,23 @@ export const ResSec = styled.div`
 
   div {
 
-
+    img {
+      display: block;
+      max-width:230px;
+      max-height:95px;
+      width: auto;
+      height: auto;
+    }
 
     width: 25%
     @media(max-width:768px){ width: 90vw; }
-    border: 1px solid blue
+    border: 1px solid black
     margin:.5em auto
     background: white;
     padding:.5em
 
     ol{
-      border: 1px solid blue
+      border: 1px solid black
 
       padding: 5px 10px;
       display: inline
