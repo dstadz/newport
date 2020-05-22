@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Question = styled.div`
   border: black 1px solid;
+  background: white
   width:360px;
   justify-content: space-between;
   margin: 15px auto;
