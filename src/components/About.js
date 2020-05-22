@@ -18,10 +18,10 @@ const questions = [
     answer:'Shortly after I started learning UXD, I grew an interest in code, which quickly took over my studies and has had me captivated ever since. '
   },{
     question:'What did I do before I got into tech?',
-    answer:'I worked as a Safeway Night Operations Manager for over 4 years learning various leadership skills and '
+    answer:'I worked as a Safeway Night Operations Manager for over 4 years learning various leadership and proffesional interpersonal skills.'
   },{
     question:'Where do I see myself in 5 years?',
-    answer:'A senior level engineer at your company, working on a project that will improve upon the lives of our customers'
+    answer:'A senior level engineer at your company, working on a project that will improve upon the lives of our customers.'
   },{
     question:'Why is web developement is important to me?',
     answer:'The internet is where everyone has a voice. It is the great equalizer in this era,  and I want to help spread meassages that are worthy of being heard.'
