@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-font-family: 'Roboto Slab', sans-serif;
-font-weight: 400;
-
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -14,12 +11,18 @@ font-weight: 400;
     width:300px
     margin:auto;
   }
+
   a img {
     height:64px
     width:64px
+    background: rgba(100,100,100,.5);
+
+    border-radius:32px
   }
 `
 export const Body = styled.div`
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -58,7 +61,6 @@ export const Button2 = styled.button`
   width: 100px
   margin: auto
 `
-
 
 export const Label = styled.label`
   align-self: flex-start;
@@ -134,6 +136,9 @@ export const ResSec = styled.div`
   justify-content: center
 
   div {
+
+
+
     width: 25%
     @media(max-width:768px){ width: 90vw; }
     border: 1px solid blue
