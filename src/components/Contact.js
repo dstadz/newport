@@ -48,8 +48,7 @@ const Contact = () => {
 
       <br/>
 
-      <p>Check me out on these cool sites:</p>
-      {/* <Linkedin /> */}
+      <p>Also check me out on these cool sites:</p>
       <div>
         <a href="https://www.linkedin.com/in/danstad/" target="_blank"><img src="https://img.icons8.com/nolan/64/linkedin.png"/></a>
 
@@ -57,7 +56,7 @@ const Contact = () => {
 
         <a href='https://docs.google.com/document/d/1jUh-UOutPwEgQLuAgDGplY_aNtly6W5RUd2zIlLJI4E/edit?usp=sharing' target="_blank"><img src="https://img.icons8.com/nolan/64/google-docs.png"/></a>
       </div>
-      <a href="https://icons8.com/icon/44019/linkedin">Icons by Icons8</a>
+      <a href="https://icons8.com/icon/44019/linkedin" target="_blank">Icons by Icons8</a>
     </Section>
     );
   }
