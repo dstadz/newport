@@ -61,7 +61,7 @@ const Project = ({props}) => {
 const Projects = () => {
 
   return (
-    <Section>
+    <Section style={{width:'75%'}}>
       <ResSec>
         { projectList.map( s => ( <Project props={s} /> ) ) }
       </ResSec>

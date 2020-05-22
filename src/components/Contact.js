@@ -56,7 +56,7 @@ const Contact = () => {
 
         <a href='https://docs.google.com/document/d/1jUh-UOutPwEgQLuAgDGplY_aNtly6W5RUd2zIlLJI4E/edit?usp=sharing' target="_blank"><img src="https://img.icons8.com/nolan/64/google-docs.png"/></a>
       </div>
-      <a href="https://icons8.com/icon/44019/linkedin" target="_blank">Icons by Icons8</a>
+
     </Section>
     );
   }
