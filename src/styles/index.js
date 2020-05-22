@@ -1,14 +1,18 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
+
+  @media(min-width: 1024px){
+    width: 50%
+  }
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: space-between;
 
   img{
-    height:300px
-    width:300px
+    height:250px
+    width:250px
     margin:auto;
   }
 
@@ -16,8 +20,8 @@ export const Section = styled.section`
     height:64px
     width:64px
     background: rgba(100,100,100,.5);
-
     border-radius:32px
+
   }
 `
 export const Body = styled.div`
@@ -26,10 +30,13 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
   margin:0
   padding:0
   background: ${props => `linear-gradient(${props.hue/8}deg, hsl(${props.hue+90}, 75%, 60%), hsl(${props.hue}, 75%, 60%)`});
+  height: 100vh;
+
+  @media(max-width:750px){
+    height: 100%;
 `
 
 
@@ -75,10 +82,11 @@ export const MSGBox = styled.textarea`
   width: 100%;
 `
 export const Form = styled.form`
+  margin:auto
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around
+  justify-content: center
   font-size: 2vh;
   @media(max-width:768px){
     width: 75vw;
@@ -90,10 +98,11 @@ export const Form = styled.form`
   }
 `
 export const Div = styled.div`
-  display: flex;
+  display: flex
+  flex-direction: column
   justify-content: center;
-  align-items:center;
   background: black;
+  align-items: center
   height: 10vh;
   width: 100%
   color: white

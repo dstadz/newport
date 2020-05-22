@@ -55,19 +55,13 @@ const About = () => {
         </div>
       </x.AboutTop>
 
-      <p> I am new in the industry, but eagar to learn more to build new applications and contribute to the ever evoling tech world. </p>
+      <p> I am new in the industry, but eagar to learn more to build new applications and contribute to the ever evoling tech world. My name is Daniel. I am a recent graduate from Lambda School, studying Full Stack Wed Development, after previously studying UX Design. The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>
+      </p>
       <x.CardDeck>
       {questions.map(q => (
         <Card question={q.question} answer={q.answer} />
         ))}
       </x.CardDeck>
-      <div>
-        <p>
-        My name is Daniel. I am a recent graduate from Lambda School, studying Full Stack Wed Development, after previously studying UX Design.
-
-          The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>
-        </p>
-      </div>
     </Section>
   )
 }

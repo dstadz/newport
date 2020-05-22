@@ -1,5 +1,5 @@
 import React , {useState} from "react";
-import { Route } from "react-router-dom";
+import { Route, useLocation } from "react-router-dom";
 import {
   RecoilRoot,
   atom,
@@ -24,12 +24,18 @@ const App = () => {
   const handleButton = e => { console.log("This proves I'm a good developer ;)") }
   const colorShift = () => { setHue(hue%360 + 3) }
 
+
+  let { pathname } = useLocation()
+  let title = pathname.substr(1)
+  console.log(title)
   return (
     <Body hue={hue} onClick={() => colorShift()} >
       <Nav/>
+      {title
+        ?<h1>{title.toUpperCase()}</h1>
+      : false}
       <Route exact path="/" render={props => {
-        return <Home {...props}
-        id='Home'
+        return <Home
         handleButton={ handleButton }
         /> }}/>
         <Routes/>
