@@ -11,9 +11,9 @@ const skills = [
 ]
 const questions = [
   {
-    question:'What can I tell you about myself?',
-    answer:'I am amazing and super good at things'
-  },{
+  //   question:'What can I tell you about myself?',
+  //   answer:'I am amazing and super good at things'
+  // },{
     question:'Why did I get into Software Development?',
     answer:'Shortly after I started learning UXD, I grew an interest in code, which quickly took over my studies and has had me captivated ever since. '
   },{
@@ -25,7 +25,7 @@ const questions = [
   },{
     question:'Why is web developement is important to me?',
     answer:'The internet is where everyone has a voice. It is the great equalizer in this era,  and I want to help spread meassages that are worthy of being heard.'
-  },{
+  }/*,{
     question:'',
     answer:''
   },{
@@ -34,7 +34,7 @@ const questions = [
   },{
     question:'',
     answer:''
-  }
+  }*/
 ]
 
 
@@ -46,12 +46,12 @@ const About = () => {
       <x.AboutTop>
         <img src={face} alt='my beautiful face'/>
         <div>
-        <h2>Wanna to know more about me? </h2>
-        <h3> All you have to do is ask! </h3>
-        Here is a list of my skills:
-        <x.Skills>
-        { skills.map( s => ( <li> { s } </li> ) ) }
-        </x.Skills>
+          <h2>Wanna to know more about me? </h2>
+          <h3> All you have to do is ask! </h3>
+          Here is a list of my skills:
+          <x.Skills>
+            { skills.map( s => ( <li> { s } </li> ) ) }
+          </x.Skills>
         </div>
       </x.AboutTop>
 
