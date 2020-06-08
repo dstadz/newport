@@ -164,8 +164,8 @@ export const ResSec = styled.div`
   display: flex
   flex-wrap: wrap
   justify-content: center
-
   div {
+    border-radius: 15px
 
     img {
       display: block;
