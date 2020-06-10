@@ -20,7 +20,7 @@ const projectList = [
     pic:cal
   }, {
     title:'Foodie Fun Six',
-    github:'',
+    github:'https://github.com/dstadz/foodie-fun6-server',
     desc:'Yelp clone made to store and review visited restaurants and meals',
     stack:['Node','Knex'],
     duties:[
