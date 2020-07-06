@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+import { BrowserRouter, withRouter } from 'react-router-dom';
 import { RecoilRoot } from 'recoil'
 import App from './components/App';
 
@@ -8,9 +8,9 @@ const AppWithRouter = withRouter(App);
 
 ReactDOM.render(
 	<RecoilRoot>
-		<Router>
+		<BrowserRouter>
 			<AppWithRouter />
-		</Router>
+		</BrowserRouter>
 	</RecoilRoot>
 	,document.getElementById('root')
 );
