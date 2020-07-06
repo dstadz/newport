@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, useLocation } from "react-router-dom";
 import { useRecoilState } from 'recoil';
-import Nav from './Nav'
+import Nav from './Nav.tsx'
 import Home from './Home'
 import Footer from './Footer'
 

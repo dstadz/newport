@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 import { Section, H1 } from '../styles'
 import * as x from '../styles'
 //import { Link } from 'react-router-dom'
@@ -9,9 +11,9 @@ const Home: React.FC = () => {
       <H1>
         Hey there! My name is Daniel Stadler.
         <br/>
-        I'm a Full Stack Developer in the <a href={'https://www.google.com/maps/@37.8093428,-122.3334453,10z'}>SF Bay Area</a>.
+        I'm a Software Engineer in the <a href={'https://www.google.com/maps/@37.8093428,-122.3334453,10z'}>SF Bay Area</a>.
         <br/>
-        Checkout some of my things in the navbar!
+        Checkout some of my <Link to='/projects'>Projects</Link>!
       </H1>
       {/*}
       <x.H4>Don'tbelieve me?</x.H4>
