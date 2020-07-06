@@ -1,16 +1,9 @@
-import React , {useState} from "react";
+import React from "react";
 import { Route, useLocation } from "react-router-dom";
-import {
-  RecoilRoot,
-  atom,
-  selector,
-  useRecoilState,
-  useRecoilValue,
-} from 'recoil';
+import { useRecoilState } from 'recoil';
 import Nav from './Nav'
 import Home from './Home'
 import Footer from './Footer'
-
 
 import Routes from './Segments/Routes'
 import { Body } from '../styles'
@@ -23,7 +16,6 @@ const App = () => {
 
   const handleButton = e => { console.log("This proves I'm a good developer ;)") }
   const colorShift = () => { setHue(hue%360 + 3) }
-
 
   let { pathname } = useLocation()
   let title = pathname.substr(1)

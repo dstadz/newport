@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Card from './Segments/Card'
 import face from '../assets/face.png'
-import { Section } from '../styles/'
-import * as x from '../styles/'
+import { Section } from '../styles'
+import * as x from '../styles'
 
 //import Slideshow from './Slideshow'
 //      { skills.map( s => ( <li> { s } </li> ) ) }
@@ -39,7 +39,7 @@ const questions = [
 
 
 
-const About = () => {
+const About: FC = () => {
 
   return (
     <Section>

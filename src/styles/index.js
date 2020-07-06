@@ -33,7 +33,10 @@ export const Body = styled.div`
   text-align: center;
   margin:0
   padding:0
-  background: ${props => `linear-gradient(${props.hue/8}deg, hsl(${props.hue+90}, 75%, 60%), hsl(${props.hue}, 75%, 60%)`});
+  background: ${({hue}) =>`
+    linear-gradient(${hue/8}deg,
+    hsl(${hue+90}, 75%, 60%),
+    hsl(${hue}, 75%, 60%)`});
   height: 100vh;
 
   h1{
@@ -53,7 +56,9 @@ export const CardDeck = styled.div`
 `
 
 export const Button = styled.button`
-  transform: ${({ open }) => open ? 'rotate(0deg)' : 'rotate(180deg)'};
+  transform: ${({ open }) => open
+  ? 'rotate(0deg)'
+  : 'rotate(180deg)'};
 `
 export const H1 = styled.h1`
   font-size: 5vh;
@@ -64,8 +69,8 @@ export const H2 = styled.h2`
   margin:0
 `
 export const H3 = styled.h3`
-font-size: 3vh;
-margin:0
+  font-size: 3vh;
+  margin:0
 `
 export const Button2 = styled.button`
   border: 1px red solid
@@ -93,14 +98,9 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center
   font-size: 2vh;
-  @media(max-width:768px){
-    width: 75vw;
-  };  @media(min-width:768px){
-    width: 50vw;
-  };
-  @media(min-width:1024px){
-    width: 33vw;
-  }
+  @media(max-width:768px){ width: 75vw; };
+  @media(min-width:768px){ width: 50vw; };
+  @media(min-width:1024px){ width: 33vw; }
 `
 export const Div = styled.div`
   display: flex
@@ -114,16 +114,16 @@ export const Div = styled.div`
   `
 const Link = styled.a``
 export const Card = styled(Link)`
-width: 300px;
-margin: 30px;
-display: flex;
-flex-direction: column;
-background: blue;
-align-items: center;
-justify-content: space-between;
-color:white;
-text-decoration: none;
-border: 3px solid green
+  width: 300px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  background: blue;
+  align-items: center;
+  justify-content: space-between;
+  color:white;
+  text-decoration: none;
+  border: 3px solid green
 `
 export const SortContainer = styled.div`
   display: flex;
@@ -190,6 +190,7 @@ export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
   justify-content:space-around
+  
   div{
     margin:auto
   }
