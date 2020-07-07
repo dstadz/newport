@@ -30,6 +30,7 @@ const Contact = () => {
 
   return (
     <Section>
+
       <Form
       onSubmit={submitForm}
       action="https://formspree.io/xknjlwwa"
@@ -48,22 +49,18 @@ const Contact = () => {
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </Form>
 
-      <br/>
 
-      <p>Also check me out on these cool sites:</p>
 
-      <div>
-        <a href="https://www.linkedin.com/in/danstad/" target="_blank">
-          <img src="https://img.icons8.com/nolan/64/linkedin.png"/>
-        </a>
+        <br/>
 
-        <a href="https://github.com/dstadz/" target="_blank">
-          <img src="https://img.icons8.com/nolan/64/github.png"/>
-        </a>
+        <p>Also check me out on these cool sites:</p>
 
-        <a href='https://docs.google.com/document/d/1jUh-UOutPwEgQLuAgDGplY_aNtly6W5RUd2zIlLJI4E/edit?usp=sharing' target="_blank">
-          <img src="https://img.icons8.com/nolan/64/google-docs.png"/>
-        </a>
+        <div>
+          <a href="https://www.linkedin.com/in/danstad/" target="_blank"><img src="https://img.icons8.com/nolan/64/linkedin.png"/></a>
+          <a href="https://github.com/dstadz/" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/></a>
+          <a href='https://docs.google.com/document/d/1jUh-UOutPwEgQLuAgDGplY_aNtly6W5RUd2zIlLJI4E/edit?usp=sharing' target="_blank"><img src="https://img.icons8.com/nolan/64/google-docs.png"/></a>
+        </div>
+
       </div>
     </Section>
   );

@@ -1,10 +1,28 @@
 import styled from 'styled-components'
 
-export const Section = styled.section`
 
-  @media(min-width: 1024px){
-    width: 50%
-  }
+export const Body = styled.div`
+  @media(min-width:375px){ height:100vh }
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  padding:0
+  background: ${({hue}) =>`
+    linear-gradient(${hue}deg,
+    hsl(${hue+90}, 75%, 60%),
+    hsl(${hue}, 75%, 60%)`});
+
+  h1{ margin-bottom: 0 }
+
+`
+
+export const Section = styled.section`
+  @media(min-width: 1024px){ width: 50% }
+
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -21,26 +39,7 @@ export const Section = styled.section`
     width:64px
     background: rgba(100,100,100,.5);
     border-radius:32px
-
   }
-`
-export const Body = styled.div`
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin:0
-  padding:0
-  background: ${props => `linear-gradient(${props.hue/8}deg, hsl(${props.hue+90}, 75%, 60%), hsl(${props.hue}, 75%, 60%)`});
-  height: 100vh;
-
-  h1{
-    margin-bottom: 0
-  }
-
-  @media(max-width:750px){
-    height: 100%;
 `
 export const CardDeck = styled.div`
   display: flex;
@@ -49,7 +48,9 @@ export const CardDeck = styled.div`
   justify-content: space-around;
 `
 export const Button = styled.button`
-  transform: ${({ open }) => open ? 'rotate(0deg)' : 'rotate(180deg)'};
+  transform: ${({ open }) => open
+  ? 'rotate(0deg)'
+  : 'rotate(180deg)'};
 `
 export const H1 = styled.h1`
   font-size: 5vh;
@@ -60,8 +61,8 @@ export const H2 = styled.h2`
   margin:0
 `
 export const H3 = styled.h3`
-font-size: 3vh;
-margin:0
+  font-size: 3vh;
+  margin:0
 `
 export const Button2 = styled.button`
   border: 1px red solid
@@ -71,7 +72,7 @@ export const Button2 = styled.button`
 `
 
 export const Form = styled.form`
-  margin:auto
+  margin:auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,28 +119,20 @@ export const Form = styled.form`
     padding: .375rem .75rem
   }
 `
-export const Div = styled.div`
-  display: flex
-  flex-direction: column
-  justify-content: center;
-  background: black;
-  align-items: center
-  height: 10vh;
-  width: 100%
-  color: white
-  `
+
+
 const Link = styled.a``
 export const Card = styled(Link)`
-width: 300px;
-margin: 30px;
-display: flex;
-flex-direction: column;
-background: blue;
-align-items: center;
-justify-content: space-between;
-color:white;
-text-decoration: none;
-border: 3px solid green
+  width: 300px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  background: blue;
+  align-items: center;
+  justify-content: space-between;
+  color:white;
+  text-decoration: none;
+  border: 3px solid green
 `
 export const SortContainer = styled.div`
   display: flex;
@@ -206,7 +199,20 @@ export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
   justify-content:space-around
+  
   div{
     margin:auto
   }
 `
+
+
+export const FooterContainer = styled.footer`
+  display: flex
+  flex-direction: column
+  justify-content: center;
+  background: black;
+  align-items: center
+  height: 10vh;
+  color: white
+
+  `

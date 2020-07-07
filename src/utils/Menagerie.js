@@ -2,7 +2,7 @@ import React , { useState, useRef } from 'react'
 //import Sketch from "react-p5";
 
 import { Section } from '../styles'
-import Canvas from './Canvas'
+import Canvas from '../components/Canvas'
 //import utils from '../utils/CanvasUtils'
 
 
