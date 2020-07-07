@@ -1,10 +1,13 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
 //import { Link, Route, Switch } from "react-router-dom";
 
 import { Section, ResSec } from '../styles'
 import cal from '../assets/cal.png'
 import food from '../assets/food.jpeg'
 import key from '../assets/key.png'
+import { useSetRecoilState } from 'recoil';
+
+import { belowFoldState } from '../utils/store'
 
 const projectList = [
   {
@@ -57,6 +60,9 @@ interface Props {
 
 const Project: FC<Props> = ({props}) => {
   const {title, github, desc, stack, duties, pic} = props
+  const setBelowFold = useSetRecoilState(belowFoldState)
+
+  useEffect(() => { setBelowFold(false) }, [])
 
   return (
   <div>

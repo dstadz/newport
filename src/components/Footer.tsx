@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer} from '../styles/index'
+import { FooterContainer } from '../styles/index'
 import { useRouteMatch } from 'react-router-dom'
 declare module 'react-router-dom';
 
@@ -13,6 +13,7 @@ const Footer: React.FC = () => {
     sensitive: true
   })
 
+  console.log(match)
   return (
     <FooterContainer>
       { match && <a
