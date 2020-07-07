@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+import { useSetRecoilState } from 'recoil';
+
+import { belowFoldState } from '../utils/store'
 import { Section, H1 } from '../styles'
-import * as x from '../styles'
 //import { Link } from 'react-router-dom'
 const place = 'https://www.google.com/maps/@37.8093428,-122.3334453,10z'
 
 const Home: React.FC = () => {
+  const setBelowFold = useSetRecoilState(belowFoldState)
+
+  useEffect(() => { setBelowFold(true) }, [])
   return (
     <Section style={{width:'100%'}}>
       <H1>

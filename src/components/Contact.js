@@ -1,11 +1,15 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import * as x from '../styles'
 import { Section, Form } from  '../styles'
 
+import { useSetRecoilState } from 'recoil';
+
+import { belowFoldState } from '../utils/store'
 
 
 const Contact = () => {
   const [status, setStatus] = useState('')
+  const setBelowFold = useSetRecoilState(belowFoldState)
 
   const submitForm = (ev) => {
     ev.preventDefault();
@@ -28,6 +32,7 @@ const Contact = () => {
     xhr.send(data);
   }
 
+  useEffect(() => { setBelowFold(true) }, [])
   return (
     <Section>
 

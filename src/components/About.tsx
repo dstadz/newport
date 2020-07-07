@@ -1,7 +1,12 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect } from 'react'
+import { useRecoilValue } from 'recoil'
+
 import Card from './Segments/Card'
 import face from '../assets/face.png'
 import { Section } from '../styles'
+import { hueState, belowFoldState } from '../utils/store'
+import { useSetRecoilState } from 'recoil';
+
 import * as x from '../styles'
 
 //import Slideshow from './Slideshow'
@@ -39,10 +44,16 @@ const questions = [
 
 
 
-const About: FC = () => {
 
+const About: FC = () => {
+  const hue = useRecoilValue(hueState)
+  const setBelowFold = useSetRecoilState(belowFoldState)
+  
+  useEffect(() => { setBelowFold(false) }, [])
+  
+  
   return (
-    <Section style={{}}>
+    <Section>
       <x.AboutTop>
         <img src={face} alt='my beautiful face'/>
         <div>
