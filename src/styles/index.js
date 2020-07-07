@@ -41,14 +41,12 @@ export const Section = styled.section`
     border-radius:32px
   }
 `
-
 export const CardDeck = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 `
-
 export const Button = styled.button`
   transform: ${({ open }) => open
   ? 'rotate(0deg)'
@@ -73,28 +71,53 @@ export const Button2 = styled.button`
   margin: auto
 `
 
-export const Label = styled.label`
-  align-self: flex-start;
-  margin: 15px 0 0;
-`
-export const Input = styled.input`
-  width:100%;
-`
-export const MSGBox = styled.textarea`
-  height: 100px;
-  justify-content: flex-start;
-  width: 100%;
-`
 export const Form = styled.form`
   margin:auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center
+  justify-content: center;
   font-size: 2vh;
+
   @media(max-width:768px){ width: 75vw; };
   @media(min-width:768px){ width: 50vw; };
   @media(min-width:1024px){ width: 33vw; }
+
+  & > * {
+    margin: auto
+    border-radius:.5rem;
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: .375rem .75rem;
+  }
+
+  label{
+    align-self: flex-start;
+    margin: 15px 0 0;
+    border: 0
+    padding-left: 0
+    padding-bottom: 0
+  }
+
+  input{
+    width: calc(100% - 1.5rem);
+    height: calc(1em + .5rem + 2px);
+    line-height: 1.25;
+  }
+
+  textarea{
+    width: calc(100% - 1.5rem);
+    height: calc(2em + 3rem + 2px);
+    justify-content: flex-start;
+    line-height: 1.5;
+
+  }
+
+  button {
+    align-self: flex-start;
+    margin: 1rem 0
+    padding: .375rem .75rem
+  }
 `
 
 
