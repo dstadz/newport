@@ -23,7 +23,7 @@ const questions = [
     question:'Where do I see myself in 5 years?',
     answer:'A senior level engineer at your company, working on a project that will improve upon the lives of our customers.'
   },{
-    question:'Why is web developement is important to me?',
+    question:'Why is web developement important to me?',
     answer:'The internet is where everyone has a voice. It is the great equalizer in this era,  and I want to help spread meassages that are worthy of being heard.'
   }/*,{
     question:'',
@@ -42,7 +42,7 @@ const questions = [
 const About: FC = () => {
 
   return (
-    <Section>
+    <Section style={{}}>
       <x.AboutTop>
         <img src={face} alt='my beautiful face'/>
         <div>

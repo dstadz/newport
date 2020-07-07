@@ -1,15 +1,32 @@
 import styled from 'styled-components'
 
-export const Section = styled.section`
 
-  @media(min-width: 1024px){
-    width: 50%
-  }
+export const Body = styled.div`
+  @media(min-width:375px){ height:100vh }
+
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  padding:0
+  background: ${({hue}) =>`
+    linear-gradient(${hue}deg,
+    hsl(${hue+90}, 75%, 60%),
+    hsl(${hue}, 75%, 60%)`});
+
+  h1{ margin-bottom: 0 }
+
+`
+
+export const Section = styled.section`
+  @media(min-width: 1024px){ width: 50% }
+
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: space-between;
-
 
   img{
     height:250px
@@ -22,31 +39,8 @@ export const Section = styled.section`
     width:64px
     background: rgba(100,100,100,.5);
     border-radius:32px
-
   }
 `
-export const Body = styled.div`
-  font-family: 'Roboto Slab', sans-serif;
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin:0
-  padding:0
-  background: ${({hue}) =>`
-    linear-gradient(${hue/8}deg,
-    hsl(${hue+90}, 75%, 60%),
-    hsl(${hue}, 75%, 60%)`});
-  height: 100vh;
-
-  h1{
-    margin-bottom: 0
-  }
-
-  @media(max-width:750px){
-    height: 100%;
-`
-
 
 export const CardDeck = styled.div`
   display: flex;
@@ -92,7 +86,7 @@ export const MSGBox = styled.textarea`
   width: 100%;
 `
 export const Form = styled.form`
-  margin:auto
+  margin:auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,16 +96,8 @@ export const Form = styled.form`
   @media(min-width:768px){ width: 50vw; };
   @media(min-width:1024px){ width: 33vw; }
 `
-export const Div = styled.div`
-  display: flex
-  flex-direction: column
-  justify-content: center;
-  background: black;
-  align-items: center
-  height: 10vh;
-  width: 100%
-  color: white
-  `
+
+
 const Link = styled.a``
 export const Card = styled(Link)`
   width: 300px;
@@ -195,3 +181,15 @@ export const AboutTop = styled.div`
     margin:auto
   }
 `
+
+
+export const FooterContainer = styled.footer`
+  display: flex
+  flex-direction: column
+  justify-content: center;
+  background: black;
+  align-items: center
+  height: 10vh;
+  color: white
+
+  `

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 //import { Link, Route, Switch } from "react-router-dom";
 
 import { Section, ResSec } from '../styles'
@@ -43,8 +43,19 @@ const projectList = [
   }
 ]
 
+interface Props {
+  props: {
+    title:string,
+    github:string,
+    desc:string,
+    stack:string[],
+    duties:string[],
+    pic:string
+  }
+}
 
-const Project = ({props}) => {
+
+const Project: FC<Props> = ({props}) => {
   const {title, github, desc, stack, duties, pic} = props
 
   return (

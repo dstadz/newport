@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 // height: 5vh;
-export const Nav = styled.nav`
+export const NavBar = styled.nav`
   display: flex;
   background: black;
   align-items: center;
@@ -55,12 +55,11 @@ export const Nav = styled.nav`
       a{
         color: white;
         text-decoration: none;
-        font-size: 2rem;
         font-family: 'Roboto', sans-serif;
+        font-size: 20px;
         font-weight: bold;
         padding: .5em .8em;
         position: relative;
-        font-size: 20px;
 
         ::before, ::after {
           content: '';
@@ -109,7 +108,7 @@ export const StyledMenu = styled.ul`
   justify-content: center;
   @media (min-width: 768px) { display:none }
   @media (max-width: 767px) { width: 100% }
-  
+
   a {
     transition: color 0.3s linear;
     &:hover { color: #343078 }
@@ -133,18 +132,20 @@ export const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
   &:focus { outline: none }
+
   @media (min-width:768px) { display:none }
-  
+
   div {
     width: 2rem;
     height: 0.25rem;
     background: ${({ open }) => open ? 'red' : '#EFFFFA'};
-    border-radius: 10px;
+    border-radius: 1rem;
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
 
     :first-child { transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'} }
+
     :nth-child(2) {
       opacity: ${({ open }) => open ? '0' : '1'};
       transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
@@ -155,13 +156,11 @@ export const StyledBurger = styled.button`
 `
 
 export const Spacer = styled.div`
-  font-size: 20px;
+  font-size: 2rem;
   flex-grow: 3;
 
   ::before, ::after {
     content: '';
-    height: 14px;
-    width: 14px;  background:blue;
 
   @media (max-width:768px) { display:none }
 `
