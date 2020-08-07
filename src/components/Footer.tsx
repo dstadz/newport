@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
     sensitive: true
   })
 
-  console.log(match)
+  // console.log(match)
   return (
     <FooterContainer>
       { match && <a
