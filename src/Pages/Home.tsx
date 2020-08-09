@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       <H1>
         Hey there! I am Daniel Stadler.
         <br/>
-        I'm a Software Engineer in the <a href={place}>SF Bay Area</a>.
+        I'm a Software Engineer in the <a target='_blank' href={place}>SF Bay Area</a>.
         <br/>
         Checkout some of my <Link to='/projects'>Projects</Link>!
       </H1>

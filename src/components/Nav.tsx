@@ -1,7 +1,6 @@
 import React, { useState, FC} from 'react'
-import { NavLink } from 'react-router-dom'
 import { useRecoilValue } from 'recoil'
-
+import { A } from 'hookrouter'
 import { NavBar, Spacer, StyledBurger} from '../styles/navStyles.js'
 import logo from '../assets/coin.png'
 import { hueState } from '../utils/store'
@@ -25,14 +24,18 @@ const Nav: FC = () => {
 
   return (
     <NavBar hue={hue} open={open} setOpen={setOpen}>
-      <div> <NavLink to='/'><img src={logo} alt='Return to home page'/></NavLink> </div>
+      <div> <A href='/'><img src={logo} alt='Return to home page'/></A> </div>
+
       <Spacer/>
       <Burger open={open} setOpen={setOpen} />
-      <ul>
-        {navLinks.map(n => (
-          <li><NavLink to={`/${n}`}
-          onClick={()=> setOpen(false)}
-          >{n}</NavLink></li>))}
+
+      <ul> {navLinks.map(n => (
+        <li key={n}>
+          <A
+            href={`/${n}`}
+            onClick={()=> setOpen(false)}
+          >{n}</A>
+        </li>))}
       </ul>
     </NavBar>
   )

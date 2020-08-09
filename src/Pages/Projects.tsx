@@ -66,18 +66,42 @@ const Project: FC<Props> = ({props}) => {
   const {title, github, desc, link, stack, duties, pic} = props
   const setBelowFold = useSetRecoilState(belowFoldState)
 
-  useEffect(() => { setBelowFold(false) }, [])
+  useEffect(() => { setBelowFold(false) })
 
   return (
   <div>
-    <a href={link} > <img style={{borderRadius:'0'}}src={pic} /> </a>
-    <h3> <a href={github} target='_blank'>{title}</a> </h3>
+    <a
+      href={link}
+      rel="noopener noreffer"
+      target='_blank'>
+      <img
+        style={{borderRadius:'0'}}
+        src={pic}
+        alt={title}
+      />
+    </a>
+
+    <h3>
+      <a
+        href={github}
+        target='_blank'
+        rel="noopener"
+
+      >{title}</a>
+    </h3>
+
     <p>{desc}</p>
+
     <ol>
-      {stack.map( s => ( <li> { s } </li> ) ) }
+      {stack.map(s => (
+        <li key={s}> { s } </li>
+      ))}
     </ol>
+
     <ul>
-      {duties.map( d => ( <li> { d } </li> ) ) }
+      {duties.map(d => (
+        <li key={d}> { d } </li>
+      ))}
     </ul>
   </div>
 )}
@@ -85,11 +109,10 @@ const Project: FC<Props> = ({props}) => {
 
 
 const Projects = () => {
-
   return (
     <Section style={{width:'100%'}}>
       <ResSec>
-        { projectList.map( s => ( <Project props={s} /> ) ) }
+        { projectList.map( s => ( <Project key={s.title} props={s} /> ) ) }
       </ResSec>
     </Section>
   )
