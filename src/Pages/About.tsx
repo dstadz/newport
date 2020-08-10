@@ -1,11 +1,10 @@
 import React, { FC, useEffect } from 'react'
-import { useRecoilValue } from 'recoil'
+import { useSetRecoilState } from 'recoil';
 
-import Card from './Segments/Card'
+import Card from '../components/Segments/Card'
 import face from '../assets/face.png'
 import { Section } from '../styles'
-import { hueState, belowFoldState } from '../utils/store'
-import { useSetRecoilState } from 'recoil';
+import { belowFoldState } from '../utils/store'
 
 import * as x from '../styles'
 
@@ -46,12 +45,10 @@ const questions = [
 
 
 const About: FC = () => {
-  const hue = useRecoilValue(hueState)
   const setBelowFold = useSetRecoilState(belowFoldState)
-  
-  useEffect(() => { setBelowFold(false) }, [])
-  
-  
+
+  useEffect(() => { setBelowFold(false) })
+
   return (
     <Section>
       <x.AboutTop>
@@ -61,7 +58,7 @@ const About: FC = () => {
           <h3> All you have to do is ask! </h3>
           Here is a list of my skills:
           <x.Skills>
-            { skills.map( s => ( <li> { s } </li> ) ) }
+            { skills.map( s => ( <li key={s}> { s } </li> ) ) }
           </x.Skills>
         </div>
       </x.AboutTop>
@@ -70,7 +67,7 @@ const About: FC = () => {
       </p>
       <x.CardDeck>
       {questions.map(q => (
-        <Card question={q.question} answer={q.answer} />
+        <Card key={q.question} question={q.question} answer={q.answer} />
         ))}
       </x.CardDeck>
     </Section>

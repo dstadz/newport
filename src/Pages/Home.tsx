@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import { Link } from 'react-router-dom'
-
+import { A } from 'hookrouter'
 import { useSetRecoilState } from 'recoil';
 
 import { belowFoldState } from '../utils/store'
@@ -17,11 +16,10 @@ const Home: React.FC = () => {
       <H1>
         Hey there! I am Daniel Stadler.
         <br/>
-        I'm a Software Engineer in the <a href={place}>SF Bay Area</a>.
+        I'm a Software Engineer in the <a target='_blank' href={place}>SF Bay Area</a>.
         <br/>
-        Checkout some of my <Link to='/projects'>Projects</Link>!
+        Checkout some of my  <A href='/projects'>Projects</A>!
       </H1>
-
     </Section>
   )
 }
