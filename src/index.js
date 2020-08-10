@@ -5,7 +5,7 @@ import App from './components/App';
 
 ReactDOM.render(
 	<RecoilRoot>
-			<App />
+		<App />
 	</RecoilRoot>
 	,document.getElementById('root')
 );
