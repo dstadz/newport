@@ -32,10 +32,13 @@ const App = () => {
 
   let title = match.type.name
   console.log(title)
+  console.log(match.type.name)
+  console.log(match.type)
+  console.log(match)
   return (
     <Body hue={hue} belowFold={belowFold} onClick={() => colorShift()} >
       <Nav/>
-      {title != 'Home' && <h1>{title.toUpperCase()}</h1>}
+      {/* {title !== 'Home' && <h1>{title.toUpperCase()}</h1>} */}
       { match }
       <Footer />
     </Body>

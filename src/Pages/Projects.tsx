@@ -128,7 +128,7 @@ const Example: FC = ({/*props*/}) => {
 const Projects = () => {
   return (
     <Section style={{width:'100%'}}>
-      <Example />
+      {/* <Example /> */}
       <ResSec>
         { projectList.map( s => ( <Project key={s.title} props={s} /> ) ) }
       </ResSec>
