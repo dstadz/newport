@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from 'react'
-//import { Link, Route, Switch } from "react-router-dom";
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button}  from 'reactstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Section, ResSec } from '../styles'
 import cal from '../assets/cal.png'
@@ -107,10 +108,27 @@ const Project: FC<Props> = ({props}) => {
 )}
 
 
+const Example: FC = ({/*props*/}) => {
+  // const {title, github, desc, link, stack, duties, pic} = props
+
+  return (
+      <Card>
+        <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+        <CardBody>
+          <CardTitle>Card title</CardTitle>
+          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+          <Button>Button</Button>
+        </CardBody>
+      </Card>
+  );
+};
+
 
 const Projects = () => {
   return (
     <Section style={{width:'100%'}}>
+      <Example />
       <ResSec>
         { projectList.map( s => ( <Project key={s.title} props={s} /> ) ) }
       </ResSec>

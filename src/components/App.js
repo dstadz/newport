@@ -29,14 +29,9 @@ const App = () => {
   const [hue, setHue] = useRecoilState(hueState)
   const belowFold = useRecoilValue(belowFoldState)
   const colorShift = () => { setHue(hue%360 + 3) }
-  
-  
-  
 
-  
-  
-  
   let title = match.type.name
+  console.log(title)
   return (
     <Body hue={hue} belowFold={belowFold} onClick={() => colorShift()} >
       <Nav/>
