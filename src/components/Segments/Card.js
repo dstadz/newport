@@ -16,14 +16,12 @@ const Card = props => {
   const toggleOpen = () => { setOpen(!open) }
 
   return (
-    <div>
-      <Question onClick={toggleOpen} >
-        <span>{props.question}</span>
-        <button style={{background:"none", border:'none'}} > { open ? '🔺' : '🔻' } </button>
-        <br/>
-        {open && <span> {props.answer} </span>}
-      </Question>
-    </div>
+    <Question onClick={toggleOpen} >
+      <span>{props.question}</span>
+      <button style={{background:"none", border:'none'}} > { open ? '🔺' : '🔻' } </button>
+      <br/>
+      {open && <span> {props.answer} </span>}
+    </Question>
   )
 }
 

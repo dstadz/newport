@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import * as x from '../styles'
 import { Section, Form } from  '../styles'
 
 import { useSetRecoilState } from 'recoil';
