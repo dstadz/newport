@@ -31,10 +31,10 @@ const App = () => {
   const colorShift = () => { setHue(hue%360 + 3) }
 
   let title = match.type.name
-  console.log(title)
-  console.log(match.type.name)
-  console.log(match.type)
-  console.log(match)
+  // console.log(title)
+  // console.log(match.type.name)
+  // console.log(match.type)
+  // console.log(match)
   return (
     <Body hue={hue} belowFold={belowFold} onClick={() => colorShift()} >
       <Nav/>

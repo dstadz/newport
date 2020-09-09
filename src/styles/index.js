@@ -12,7 +12,7 @@ export const Body = styled.div`
   flex-direction: column;
   text-align: center;
   margin: auto;
-  padding:0
+  padding:0;
   background: ${({hue}) =>`
     linear-gradient(${hue}deg,
     hsl(${hue+90}, 75%, 60%),
@@ -31,16 +31,16 @@ export const Section = styled.section`
   justify-content: space-between;
 
   img{
-    height:250px
-    width:250px
+    height:250px;
+    width:250px;
     margin:auto;
   }
 
   a img {
-    height:64px
-    width:64px
+    height:64px;
+    width:64px;
     background: rgba(100,100,100,.5);
-    border-radius:32px
+    border-radius:32px;
   }
 `
 export const CardDeck = styled.div`
@@ -56,21 +56,21 @@ export const Button = styled.button`
 `
 export const H1 = styled.h1`
   font-size: 5vh;
-  margin:0
+  margin:0;
 `
 export const H2 = styled.h2`
   font-size: 4vh;
-  margin:0
+  margin:0;
 `
 export const H3 = styled.h3`
   font-size: 3vh;
-  margin:0
+  margin:0;
 `
 export const Button2 = styled.button`
-  border: 1px red solid
-  border-radius: 30px
-  width: 100px
-  margin: auto
+  border: 1px red solid;
+  border-radius: 30px;
+  width: 100px;
+  margin: auto;
 `
 
 export const Form = styled.form`
@@ -86,7 +86,7 @@ export const Form = styled.form`
   @media(min-width:1024px){ width: 33vw; }
 
   & > * {
-    margin: auto
+    margin: auto;
     border-radius:.5rem;
     border: 1px solid black;
     font-size: 1rem;
@@ -96,9 +96,9 @@ export const Form = styled.form`
   label{
     align-self: flex-start;
     margin: 15px 0 0;
-    border: 0
-    padding-left: 0
-    padding-bottom: 0
+    border: 0;
+    padding-left: 0;
+    padding-bottom: 0;
   }
 
   input{
@@ -117,8 +117,8 @@ export const Form = styled.form`
 
   button {
     align-self: flex-start;
-    margin: 1rem 0
-    padding: .375rem .75rem
+    margin: 1rem 0;
+    padding: .375rem .75rem;
   }
 `
 
@@ -134,7 +134,7 @@ export const Card = styled(Link)`
   justify-content: space-between;
   color:white;
   text-decoration: none;
-  border: 3px solid green
+  border: 3px solid green;
 `
 export const SortContainer = styled.div`
   display: flex;
@@ -145,8 +145,8 @@ export const SortContainer = styled.div`
   `
 
 export const SortBase = styled.div`
-  border: 1px solid white
-  margin: auto
+  border: 1px solid white;
+  margin: auto;
 `
 
 export const Skills = styled.ul`
@@ -156,11 +156,11 @@ export const Skills = styled.ul`
 `
 
 export const ResSec = styled.div`
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   div {
-    border-radius: 15px
+    border-radius: 15px;
 
     img {
       display: block;
@@ -170,28 +170,29 @@ export const ResSec = styled.div`
       height: auto;
     }
 
-    width: 25%
+    width: 25%;
     @media(max-width:768px){ width: 90vw; }
-    border: 1px solid black
-    margin:.5em auto
+    border: 1px solid black;
+    margin:.5em auto;
     background: white;
-    padding:.5em
+    padding: .5em;
 
     ol{
-      border: 1px solid black
+      border: 1px solid black;
 
       padding: 5px 10px;
-      display: inline
+      display: inline;
 
       li{
-        display: inline
+        display: inline;
       }
     }
 
     ul{
-      padding-left: 20px
+      padding-left: 20px;
+
       li{
-        text-align: left
+        text-align: left;
       }
     }
   }
@@ -200,20 +201,20 @@ export const ResSec = styled.div`
 export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
-  justify-content:space-around
+  justify-content:space-around;
 
 
 `
 
 
 export const FooterContainer = styled.footer`
-  display: flex
-  flex-direction: column
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background: black;
-  align-items: center
+  align-items: center;
   height: 10vh;
-  color: white
+  color: white;
 
   `
 
