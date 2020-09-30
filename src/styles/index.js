@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
+const borderRadius = `border-radius: 15px;`
 
 export const Body = styled.div`
   @media(min-width:769px){ height:100vh }
 
-  @media(max-width:768px){ ${({belowFold})=> belowFold && 'height:100vh'} };
+  @media(max-width:768px){ ${({belowFold}) => belowFold && 'height:100vh'} };
 
   font-family: 'Roboto Slab', sans-serif;
   font-weight: 400;
@@ -30,25 +31,30 @@ export const Section = styled.section`
   margin: auto;
   justify-content: space-between;
 
-  img{
+  .face {
     height:250px;
     width:250px;
     margin:auto;
   }
 
-  a img {
-    height:64px;
-    width:64px;
-    background: rgba(100,100,100,.5);
-    border-radius:32px;
+  .buttonRow {
+    background: red;
+    justify-content: space-around;
+
+    a img {
+      height:64px;
+      width:64px;
+      background: rgba(100,100,100,.5);
+      border-radius: 50%
+    }
   }
 `
 export const CardDeck = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-`
+  justify-content: flex-start;
+  align-items: flex-start;`
 export const Button = styled.button`
   transform: ${({ open }) => open
   ? 'rotate(0deg)'
@@ -68,7 +74,7 @@ export const H3 = styled.h3`
 `
 export const Button2 = styled.button`
   border: 1px red solid;
-  border-radius: 30px;
+  ${borderRadius}
   width: 100px;
   margin: auto;
 `
@@ -87,13 +93,13 @@ export const Form = styled.form`
 
   & > * {
     margin: auto;
-    border-radius:.5rem;
+    ${borderRadius}
     border: 1px solid black;
     font-size: 1rem;
     padding: .375rem .75rem;
   }
 
-  label{
+  label {
     align-self: flex-start;
     margin: 15px 0 0;
     border: 0;
@@ -101,13 +107,13 @@ export const Form = styled.form`
     padding-bottom: 0;
   }
 
-  input{
+  input {
     width: calc(100% - 1.5rem);
     height: calc(1em + .5rem + 2px);
     line-height: 1.25;
   }
 
-  textarea{
+  textarea {
     width: calc(100% - 1.5rem);
     height: calc(2em + 3rem + 2px);
     justify-content: flex-start;
@@ -160,7 +166,7 @@ export const ResSec = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   div {
-    border-radius: 15px;
+    ${borderRadius}
 
     img {
       display: block;
@@ -205,7 +211,20 @@ export const AboutTop = styled.div`
 
 
 `
+export const Question = styled.div`
+  border: black 1px solid;
+  ${borderRadius}
+  background: white;
+  width:350px;
+  justify-content: space-between;
+  margin: 15px auto;
+  padding: 5px 10px;
 
+  button {
+    background:none;
+    border:none
+  }
+`
 
 export const FooterContainer = styled.footer`
   display: flex;
