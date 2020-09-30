@@ -76,7 +76,6 @@ const Project: FC<Props> = ({props}) => {
       rel="noopener noreffer"
       target='_blank'>
       <img
-        style={{borderRadius:'0'}}
         src={pic}
         alt={title}
       />
@@ -87,7 +86,6 @@ const Project: FC<Props> = ({props}) => {
         href={github}
         target='_blank'
         rel="noopener"
-
       >{title}</a>
     </h3>
 
@@ -108,21 +106,21 @@ const Project: FC<Props> = ({props}) => {
 )}
 
 
-const Example: FC = ({/*props*/}) => {
-  // const {title, github, desc, link, stack, duties, pic} = props
+// const Example: FC = ({/*props*/}) => {
+//   // const {title, github, desc, link, stack, duties, pic} = props
 
-  return (
-      <Card>
-        <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
-        <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-  );
-};
+//   return (
+//       <Card>
+//         <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
+//         <CardBody>
+//           <CardTitle>Card title</CardTitle>
+//           <CardSubtitle>Card subtitle</CardSubtitle>
+//           <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+//           <Button>Button</Button>
+//         </CardBody>
+//       </Card>
+//   );
+// };
 
 
 const Projects = () => {

@@ -167,8 +167,8 @@ export const ResSec = styled.div`
   justify-content: center;
   div {
     ${borderRadius}
-
     img {
+      margin:auto;
       display: block;
       max-width:230px;
       max-height:95px;
@@ -185,7 +185,6 @@ export const ResSec = styled.div`
 
     ol{
       border: 1px solid black;
-
       padding: 5px 10px;
       display: inline;
 
