@@ -52,7 +52,7 @@ const About: FC = () => {
   return (
     <Section>
       <x.AboutTop>
-        <img src={face} alt='my beautiful face'/>
+        <img className='face'  src={face} alt='my beautiful face'/>
         <div>
           <h2>Want to know more about me? </h2>
           <h3> All you have to do is ask! </h3>

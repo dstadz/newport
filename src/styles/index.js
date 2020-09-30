@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
+const borderRadius = `border-radius: 15px;`
 
 export const Body = styled.div`
   @media(min-width:769px){ height:100vh }
 
-  @media(max-width:768px){ ${({belowFold})=> belowFold && 'height:100vh'} };
+  @media(max-width:768px){ ${({belowFold}) => belowFold && 'height:100vh'} };
 
   font-family: 'Roboto Slab', sans-serif;
   font-weight: 400;
@@ -12,7 +13,7 @@ export const Body = styled.div`
   flex-direction: column;
   text-align: center;
   margin: auto;
-  padding:0
+  padding:0;
   background: ${({hue}) =>`
     linear-gradient(${hue}deg,
     hsl(${hue+90}, 75%, 60%),
@@ -30,25 +31,30 @@ export const Section = styled.section`
   margin: auto;
   justify-content: space-between;
 
-  img{
-    height:250px
-    width:250px
+  .face {
+    height:250px;
+    width:250px;
     margin:auto;
   }
 
-  a img {
-    height:64px
-    width:64px
-    background: rgba(100,100,100,.5);
-    border-radius:32px
+  .buttonRow {
+    background: red;
+    justify-content: space-around;
+
+    a img {
+      height:64px;
+      width:64px;
+      background: rgba(100,100,100,.5);
+      border-radius: 50%
+    }
   }
 `
 export const CardDeck = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-`
+  justify-content: flex-start;
+  align-items: flex-start;`
 export const Button = styled.button`
   transform: ${({ open }) => open
   ? 'rotate(0deg)'
@@ -56,21 +62,21 @@ export const Button = styled.button`
 `
 export const H1 = styled.h1`
   font-size: 5vh;
-  margin:0
+  margin:0;
 `
 export const H2 = styled.h2`
   font-size: 4vh;
-  margin:0
+  margin:0;
 `
 export const H3 = styled.h3`
   font-size: 3vh;
-  margin:0
+  margin:0;
 `
 export const Button2 = styled.button`
-  border: 1px red solid
-  border-radius: 30px
-  width: 100px
-  margin: auto
+  border: 1px red solid;
+  ${borderRadius}
+  width: 100px;
+  margin: auto;
 `
 
 export const Form = styled.form`
@@ -86,28 +92,28 @@ export const Form = styled.form`
   @media(min-width:1024px){ width: 33vw; }
 
   & > * {
-    margin: auto
-    border-radius:.5rem;
+    margin: auto;
+    ${borderRadius}
     border: 1px solid black;
     font-size: 1rem;
     padding: .375rem .75rem;
   }
 
-  label{
+  label {
     align-self: flex-start;
     margin: 15px 0 0;
-    border: 0
-    padding-left: 0
-    padding-bottom: 0
+    border: 0;
+    padding-left: 0;
+    padding-bottom: 0;
   }
 
-  input{
+  input {
     width: calc(100% - 1.5rem);
     height: calc(1em + .5rem + 2px);
     line-height: 1.25;
   }
 
-  textarea{
+  textarea {
     width: calc(100% - 1.5rem);
     height: calc(2em + 3rem + 2px);
     justify-content: flex-start;
@@ -117,8 +123,8 @@ export const Form = styled.form`
 
   button {
     align-self: flex-start;
-    margin: 1rem 0
-    padding: .375rem .75rem
+    margin: 1rem 0;
+    padding: .375rem .75rem;
   }
 `
 
@@ -134,7 +140,7 @@ export const Card = styled(Link)`
   justify-content: space-between;
   color:white;
   text-decoration: none;
-  border: 3px solid green
+  border: 3px solid green;
 `
 export const SortContainer = styled.div`
   display: flex;
@@ -145,8 +151,8 @@ export const SortContainer = styled.div`
   `
 
 export const SortBase = styled.div`
-  border: 1px solid white
-  margin: auto
+  border: 1px solid white;
+  margin: auto;
 `
 
 export const Skills = styled.ul`
@@ -156,13 +162,13 @@ export const Skills = styled.ul`
 `
 
 export const ResSec = styled.div`
-  display: flex
-  flex-wrap: wrap
-  justify-content: center
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   div {
-    border-radius: 15px
-
+    ${borderRadius}
     img {
+      margin:auto;
       display: block;
       max-width:230px;
       max-height:95px;
@@ -170,28 +176,28 @@ export const ResSec = styled.div`
       height: auto;
     }
 
-    width: 25%
+    width: 25%;
     @media(max-width:768px){ width: 90vw; }
-    border: 1px solid black
-    margin:.5em auto
+    border: 1px solid black;
+    margin:.5em auto;
     background: white;
-    padding:.5em
+    padding: .5em;
 
     ol{
-      border: 1px solid black
-
+      border: 1px solid black;
       padding: 5px 10px;
-      display: inline
+      display: inline;
 
       li{
-        display: inline
+        display: inline;
       }
     }
 
     ul{
-      padding-left: 20px
+      padding-left: 20px;
+
       li{
-        text-align: left
+        text-align: left;
       }
     }
   }
@@ -200,20 +206,33 @@ export const ResSec = styled.div`
 export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
-  justify-content:space-around
+  justify-content:space-around;
 
 
 `
+export const Question = styled.div`
+  border: black 1px solid;
+  ${borderRadius}
+  background: white;
+  width:350px;
+  justify-content: space-between;
+  margin: 15px auto;
+  padding: 5px 10px;
 
+  button {
+    background:none;
+    border:none
+  }
+`
 
 export const FooterContainer = styled.footer`
-  display: flex
-  flex-direction: column
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   background: black;
-  align-items: center
+  align-items: center;
   height: 10vh;
-  color: white
+  color: white;
 
   `
 
