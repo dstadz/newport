@@ -65,10 +65,6 @@ interface Props {
 
 const Project: FC<Props> = ({props}) => {
   const {title, github, desc, link, stack, duties, pic} = props
-  const setBelowFold = useSetRecoilState(belowFoldState)
-
-  useEffect(() => { setBelowFold(false) })
-
   return (
   <div>
     <a
@@ -106,29 +102,46 @@ const Project: FC<Props> = ({props}) => {
 )}
 
 
-// const Example: FC = ({/*props*/}) => {
-//   // const {title, github, desc, link, stack, duties, pic} = props
+const NewProject: FC<Props> = ({props}) => {
+  const {title, github, desc, link, stack, duties, pic} = props
+  const setBelowFold = useSetRecoilState(belowFoldState)
+  useEffect(() => { setBelowFold(false) })
+  return (
+    <div>
+      <h3> {title} </h3>
+      <img
+        src={pic}
+        alt={title}
+      />
+      <span> {desc} </span>
+      <br/>
+      <ol>
+        {stack.map(s => (
+          <li key={s}> { s } </li>
+        ))}
+      </ol>
 
-//   return (
-//       <Card>
-//         <CardImg top width="100%" src="/assets/318x180.svg" alt="Card image cap" />
-//         <CardBody>
-//           <CardTitle>Card title</CardTitle>
-//           <CardSubtitle>Card subtitle</CardSubtitle>
-//           <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-//           <Button>Button</Button>
-//         </CardBody>
-//       </Card>
-//   );
-// };
+     
+      </div>
+  )
+
+}
 
 
 const Projects = () => {
+  const setBelowFold = useSetRecoilState(belowFoldState)
+
+  useEffect(() => { setBelowFold(false) })
+
   return (
     <Section style={{width:'100%'}}>
       {/* <Example /> */}
       <ResSec>
         { projectList.map( s => ( <Project key={s.title} props={s} /> ) ) }
+      </ResSec>
+
+      <ResSec>
+        { projectList.map( s => ( <NewProject key={s.title} props={s} /> ) ) }
       </ResSec>
     </Section>
   )
