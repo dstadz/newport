@@ -38,7 +38,6 @@ export const Section = styled.section`
   }
 
   .buttonRow {
-    background: red;
     justify-content: space-around;
 
     a img {
@@ -165,51 +164,47 @@ export const ResSec = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  div {
-    ${borderRadius}
-    img {
-      margin:auto;
-      display: block;
-      max-width:230px;
-      max-height:95px;
-      width: auto;
-      height: auto;
+`
+
+export const ProjectContainer = styled.div`
+  max-width:300px;
+
+  h3 { font-size: 2rem; }
+
+  .techStack {
+    background: #999;
+    ol{
+      display: inline;
+      li{  display: inline; }
     }
+  }
+
+  img {
+    margin:auto;
+    display: block;
+    max-width:300px;
+    max-height:300px;
+    width: auto;
+    height: auto;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
 
     width: 25%;
     @media(max-width:768px){ width: 90vw; }
-    border: 1px solid black;
     margin:.5em auto;
-    background: white;
     padding: .5em;
-
-    ol{
-      border: 1px solid black;
-      padding: 5px 10px;
-      display: inline;
-
-      li{
-        display: inline;
-      }
-    }
-
-    ul{
-      padding-left: 20px;
-
-      li{
-        text-align: left;
-      }
-    }
-  }
 `
 
 export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
   justify-content:space-around;
-
-
 `
+
 export const Question = styled.div`
   border: black 1px solid;
   ${borderRadius}

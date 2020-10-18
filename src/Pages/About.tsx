@@ -56,19 +56,18 @@ const About: FC = () => {
         <div>
           <h2>Want to know more about me? </h2>
           <h3> All you have to do is ask! </h3>
-          Here is a list of my skills:
+          <h3> Here is a list of my skills: </h3>
           <x.Skills>
             { skills.map( s => ( <li key={s}> { s } </li> ) ) }
           </x.Skills>
         </div>
       </x.AboutTop>
 
-      <p> I am new in the industry, but eagar to learn more to build new applications and contribute to the ever evoling tech world. I recently graduated from Lambda School, studying Full Stack Wed Development, after previously studying UX Design. The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>.
+      <p>
+        I am new in the industry, but eagar to learn more to build new applications and contribute to the ever evoling tech world. I recently graduated from Lambda School, studying Full Stack Wed Development, after previously studying UX Design. The constant evolution of the industry calls to my perpetual love of learning and my <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>.
       </p>
       <x.CardDeck>
-      {questions.map(q => (
-        <Card key={q.question} question={q.question} answer={q.answer} />
-        ))}
+        {questions.map(q => ( <Card key={q.question} question={q.question} answer={q.answer} /> ))}
       </x.CardDeck>
     </Section>
   )
