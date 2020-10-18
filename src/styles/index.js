@@ -38,7 +38,6 @@ export const Section = styled.section`
   }
 
   .buttonRow {
-    background: red;
     justify-content: space-around;
 
     a img {
@@ -168,24 +167,32 @@ export const ResSec = styled.div`
 `
 
 export const ProjectContainer = styled.div`
+  max-width:300px;
+
   h3 { font-size: 2rem; }
 
-  ol{
-      border: 1px solid black;
-      padding: 5px 10px;
+  .techStack {
+    background: #999;
+    ol{
       display: inline;
-
       li{  display: inline; }
     }
+  }
 
-    img {
-      margin:auto;
-      display: block;
-      max-width:300px;
-      max-height:300px;
-      width: auto;
-      height: auto;
-    }
+  img {
+    margin:auto;
+    display: block;
+    max-width:300px;
+    max-height:300px;
+    width: auto;
+    height: auto;
+  }
+
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+
     width: 25%;
     @media(max-width:768px){ width: 90vw; }
     margin:.5em auto;
