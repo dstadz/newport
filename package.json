@@ -23,6 +23,7 @@
     "react-scripts": "3.3.0",
     "reactstrap": "^8.5.1",
     "recoil": "0.0.7",
+    "storybook": "^6.0.26",
     "styled-components": "^4.4.1",
     "typescript": "^3.9.5"
   },
