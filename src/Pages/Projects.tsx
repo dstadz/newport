@@ -63,7 +63,7 @@ interface Props {
 
 
 
-const NewProject: FC<Props> = ({props}) => {
+const Project: FC<Props> = ({props}) => {
   const {title, github, desc, link, stack, duties, pic} = props
   return (
     <ProjectContainer>
@@ -93,7 +93,7 @@ const Projects = () => {
   return (
     <Section style={{width:'100%'}}>
       <ResSec>
-        { projectList.map( s => ( <NewProject key={s.title} props={s} /> ) ) }
+        { projectList.map( s => ( <Project key={s.title} props={s} /> ) ) }
       </ResSec>
     </Section>
   )
