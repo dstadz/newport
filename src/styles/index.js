@@ -226,7 +226,7 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   background: black;
   align-items: center;
-  height: 10vh;
+  height: 8vh;
   color: white;
 
   `

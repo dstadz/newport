@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { A } from 'hookrouter'
 import { useSetRecoilState } from 'recoil';
-
 import { belowFoldState } from '../utils/store'
 import { Section, H1 } from '../styles'
+import Task from '../components/Task/Task'
 
 const Home: React.FC = () => {
   const setBelowFold = useSetRecoilState(belowFoldState)
