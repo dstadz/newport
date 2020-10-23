@@ -17,16 +17,16 @@ export const NavBar = styled.nav`
   }
 
   img {
-    margin: 8px
-    height: 75px;
+    margin: 1vh;
+    height: 5vh;
     @media (min-width: 768px) { flex-grow: 1 }
   }
 
   h6 {
     background: ${({ hue }) => `hsl(${hue+240},100%,60%)`};
     flex-grow: 1;
-    justify-content:center
-    align-items:center
+    justify-content:center;
+    align-items:center;
 
     @media (min-width: 768px) { display:flex }
     @media (max-width: 767px) { display:none }

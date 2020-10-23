@@ -29,13 +29,15 @@ const Nav: FC = () => {
       <Spacer/>
       <Burger open={open} setOpen={setOpen} />
 
-      <ul> {navLinks.map(n => (
-        <li key={n}>
-          <A
-            href={`/${n}`}
-            onClick={()=> setOpen(false)}
-          >{n}</A>
-        </li>))}
+      <ul>
+        {navLinks.map(n => (
+          <li key={n}>
+            <A
+              href={`/${n}`}
+              onClick={()=> setOpen(false)}
+            >{n}</A>
+          </li>
+        ))}
       </ul>
     </NavBar>
   )
