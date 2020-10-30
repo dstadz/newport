@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react'
 import { Section, ResSec, ProjectContainer } from '../styles'
 import cal from '../assets/cal.png'
 import food from '../assets/food.jpeg'
-import check from '../assets/check.jpg'
+import life from '../assets/life.jpg'
 import GitMark from '../assets/GitHub-Mark-32px.png'
 import share from '../assets/share.png'
 import { useSetRecoilState } from 'recoil';
@@ -21,7 +21,7 @@ const projectList = [
       'Designed & built 12+ React components, styled to fit theme of app',
       'Implemented State management with Recoil, new experimental  SM library'
     ],
-    pic:check
+    pic:life
   },{
     title:'D8 Picker',
     github:'https://github.com/Lambda-School-Labs/school-calendar-fe',
