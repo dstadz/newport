@@ -37,7 +37,7 @@ export const NavBar = styled.nav`
     flex-grow: 1;
     justify-content: space-between;
     list-style: none;
-    padding:0
+    padding:0;
 
     @media (max-width: 767px) {
       flex-wrap:wrap;

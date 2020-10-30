@@ -24,7 +24,11 @@ const Nav: FC = () => {
 
   return (
     <NavBar hue={hue} open={open} setOpen={setOpen}>
-      <div> <A href='/'><img src={logo} alt='Return to home page'/></A> </div>
+      <div>
+        <A href='/'>
+          <img src={logo} alt='Return to home page'/>
+        </A>
+      </div>
 
       <Spacer/>
       <Burger open={open} setOpen={setOpen} />
