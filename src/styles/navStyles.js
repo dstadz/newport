@@ -19,18 +19,9 @@ export const NavBar = styled.nav`
   img {
     margin: 1vh;
     height: 5vh;
-    @media (min-width: 768px) { flex-grow: 1 }
+    ${'' /* @media (min-width: 768px) { flex-grow: 1 } */}
   }
 
-  h6 {
-    background: ${({ hue }) => `hsl(${hue+240},100%,60%)`};
-    flex-grow: 1;
-    justify-content:center;
-    align-items:center;
-
-    @media (min-width: 768px) { display:flex }
-    @media (max-width: 767px) { display:none }
-  }
 
   ul{
     display: flex;
@@ -42,7 +33,7 @@ export const NavBar = styled.nav`
     @media (max-width: 767px) {
       flex-wrap:wrap;
       display: ${({ open }) => open ? 'flex' : 'none'};
-      justify-content: space-evenly
+      ${'' /* justify-content: space-between */}
     }
 
     li {
@@ -99,28 +90,9 @@ export const NavBar = styled.nav`
   @media (max-width:767px){ flex-wrap:wrap; }
   `
 
-
-export const StyledMenu = styled.ul`
-
-  background: orange;
-  display: ${({ open }) => open ? 'flex' : 'none'};
-  flex-direction: column;
-  justify-content: center;
-  @media (min-width: 768px) { display:none }
-  @media (max-width: 767px) { width: 100% }
-
-  a {
-    transition: color 0.3s linear;
-    &:hover { color: #343078 }
-    @media (max-width: 576px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
-  }
-`
-
 export const StyledBurger = styled.button`
-  margin: 1rem;
+  @media (min-width:768px) { display:none }
+  margin-right: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -133,7 +105,6 @@ export const StyledBurger = styled.button`
   z-index: 10;
   &:focus { outline: none }
 
-  @media (min-width:768px) { display:none }
 
   div {
     width: 2rem;
@@ -144,23 +115,39 @@ export const StyledBurger = styled.button`
     position: relative;
     transform-origin: 1px;
 
-    :first-child { transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'} }
+    :first-child { transform: ${({ open }) =>
+      open 
+      ? 'rotate(45deg)' 
+      : 'rotate(0)'
+    }}
 
     :nth-child(2) {
-      opacity: ${({ open }) => open ? '0' : '1'};
-      transform: ${({ open }) => open ? 'translateX(20px)' : 'translateX(0)'};
+      opacity: ${({ open }) =>
+        open
+          ? '0'
+          : '1'
+        };
+      transform: ${({ open }) =>
+        open
+          ? 'translateX(20px)'
+          : 'translateX(0)'
+        };
     }
 
-    :nth-child(3) { transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'} }
+    :nth-child(3) { transform: ${({ open }) =>
+      open
+        ? 'rotate(-45deg)'
+        : 'rotate(0)'
+      }}
   }
 `
 
 export const Spacer = styled.div`
+  @media (max-width:768px) { display:none }
   font-size: 2rem;
   flex-grow: 3;
 
   ::before, ::after {
     content: '';
 
-  @media (max-width:768px) { display:none }
 `

@@ -229,6 +229,5 @@ export const FooterContainer = styled.footer`
   align-items: center;
   height: 8vh;
   color: white;
-
   `
 
