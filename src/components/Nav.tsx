@@ -5,6 +5,9 @@ import { NavBar, Spacer, StyledBurger} from '../styles/navStyles.js'
 import logo from '../assets/coin.png'
 import { hueState } from '../utils/store'
 
+
+const navLinks = ['about','projects','contact']
+
 interface Props {
   open: boolean,
   setOpen: (open:boolean) => void
@@ -16,7 +19,6 @@ const Burger: FC<Props> = ({open, setOpen}) => { return (
   </StyledBurger>
   )}
 
-const navLinks = ['about','projects','contact']
 
 const Nav: FC = () => {
   const hue = useRecoilValue(hueState)
