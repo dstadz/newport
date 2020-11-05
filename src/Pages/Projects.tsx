@@ -7,7 +7,6 @@ import GitMark from '../assets/GitHub-Mark-32px.png'
 import share from '../assets/share.png'
 import { useSetRecoilState } from 'recoil';
 
-import { belowFoldState } from '../utils/store'
 
 const projectList = [
   {
@@ -87,8 +86,6 @@ const Project: FC<Props> = ({props}) => {
 
 
 const Projects = () => {
-  const setBelowFold = useSetRecoilState(belowFoldState)
-  useEffect(() => { setBelowFold(false) })
 
   return (
     <Section style={{width:'100%'}}>

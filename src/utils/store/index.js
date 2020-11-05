@@ -1,1 +1,1 @@
-export { hueState, belowFoldState } from './atoms'
+export { hueState } from './atoms'

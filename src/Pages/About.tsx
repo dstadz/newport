@@ -4,7 +4,6 @@ import { useSetRecoilState } from 'recoil';
 import Card from '../components/Segments/Card'
 import face from '../assets/face.png'
 import { Section } from '../styles'
-import { belowFoldState } from '../utils/store'
 
 import * as x from '../styles'
 
@@ -45,9 +44,6 @@ const questions = [
 
 
 const About: FC = () => {
-  const setBelowFold = useSetRecoilState(belowFoldState)
-
-  useEffect(() => { setBelowFold(false) })
 
   return (
     <Section>

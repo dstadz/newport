@@ -3,9 +3,10 @@ import styled from 'styled-components'
 const borderRadius = `border-radius: 15px;`
 
 export const Body = styled.div`
-  @media(min-width:769px){ height:100vh }
+  min-height:100vh;
+  ${'' /* @media(min-width:769px){ height:100vh }
 
-  @media(max-width:768px){ ${({belowFold}) => belowFold && 'height:100vh'} };
+  @media(max-width:768px){ ${({belowFold}) => belowFold && 'height:100vh'} }; */}
 
   font-family: 'Roboto Slab', sans-serif;
   font-weight: 400;
@@ -24,7 +25,7 @@ export const Body = styled.div`
 `
 
 export const Section = styled.section`
-  @media(min-width: 1024px){ width: 50% }
+  ${'' /* @media(min-width: 1024px){ width: 50% } */}
 
   display: flex;
   flex-direction: column;
