@@ -3,15 +3,14 @@ import { A } from 'hookrouter'
 import { useSetRecoilState } from 'recoil';
 import { belowFoldState } from '../utils/store'
 import { Section, H1 } from '../styles'
-import Task from '../components/Task/Task'
 
 const Home: React.FC = () => {
-  const setBelowFold = useSetRecoilState(belowFoldState)
+  // const setBelowFold = useSetRecoilState(belowFoldState)
 
-  useEffect(() => { setBelowFold(true) }, [])
+  // useEffect(() => { setBelowFold(true) }, [])
 
   return (
-    <Section style={{width:'100%'}}>
+    <Section>
       <H1>
         Hey there! I am Daniel Stadler.
         <br/>
