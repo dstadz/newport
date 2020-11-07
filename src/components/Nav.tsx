@@ -17,7 +17,7 @@ const Burger: FC<Props> = ({open, setOpen}) => { return (
   <StyledBurger open={open} onClick={() => setOpen(!open)}>
     <div /> <div /> <div />
   </StyledBurger>
-  )}
+)}
 
 
 const Nav: FC = () => {
