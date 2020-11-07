@@ -1,6 +1,6 @@
 import React from "react";
 import { useRoutes } from 'hookrouter';
-import { useRecoilState, useRecoilValue } from 'recoil';
+import { useRecoilState } from 'recoil';
 
 import Nav from './Nav.tsx'
 import Footer from './Footer'
