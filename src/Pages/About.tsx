@@ -1,5 +1,4 @@
-import React, { FC, useEffect } from 'react'
-import { useSetRecoilState } from 'recoil';
+import React, { FC } from 'react'
 
 import Card from '../components/Segments/Card'
 import face from '../assets/face.png'
@@ -7,10 +6,35 @@ import { Section } from '../styles'
 
 import * as x from '../styles'
 
-//import Slideshow from './Slideshow'
-//      { skills.map( s => ( <li> { s } </li> ) ) }
 const skills = [
-  'React (+Hooks)','Node','Javascript','HTML','CSS','Figma','Python','GitHub','Agile','REST'
+  'HTML5',
+  'CSS3',
+  'Javascript',
+  'Agile Method',
+  'LESS',
+  'GIT',
+  'Github',
+  'MaterialUI',
+  'React',
+  'Redux',
+  'Jest',
+  'Cypress',
+  'SQLLite',
+  'RESTful API',
+  'Single Page Apps',
+  'PostGreSQL',
+  'Node',
+  'ExpressJS',
+  'Python',
+  'Algorithms',
+  'Async JavaScript',
+  'Authentication',
+  'Automated Unit Testing',
+  'Big-O Notation',
+  'Data Structures',
+  'Debugging',
+  'Deployment',
+  'End-To-End Testing'
 ]
 const questions = [
   {
