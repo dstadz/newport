@@ -1,11 +1,11 @@
-import React, { FC, useEffect } from 'react'
-import { Section, ResSec, ProjectContainer } from '../styles'
+import React, { FC } from 'react'
+import { Section, ResSec, ProjectContainer, ProjectCard } from '../styles'
 import cal from '../assets/cal.png'
 import food from '../assets/food.jpeg'
 import life from '../assets/life.jpg'
 import GitMark from '../assets/GitHub-Mark-32px.png'
+import notionPic from '../assets/notion.png'
 import share from '../assets/share.png'
-import { useSetRecoilState } from 'recoil';
 
 
 const projectList = [
@@ -15,6 +15,7 @@ const projectList = [
     link:'https://goalgetter.netlify.app/',
     desc:'Todo List App that tracks goals and habits over a lifetime',
     stack:['React','Node','Express','Knex'],
+    emoji:'🥇',
     duties:[
       'Created 15+ CRUD endpoints to connect Front and Back Ends',
       'Designed & built 12+ React components, styled to fit theme of app',
@@ -23,10 +24,12 @@ const projectList = [
     pic:life
   },{
     title:'D8 Picker',
-    github:'https://github.com/Lambda-School-Labs/school-calendar-fe',
-    link:'',
+    github:'https://github.com/Labs20-D8Picker/DatePickerFE',
+    link:'https://labs20d8picker.netlify.app/',
     desc:'PWA calendar extension to handle irregularly repeating events.',
+    notion: 'https://www.notion.so/D8-Picker-School-Calendar-945247d05459402199c00843664fb4d1',
     stack:['React','Node','MongoDB'],
+    emoji:'📅',
     duties:[
       'Used OAuth to connect to Google Cal API',
       'Developed Front End Components',
@@ -39,6 +42,7 @@ const projectList = [
     link:'',
     desc:'Yelp clone made to store and review visited restaurants and meals',
     stack:['Node','Knex'],
+    emoji:'🍲',
     duties:[
       'Handled server-side routing with Knex',
       'Managed data persistence across the app',
@@ -48,12 +52,14 @@ const projectList = [
   }
 ]
 
-interface Props {
+interface Project {
   props: {
     title:string,
     github:string,
     link:string,
     desc:string,
+    emoji?:string,
+    notion?:string,
     stack:string[],
     duties:string[],
     pic:string
@@ -62,35 +68,49 @@ interface Props {
 
 
 
-const Project: FC<Props> = ({props}) => {
-  const {title, github, desc, link, stack, duties, pic} = props
-  return (
-    <ProjectContainer>
-      <h3> {title} </h3>
-      <img src={pic} alt={title} />
-      <p> {desc} </p>
 
-      <div className='techStack'>
-        <ol>
-          {stack.map(s => ( <li key={s}> { s } </li> ))}
-        </ol>
-      </div>
+
+const Project: FC<Project> = ({props}) => {
+  const {title, github, desc, link, stack, duties, emoji, notion} = props
+  return (
+    <ProjectCard>
+      <a target='_blank' href={link} rel="noopener noreferrer">
+        <span role='img'>
+          {emoji}
+        </span>
+        <h2> {title} </h2>
+      </a>
 
       <div>
-        <a target='_blank' href={github} > <img src={GitMark} /> </a>
-        <a target='_blank' href={link} > <img src={share} /> </a>
+        <p>{desc}</p>
+
+        <ol className='techStack'>
+          {stack.map(s => ( <li key={s}> { s } </li> ))}
+        </ol>
+
+        <div>
+          <a target='_blank' href={github} rel="noopener noreferrer">
+            <img alt='github' src={GitMark} />
+          </a>
+          <a target='_blank' href={notion} rel="noopener noreferrer">
+            <img alt='notion doc' src={notionPic} />
+          </a>
+          <a target='_blank' href={link} rel="noopener noreferrer">
+            <img alt='go to site' src={share} />
+          </a>
+        </div>
       </div>
-    </ProjectContainer>
+    </ProjectCard>
   )
 }
 
-
 const Projects = () => {
-
   return (
-    <Section style={{width:'100%'}}>
+    <Section>
       <ResSec>
-        { projectList.map( s => ( <Project key={s.title} props={s} /> ) ) }
+        {projectList.map( p => (
+          <Project key={p.title} props={p} />
+        ))}
       </ResSec>
     </Section>
   )

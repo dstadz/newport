@@ -29,7 +29,7 @@ export const Section = styled.section`
 
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: auto 0;
   justify-content: space-between;
 
   .face {
@@ -164,7 +164,7 @@ export const Skills = styled.ul`
 export const ResSec = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 `
 
 export const ProjectContainer = styled.div`
@@ -200,6 +200,41 @@ export const ProjectContainer = styled.div`
     padding: .5em;
 `
 
+
+export const ProjectCard = styled.div`
+  margin: auto;
+  width: 350px;
+  border: solid 2px black;
+  border-radius: 25px;
+
+  .techStack {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    list-style:none;
+    li{  display: inline; }
+
+  }
+  a{
+    text-decoration:none;
+  }
+  span {
+    font-size: 5em;
+  }
+  h2 {}
+  div{
+      background: white;
+      border-radius: 0 0 25px 25px;
+    div {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+
+`
 export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
