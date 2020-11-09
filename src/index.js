@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { RecoilRoot } from 'recoil';
-import App from './components/App';
+import App from './App';
 
 ReactDOM.render(
 	<RecoilRoot>

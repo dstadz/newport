@@ -1,11 +1,17 @@
 import React, { FC } from 'react'
-import { Section, ResSec, ProjectContainer, ProjectCard } from '../styles'
-import cal from '../assets/cal.png'
-import food from '../assets/food.jpeg'
-import life from '../assets/life.jpg'
-import GitMark from '../assets/GitHub-Mark-32px.png'
-import notionPic from '../assets/notion.png'
-import share from '../assets/share.png'
+import { useRecoilValue } from 'recoil';
+
+
+import { hueState } from '../../utils/store'
+
+import { Section } from '../../styles'
+import { ResSec, ProjectCard } from './styles.js'
+import cal from '../../assets/cal.png'
+import food from '../../assets/food.jpeg'
+import life from '../../assets/life.jpg'
+import GitMark from '../../assets/GitHub-Mark-32px.png'
+import notionPic from '../../assets/notion.png'
+import share from '../../assets/share.png'
 
 
 const projectList = [
@@ -66,38 +72,35 @@ interface Project {
   }
 }
 
-
-
-
-
 const Project: FC<Project> = ({props}) => {
   const {title, github, desc, link, stack, duties, emoji, notion} = props
+  const hue = useRecoilValue(hueState)
+
+  const links = [
+    [github, GitMark],
+    [notion, notionPic],
+    [link,share]
+  ]
+
   return (
-    <ProjectCard>
-      <a target='_blank' href={link} rel="noopener noreferrer">
-        <span role='img'>
-          {emoji}
-        </span>
-        <h2> {title} </h2>
-      </a>
-
+    <ProjectCard hue={hue}>
+      <a target='_blank' href={link} rel="noopener noreferrer"><span role='img'>
+        {emoji}
+      </span></a>
       <div>
+        <h2> {title} </h2>
+        <ul>
+          {stack.map(s => (
+            <li key={s}> { s } </li>
+          ))}
+        </ul>
         <p>{desc}</p>
-
-        <ol className='techStack'>
-          {stack.map(s => ( <li key={s}> { s } </li> ))}
-        </ol>
-
         <div>
-          <a target='_blank' href={github} rel="noopener noreferrer">
-            <img alt='github' src={GitMark} />
-          </a>
-          <a target='_blank' href={notion} rel="noopener noreferrer">
-            <img alt='notion doc' src={notionPic} />
-          </a>
-          <a target='_blank' href={link} rel="noopener noreferrer">
-            <img alt='go to site' src={share} />
-          </a>
+          {links.map(l => (
+            <a target='_blank' href={l[0]} rel="noopener noreferrer">
+              <img alt='github' src={l[1]} />
+            </a>
+          ))}
         </div>
       </div>
     </ProjectCard>

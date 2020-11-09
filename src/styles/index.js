@@ -161,84 +161,18 @@ export const Skills = styled.ul`
   list-style:none;
 `
 
-export const ResSec = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`
-
-export const ProjectContainer = styled.div`
-  max-width:300px;
-
-  h3 { font-size: 2rem; }
-
-  .techStack {
-    background: #999;
-    ol{
-      display: inline;
-      li{  display: inline; }
-    }
-  }
-
-  img {
-    margin:auto;
-    display: block;
-    max-width:300px;
-    max-height:300px;
-    width: auto;
-    height: auto;
-  }
-
-  div {
-    display: flex;
-    justify-content: space-around;
-  }
-
-    width: 25%;
-    @media(max-width:768px){ width: 90vw; }
-    margin:.5em auto;
-    padding: .5em;
-`
 
 
-export const ProjectCard = styled.div`
-  margin: auto;
-  width: 350px;
-  border: solid 2px black;
-  border-radius: 25px;
-
-  .techStack {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    list-style:none;
-    li{  display: inline; }
-
-  }
-  a{
-    text-decoration:none;
-  }
-  span {
-    font-size: 5em;
-  }
-  h2 {}
-  div{
-      background: white;
-      border-radius: 0 0 25px 25px;
-    div {
-      display: flex;
-      justify-content: space-around;
-    }
-  }
-
-
-`
 export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
   justify-content:space-around;
+  background: blue;
+
+  div{
+    margin: auto;
+    background: red;
+  }
 `
 
 export const Question = styled.div`
