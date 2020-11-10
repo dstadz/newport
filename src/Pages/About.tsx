@@ -64,9 +64,6 @@ const questions = [
   }*/
 ]
 
-
-
-
 const About: FC = () => {
 
   return (
@@ -74,11 +71,13 @@ const About: FC = () => {
       <x.AboutTop>
         <img className='face'  src={face} alt='my beautiful face'/>
         <div>
-          <h2>Want to know more about me? </h2>
+          <h2> Want to know more about me? </h2>
           <h3> All you have to do is ask! </h3>
           <h3> Here is a list of my skills: </h3>
           <x.Skills>
-            { skills.map( s => ( <li key={s}> { s } </li> ) ) }
+            { skills.map( s => (
+              <li key={s}> { s } </li>
+            ))}
           </x.Skills>
         </div>
       </x.AboutTop>

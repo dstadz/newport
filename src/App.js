@@ -2,15 +2,15 @@ import React from "react";
 import { useRoutes } from 'hookrouter';
 import { useRecoilState } from 'recoil';
 
-import Nav from './Nav.tsx'
-import Footer from './Footer'
-import Home from '../Pages/Home'
-import About from '../Pages/About'
-import Projects from '../Pages/Projects'
-import Contact from '../Pages/Contact.js'
+import Nav from './components/Nav.tsx'
+import Footer from './components/Footer'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Projects from './Pages/Projects'
+import Contact from './Pages/Contact.js'
 
-import { Body } from '../styles'
-import { hueState } from '../utils/store'
+import { Body } from './styles'
+import { hueState } from './utils/store'
 
 const routes = {
   '/': () => <Home />,

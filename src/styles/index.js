@@ -29,7 +29,7 @@ export const Section = styled.section`
 
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: auto 0;
   justify-content: space-between;
 
   .face {
@@ -161,49 +161,18 @@ export const Skills = styled.ul`
   list-style:none;
 `
 
-export const ResSec = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-`
 
-export const ProjectContainer = styled.div`
-  max-width:300px;
-
-  h3 { font-size: 2rem; }
-
-  .techStack {
-    background: #999;
-    ol{
-      display: inline;
-      li{  display: inline; }
-    }
-  }
-
-  img {
-    margin:auto;
-    display: block;
-    max-width:300px;
-    max-height:300px;
-    width: auto;
-    height: auto;
-  }
-
-  div {
-    display: flex;
-    justify-content: space-around;
-  }
-
-    width: 25%;
-    @media(max-width:768px){ width: 90vw; }
-    margin:.5em auto;
-    padding: .5em;
-`
 
 export const AboutTop = styled.div`
   display: flex;
   flex-wrap:wrap;
   justify-content:space-around;
+  background: blue;
+
+  div{
+    margin: auto;
+    background: red;
+  }
 `
 
 export const Question = styled.div`
