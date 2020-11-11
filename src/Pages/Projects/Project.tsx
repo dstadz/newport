@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { useRecoilValue } from 'recoil';
 import { ProjectInterface } from './projectList'
 import { hueState } from '../../utils/store'
-import { ProjectCard } from './styles.js'
+import { ProjectCard } from './styles'
 import share from '../../assets/share.png'
 import notionPic from '../../assets/notion.png'
 import GitMark from '../../assets/GitHub-Mark-32px.png'

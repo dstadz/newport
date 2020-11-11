@@ -4,7 +4,7 @@ import { hueState } from '../../utils/store'
 
 import Project from './Project'
 import { projectList } from './projectList'
-import { ProjectsContainer } from './styles.js'
+import { ProjectsContainer } from './styles'
 
 const Projects = () => {
   const hue = useRecoilValue(hueState)

@@ -5,6 +5,7 @@ import Home from '../../Pages/Home'
 import About from '../../Pages/About'
 import Projects from '../../Pages/Projects'
 import Contact from '../../Pages/Contact'
+import Canvas from '../Segments/Canvas'
 // import Resume from '../Resume'
 // import SortingPage from '../SortingPage'
 
@@ -16,5 +17,6 @@ const routes = {
   '/about': () => <About />,
   '/projects': () => <Projects/>,
   '/contact': () => <Contact/>,
+  '/canvas': () => <Canvas/>,
 }
 export default routes

@@ -1,9 +1,9 @@
 import React, { useState, FC} from 'react'
 import { useRecoilValue } from 'recoil'
 import { A } from 'hookrouter'
-import { NavBar, Spacer, StyledBurger} from '../styles/navStyles.js'
-import logo from '../assets/coin.png'
-import { hueState } from '../utils/store'
+import { NavBar, Spacer, StyledBurger} from './styles.js'
+import logo from '../../assets/coin.png'
+import { hueState } from '../../utils/store'
 
 
 const navLinks = ['about','projects','contact']
