@@ -1,6 +1,45 @@
 import styled from 'styled-components'
 
-export const borderRadius = `border-radius: 15px`
+export const borderRadius = `
+border-radius: 15px;
+border: solid 2px black;
+:hover {
+  border: solid 2px white;
+}
+`
+
+export const cornerFloat = `
+  ::before, ::after {
+    content: 'X';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    transition: all .35s ease;
+    opacity: 0;
+  }
+
+  ::before {
+    right: 0;
+    top: 0;
+    border-top: 3px solid ${({ hue }) => `hsl(${hue+60},100%,60%)`};
+    border-right: 3px solid ${({ hue }) => `hsl(${hue+60},100%,30%)`};
+    transform: translate(-100%, 50%);
+  }
+
+  :after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid ${({ hue }) => `hsl(${hue-60},100%,30%)`};
+    border-left: 3px solid ${({ hue }) => `hsl(${hue-60},100%,60%)`};
+    transform: translate(100%, -50%)
+  }
+
+  :hover {
+    ::before, ::after{
+      transform: translate(0,0);
+      opacity: 1;
+    }
+`
 
 export const Body = styled.div`
   margin: auto;
@@ -12,7 +51,7 @@ export const Body = styled.div`
   flex-direction: column;
   text-align: center;
   background: ${({hue}) =>`
-    linear-gradient(${(Math.floor(Math.random()*6)*60)}deg,
+    linear-gradient(120deg,
     hsl(${hue+90}, 75%, 60%),
     hsl(${hue}, 75%, 60%)
   `});
@@ -112,13 +151,4 @@ export const Question = styled.div`
   }
 `
 
-export const FooterContainer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: black;
-  align-items: center;
-  height: 8vh;
-  color: white;
-  `
 

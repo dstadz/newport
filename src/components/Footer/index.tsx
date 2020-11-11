@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer } from '../styles/index'
+import { FooterContainer } from './styles'
 
 
 // const Icons8 = "https://icons8.com/icon/44019/linkedin"
