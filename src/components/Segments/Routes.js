@@ -4,7 +4,7 @@ import React  from "react";
 import Home from '../../Pages/Home'
 import About from '../../Pages/About'
 import Projects from '../../Pages/Projects'
-import Contact from '../../Pages/Contact.js'
+import Contact from '../../Pages/Contact'
 // import Resume from '../Resume'
 // import SortingPage from '../SortingPage'
 

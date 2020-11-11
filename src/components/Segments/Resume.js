@@ -1,6 +1,6 @@
 import React from 'react'
 // import pdf from '../../src/assets/resume.pdf'
-import { Section, Skills, ResSec } from '../styles'
+import { Section, Skills, ProjectsContainer } from '../../styles'
 //import styled from 'styled-components'
 
 
@@ -122,19 +122,19 @@ const Resume = () => { return (
     </Skills>
 
     PROJECTS
-    <ResSec>
+    <ProjectsContainer>
       { projects.map( s => ( <Project props={s} /> ) ) }
-    </ResSec>
+    </ProjectsContainer>
 
     EMPLOYMENT
-    <ResSec>
+    <ProjectsContainer>
     { employment.map( e => ( <History props={e} /> ) ) }
-    </ResSec>
+    </ProjectsContainer>
 
     EDUCATION
-    <ResSec>
+    <ProjectsContainer>
       { education.map( e => ( <History props={e} /> ) ) }
-    </ResSec>
+    </ProjectsContainer>
 
     INTERESTS
     <Skills>

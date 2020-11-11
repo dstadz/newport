@@ -1,35 +1,30 @@
 import styled from 'styled-components'
 
-const borderRadius = `border-radius: 15px;`
+export const borderRadius = `border-radius: 15px`
 
 export const Body = styled.div`
+  margin: auto;
+  padding:0;
   min-height:100vh;
-  ${'' /* @media(min-width:769px){ height:100vh }
-
-  @media(max-width:768px){ ${({belowFold}) => belowFold && 'height:100vh'} }; */}
-
   font-family: 'Roboto Slab', sans-serif;
   font-weight: 400;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: auto;
-  padding:0;
   background: ${({hue}) =>`
-    linear-gradient(${hue}deg,
+    linear-gradient(${(Math.floor(Math.random()*6)*60)}deg,
     hsl(${hue+90}, 75%, 60%),
-    hsl(${hue}, 75%, 60%)`});
+    hsl(${hue}, 75%, 60%)
+  `});
 
   h1{ margin-bottom: 0 }
 
 `
 
 export const Section = styled.section`
-  ${'' /* @media(min-width: 1024px){ width: 50% } */}
-
+  margin: auto 0;
   display: flex;
   flex-direction: column;
-  margin: auto 0;
   justify-content: space-between;
 
   .face {
@@ -49,12 +44,8 @@ export const Section = styled.section`
     }
   }
 `
-export const CardDeck = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;`
+
+
 export const Button = styled.button`
   transform: ${({ open }) => open
   ? 'rotate(0deg)'
@@ -74,58 +65,9 @@ export const H3 = styled.h3`
 `
 export const Button2 = styled.button`
   border: 1px red solid;
-  ${borderRadius}
+  ${borderRadius};
   width: 100px;
   margin: auto;
-`
-
-export const Form = styled.form`
-  margin:auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 2vh;
-
-  @media(max-width:768px){ width: 75vw; };
-  @media(min-width:768px){ width: 50vw; };
-  @media(min-width:1024px){ width: 33vw; }
-
-  & > * {
-    margin: auto;
-    ${borderRadius}
-    border: 1px solid black;
-    font-size: 1rem;
-    padding: .375rem .75rem;
-  }
-
-  label {
-    align-self: flex-start;
-    margin: 15px 0 0;
-    border: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-  }
-
-  input {
-    width: calc(100% - 1.5rem);
-    height: calc(1em + .5rem + 2px);
-    line-height: 1.25;
-  }
-
-  textarea {
-    width: calc(100% - 1.5rem);
-    height: calc(2em + 3rem + 2px);
-    justify-content: flex-start;
-    line-height: 1.5;
-
-  }
-
-  button {
-    align-self: flex-start;
-    margin: 1rem 0;
-    padding: .375rem .75rem;
-  }
 `
 
 
@@ -145,7 +87,7 @@ export const Card = styled(Link)`
 export const SortContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  border: 1px solid white;
   align-items: center;
   justify-content: space-around;
   `
@@ -155,29 +97,9 @@ export const SortBase = styled.div`
   margin: auto;
 `
 
-export const Skills = styled.ul`
-  columns: 100px 2;
-  padding: 0;
-  list-style:none;
-`
-
-
-
-export const AboutTop = styled.div`
-  display: flex;
-  flex-wrap:wrap;
-  justify-content:space-around;
-  background: blue;
-
-  div{
-    margin: auto;
-    background: red;
-  }
-`
-
 export const Question = styled.div`
   border: black 1px solid;
-  ${borderRadius}
+  ${borderRadius};
   background: white;
   width:350px;
   justify-content: space-between;
