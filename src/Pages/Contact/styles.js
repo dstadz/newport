@@ -27,6 +27,7 @@ export const FormContainer = styled.div`
     }
 
     label {
+      border: 0;
       align-self: flex-start;
       width: 0;
       margin: 15px 0 0;
@@ -55,5 +56,5 @@ export const FormContainer = styled.div`
     width:100%;
     justify-content: space-around;
   }
-  
+
 `

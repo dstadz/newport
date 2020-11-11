@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { borderRadius } from '../../styles'
+import { borderRadius, cornerFloat } from '../../styles'
 
 
 
@@ -21,35 +21,26 @@ export const ProjectsContainer = styled.div`
 export const ProjectCard = styled.div`
   margin: 3em auto;
   width: 350px;
-  border: solid 2px black;
-  ${borderRadius}
+  ${borderRadius};
   background: ${({hue}) => `
     linear-gradient(${hue+180}deg,
     hsl(${hue-90}, 75%, 60%),
     hsl(${hue}, 75%, 60%)
   `});
 
-  :hover {
-    border: solid 2px white;
 
-
-  }
 
   a{ text-decoration:none; }
   span {
     font-size: 5em;
     :hover {
-
-      ::before{
-        content: '⭐';
-        -webkit-animation: rotation 2s infinite linear;
-        }
-      ::after{ content: '⭐' }
+      ::before{ content: '⭐'; }
+      ::after{ content: '⭐'; }
     }
   }
 
   div {
-    ${borderRadius}
+    border-radius: 0 0 15px 15px;
     > * {
       background: silver;
       margin: 0;
