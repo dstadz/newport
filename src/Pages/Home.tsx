@@ -10,7 +10,7 @@ const Home: React.FC = () => {
     <Section>
       <img className='face' src={face} alt='my beautiful face'/>
       <H1>
-        Hey there! <span role="img">👋</span> I'm Daniel Stadler
+        Hey there! <span role="img" aria-label='wave'>👋</span> I'm Daniel Stadler
       </H1>
         <br/>
         <p>

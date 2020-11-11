@@ -70,55 +70,6 @@ export const Button2 = styled.button`
   margin: auto;
 `
 
-export const Form = styled.form`
-  margin:auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 2vh;
-
-  @media(max-width:768px){ width: 75vw; };
-  @media(min-width:768px){ width: 50vw; };
-  @media(min-width:1024px){ width: 33vw; }
-
-  & > * {
-    margin: auto;
-    ${borderRadius};
-    border: 1px solid black;
-    font-size: 1rem;
-    padding: .375rem .75rem;
-  }
-
-  label {
-    align-self: flex-start;
-    margin: 15px 0 0;
-    border: 0;
-    padding-left: 0;
-    padding-bottom: 0;
-  }
-
-  input {
-    width: calc(100% - 1.5rem);
-    height: calc(1em + .5rem + 2px);
-    line-height: 1.25;
-  }
-
-  textarea {
-    width: calc(100% - 1.5rem);
-    height: calc(2em + 3rem + 2px);
-    justify-content: flex-start;
-    line-height: 1.5;
-
-  }
-
-  button {
-    align-self: flex-start;
-    margin: 1rem 0;
-    padding: .375rem .75rem;
-  }
-`
-
 
 const Link = styled.a``
 export const Card = styled(Link)`
@@ -136,7 +87,7 @@ export const Card = styled(Link)`
 export const SortContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid black;
+  border: 1px solid white;
   align-items: center;
   justify-content: space-around;
   `

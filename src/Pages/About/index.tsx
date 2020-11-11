@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 
-import Card from './Card'
+// import Card from './Card'
 // import face from '../assets/face.png'
-import { skills, questions } from './textLists'
-import { AboutMeContainer, CardDeck } from './styles'
+import { skills } from './textLists'
+import { AboutMeContainer } from './styles'
 
 
 
