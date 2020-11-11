@@ -14,8 +14,8 @@ const About = () => {
           <p> {q.answer} </p>
         </div>
       ))}
-      <p> I'm good getting people what they want, and great at getting people what they need.</p>
-      <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a>
+      {/* <p> I'm good getting people what they want, and great at getting people what they need.</p>
+      <a href='https://en.wikipedia.org/wiki/Ikigai' rel="noopener noreferrer"target="_blank">ikigai</a> */}
       <ul>
         {skills.map( s => (
           <li key={s}> { s } </li>
