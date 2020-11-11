@@ -1,10 +1,10 @@
 import React from 'react'
-import { Section, SortContainer } from '../styles'
-import SortCard from './Sorts/SortCard'
-import bogo from './Sorts/algos/bogosort'
-import bubble from './Sorts/algos/bubblesort'
-import insertion from './Sorts/algos/insertionsort'
-import quick from './Sorts/algos/quicksort'
+import { Section, SortContainer } from '../../styles'
+import SortCard from './SortCard'
+import bogo from './algos/bogosort'
+import bubble from './algos/bubblesort'
+import insertion from './algos/insertionsort'
+import quick from './algos/quicksort'
 
 const sorts = [bubble, insertion, quick, bogo]
 
