@@ -1,18 +1,15 @@
 import React from 'react'
 import Project from './Project'
 import { projectList } from './projectList'
-import { Section } from '../../styles'
-import { ResSec } from './styles.js'
+import { ProjectsContainer } from './styles.js'
 
 const Projects = () => {
   return (
-    <Section>
-      <ResSec>
-        {projectList.map( p => (
-          <Project key={p.title} props={p} />
-        ))}
-      </ResSec>
-    </Section>
+    <ProjectsContainer>
+      {projectList.map( p => (
+        <Project key={p.title} props={p} />
+      ))}
+    </ProjectsContainer>
   )
 }
 

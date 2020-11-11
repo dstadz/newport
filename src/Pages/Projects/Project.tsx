@@ -7,12 +7,6 @@ import share from '../../assets/share.png'
 import notionPic from '../../assets/notion.png'
 import GitMark from '../../assets/GitHub-Mark-32px.png'
 
-
-
-
-
-
-
 const Project: FC<ProjectInterface> = ({props}) => {
   const hue = useRecoilValue(hueState)
   const {
@@ -23,7 +17,7 @@ const Project: FC<ProjectInterface> = ({props}) => {
     desc,
     github,
     notion,
-    duties,
+    // duties,
   } = props
   const links = [
     [github, GitMark],
@@ -57,4 +51,3 @@ const Project: FC<ProjectInterface> = ({props}) => {
 }
 
 export default Project
-

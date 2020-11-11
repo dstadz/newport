@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Section, Form } from  '../styles'
+import { Form } from  '../styles'
 
 
 
@@ -13,10 +13,8 @@ const Contact = () => {
     const form = ev.target;
     const data = new FormData(form);
     const xhr = new XMLHttpRequest();
-
     xhr.open(form.method, form.action);
     xhr.setRequestHeader("Accept", "application/json");
-
     xhr.onreadystatechange = () => {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
@@ -24,29 +22,26 @@ const Contact = () => {
         setStatus("SUCCESS");
       } else setStatus("ERROR");
     };
-
     xhr.send(data);
   }
 
   return (
-    <Section>
-      <Form
-      onSubmit={submitForm}
-      action="https://formspree.io/xknjlwwa"
-      method="POST"
-      >
-        <label>Name</label>
-        <input type="name" name="name" placeholder="Who are you?"/>
+    <Form
+    onSubmit={submitForm}
+    action="https://formspree.io/xknjlwwa"
+    method="POST"
+    >
+      <label>Name</label>
+      <input type="name" name="name" placeholder="Who are you?"/>
 
-        <label>Email</label>
-        <input type="email" name="email" placeholder="How can I reply to you?" />
+      <label>Email</label>
+      <input type="email" name="email" placeholder="How can I reply to you?" />
 
-        <label>Message</label>
-        <textarea type="textarea" name="message" placeholder="What do you want to tell me?"/>
+      <label>Message</label>
+      <textarea type="textarea" name="message" placeholder="What do you want to tell me?"/>
 
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Send</button>}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
-      </Form>
+      {status === "SUCCESS" ? <p>Thanks!</p> : <button>Send</button>}
+      {status === "ERROR" && <p>Ooops! There was an error.</p>}
 
       <br/>
 
@@ -57,7 +52,7 @@ const Contact = () => {
         <a href="https://github.com/dstadz/" target="_blank"><img src="https://img.icons8.com/nolan/64/github.png"/></a>
         <a href='https://docs.google.com/document/d/1jUh-UOutPwEgQLuAgDGplY_aNtly6W5RUd2zIlLJI4E/edit?usp=sharing' target="_blank"><img src="https://img.icons8.com/nolan/64/google-docs.png"/></a>
       </div>
-    </Section>
+    </Form>
   );
 }
   export default Contact
