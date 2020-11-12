@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <h2>
         I take ideas from our world, and translate them into the digital one.
       </h2>
-      <a href={`/canvas`}> Canvas</a>
+      {/* <a href={`/canvas`}> Canvas</a> */}
     </div>
   )
 }
