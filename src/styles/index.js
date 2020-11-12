@@ -4,7 +4,7 @@ export const borderRadius = `
 border-radius: 15px;
 border: solid 2px black;
 :hover {
-  border: solid 2px white;
+  border: solid 2px ${`hsl(${Math.floor(Math.random()*359)},100%,60%)`};
 }
 `
 
@@ -82,6 +82,12 @@ export const Section = styled.section`
       border-radius: 50%
     }
   }
+
+  h1 {
+    font-size: 5vh;
+    margin:0;
+  }
+  
 `
 
 
@@ -89,24 +95,6 @@ export const Button = styled.button`
   transform: ${({ open }) => open
   ? 'rotate(0deg)'
   : 'rotate(180deg)'};
-`
-export const H1 = styled.h1`
-  font-size: 5vh;
-  margin:0;
-`
-export const H2 = styled.h2`
-  font-size: 4vh;
-  margin:0;
-`
-export const H3 = styled.h3`
-  font-size: 3vh;
-  margin:0;
-`
-export const Button2 = styled.button`
-  border: 1px red solid;
-  ${borderRadius};
-  width: 100px;
-  margin: auto;
 `
 
 

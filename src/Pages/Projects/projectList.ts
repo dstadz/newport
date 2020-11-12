@@ -2,16 +2,17 @@
 export interface ProjectInterface {
   props: {
     title:string,
-    github:string,
-    link:string,
-    desc:string,
     emoji?:string,
-    notion?:string,
+    pic?:string
+    desc:string,
     stack:string[],
     duties:string[],
-    pic?:string
+    link?:string,
+    notion?:string,
+    github?:string,
   }
 }
+
 
 
 export const projectList = [
@@ -43,7 +44,6 @@ export const projectList = [
   }, {
     title:'Foodie Fun Six',
     github:'https://github.com/dstadz/foodie-fun6-server',
-    link:'',
     desc:'Yelp clone made to store and review visited restaurants and meals',
     stack:['Node','Knex'],
     emoji:'🍲',

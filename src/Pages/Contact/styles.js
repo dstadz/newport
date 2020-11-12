@@ -50,11 +50,16 @@ export const FormContainer = styled.div`
     }
   }
 
-  div {
+  .buttonBar {
     display: flex;
     margin: auto;
     width:100%;
     justify-content: space-around;
+
+    div{
+      background: rgba(50,50,50,.3);
+      border-radius: 50%;
+    }
   }
 
 `
