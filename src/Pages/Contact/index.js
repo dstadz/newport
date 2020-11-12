@@ -32,43 +32,48 @@ const Contact = () => {
         action="https://formspree.io/xknjlwwa"
         method="POST"
       >
+
         <label>Name</label>
         <input
           type="name"
           name="name"
           placeholder="Who are you?"
         />
+
         <label>Email</label>
         <input
           type="email"
           name="email"
           placeholder="How can I reply to you?"
         />
+
         <label>Message</label>
         <textarea
           type="textarea"
           name="message"
           placeholder="What do you want to tell me?"
         />
+
         {status === "SUCCESS" ? <p>Thanks!</p> : <button>Send</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
 
-      <br/>
-
       <p>Also check me out on these cool sites:</p>
 
-      <div>
+      <div className="buttonBar">
         {externals.map( e => (
-          <a
-            href={e.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img alt={`${e.img} logo`} src={`https://img.icons8.com/nolan/64/${e.img}`}/>
-          </a>
+          <div>
+            <a
+              href={e.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img alt={`${e.img} logo`} src={`https://img.icons8.com/nolan/64/${e.img}`}/>
+            </a>
+          </div>
         ))}
       </div>
+      <span> thanks to <a href={'icon8.org'}>Icon8</a> for the icons!</span>
     </FormContainer>
   );
 }

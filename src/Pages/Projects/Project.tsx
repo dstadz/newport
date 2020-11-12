@@ -40,8 +40,9 @@ const Project: FC<ProjectInterface> = ({props}) => {
         <p>{desc}</p>
         <div>
           {links.map(l => (
+            (l[0] !== undefined) &&
             <a target='_blank' href={l[0]} rel="noopener noreferrer">
-              <img alt='github' src={l[1]} />
+              <img alt={l[0]} src={l[1]} />
             </a>
           ))}
         </div>
