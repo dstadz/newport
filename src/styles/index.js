@@ -4,7 +4,7 @@ export const borderRadius = `
 border-radius: 15px;
 border: solid 2px black;
 :hover {
-  border: solid 2px ${`hsl(${Math.floor(Math.random()*359)},100%,60%)`};
+  border: solid 2px hsl(${Math.floor(Math.random()*359)},100%,60%);
 }
 `
 
