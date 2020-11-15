@@ -31,6 +31,7 @@ export const FormContainer = styled.div`
       align-self: flex-start;
       width: 0;
       margin: 15px 0 0;
+      :hover { border: 0}
     }
 
     input {
@@ -58,6 +59,7 @@ export const FormContainer = styled.div`
 
     div{
       background: rgba(50,50,50,.3);
+      ${borderRadius}
       border-radius: 50%;
     }
   }
