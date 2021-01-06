@@ -41,16 +41,27 @@ export const projectList = [
       'Developed Front End Components',
       'Crafted user interface for interaction with calendar',
     ],
-  }, {
-    title:'Foodie Fun Six',
-    github:'https://github.com/dstadz/foodie-fun6-server',
-    desc:'Yelp clone made to store and review visited restaurants and meals',
-    stack:['Node','Knex'],
-    emoji:'🍲',
+    // }, {
+    // title:'Foodie Fun Six',
+    // github:'https://github.com/dstadz/foodie-fun6-server',
+    // desc:'Yelp clone made to store and review visited restaurants and meals',
+    // stack:['Node','Knex'],
+    // emoji:'🍲',
+    // duties:[
+    //   'Handled server-side routing with Knex',
+    //   'Managed data persistence across the app',
+    //   'Used HTTP Protocol methods to access user data'
+    // ],
+  },{
+    title:'Stop Drop Shop',
+    github:'https://github.com/dstadz/react-store',
+    desc:'Udemy React Course, updated with Typescript',
+    stack:['React','TypeScript','Firebase'],
+    emoji:'🏪',
     duties:[
-      'Handled server-side routing with Knex',
-      'Managed data persistence across the app',
-      'Used HTTP Protocol methods to access user data'
+      'Integrated Typescript into project',
+      'Refactored code to use Recoil in place of Redux',
+      ''
     ],
   }
 ]

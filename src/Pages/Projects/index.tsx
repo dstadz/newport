@@ -11,6 +11,7 @@ const Projects = () => {
 
   return (
     <ProjectsContainer hue={hue}>
+      {console.log(projectList)}
       {projectList.map( p => (
         <Project key={p.title} props={p} />
       ))}
