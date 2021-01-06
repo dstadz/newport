@@ -1,7 +1,7 @@
 import React, { useState, FC} from 'react'
 import { useRecoilValue } from 'recoil'
 import { A } from 'hookrouter'
-import { NavBar, Spacer, StyledBurger} from './styles.js'
+import { NavBar, Spacer, StyledBurger} from './styles'
 import logo from '../../assets/coin.png'
 import { hueState } from '../../utils/store'
 
@@ -25,7 +25,7 @@ const Nav: FC = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <NavBar hue={hue} open={open} setOpen={setOpen}>
+    <NavBar hue={hue} open={open}>
       <div>
         <A href='/'>
           <img src={logo} alt='Return to home page'/>

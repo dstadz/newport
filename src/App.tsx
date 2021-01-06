@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 
 import { Body, Section } from './styles'
 import { hueState } from './utils/store'
-import routes from './components/Segments/Routes'
+import routes from './Routes'
 
 
 const App = () => {
@@ -27,3 +27,4 @@ const App = () => {
 }
 
 export default App
+

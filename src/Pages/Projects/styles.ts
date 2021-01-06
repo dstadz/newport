@@ -12,13 +12,13 @@ import { borderRadius, cornerFloat } from '../../styles'
 //   }
 // `
 
-export const ProjectsContainer = styled.div`
+export const ProjectsContainer = styled.div<{hue:number}>`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 `
 
-export const ProjectCard = styled.div`
+export const ProjectCard = styled.div<{hue:number}>`
   margin: 3em auto;
   width: 350px;
   ${borderRadius};
@@ -28,6 +28,22 @@ export const ProjectCard = styled.div`
     hsl(${hue}, 75%, 60%)
   `});
 
+
+
+  ::before {
+    right: 0;
+    top: 0;
+    border-right: 3px solid ${({ hue }) => `hsl(${hue+60},100%,30%)`};
+    transform: translate(-100%, 50%);
+  }
+
+  :after {
+    left: 0;
+    bottom: 0;
+    border-bottom: 3px solid ${({ hue }) => `hsl(${hue-60},100%,30%)`};
+    border-left: 3px solid ${({ hue }) => `hsl(${hue-60},100%,60%)`};
+    transform: translate(100%, -50%)
+  }
 
 
   a{ text-decoration:none; }

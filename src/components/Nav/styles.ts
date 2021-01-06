@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 // height: 5vh;
-export const NavBar = styled.nav`
+export const NavBar = styled.nav<{open:boolean, hue:number}>`
   display: flex;
   background: black;
   align-items: center;
@@ -90,7 +90,7 @@ export const NavBar = styled.nav`
   @media (max-width:767px){ flex-wrap:wrap; }
   `
 
-export const StyledBurger = styled.button`
+export const StyledBurger = styled.button<{open:boolean, onClick:()=>void}>`
   @media (min-width:768px) { display:none }
   margin-right: 1rem;
   display: flex;
@@ -116,8 +116,8 @@ export const StyledBurger = styled.button`
     transform-origin: 1px;
 
     :first-child { transform: ${({ open }) =>
-      open 
-      ? 'rotate(45deg)' 
+      open
+      ? 'rotate(45deg)'
       : 'rotate(0)'
     }}
 

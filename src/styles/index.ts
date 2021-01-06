@@ -8,7 +8,7 @@ border: solid 2px black;
 }
 `
 
-export const cornerFloat = `
+export const cornerFloat = (hue:number) =>`
   ::before, ::after {
     content: 'X';
     height: 20px;
@@ -18,21 +18,7 @@ export const cornerFloat = `
     opacity: 0;
   }
 
-  ::before {
-    right: 0;
-    top: 0;
-    border-top: 3px solid ${({ hue }) => `hsl(${hue+60},100%,60%)`};
-    border-right: 3px solid ${({ hue }) => `hsl(${hue+60},100%,30%)`};
-    transform: translate(-100%, 50%);
-  }
 
-  :after {
-    left: 0;
-    bottom: 0;
-    border-bottom: 3px solid ${({ hue }) => `hsl(${hue-60},100%,30%)`};
-    border-left: 3px solid ${({ hue }) => `hsl(${hue-60},100%,60%)`};
-    transform: translate(100%, -50%)
-  }
 
   :hover {
     ::before, ::after{
@@ -41,7 +27,7 @@ export const cornerFloat = `
     }
 `
 
-export const Body = styled.div`
+export const Body = styled.div<{hue:number}>`
   margin: auto;
   padding:0;
   min-height:100vh;
@@ -91,7 +77,7 @@ export const Section = styled.section`
 `
 
 
-export const Button = styled.button`
+export const Button = styled.button<{open:boolean}>`
   transform: ${({ open }) => open
   ? 'rotate(0deg)'
   : 'rotate(180deg)'};

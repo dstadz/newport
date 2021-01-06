@@ -1,11 +1,11 @@
 import React  from "react";
 // import { Route } from "react-router-dom";
 
-import Home from '../../Pages/Home'
-import About from '../../Pages/About'
-import Projects from '../../Pages/Projects'
-import Contact from '../../Pages/Contact'
-import Canvas from '../Segments/Canvas'
+import Home from '../Pages/Home'
+import About from '../Pages/About'
+import Projects from '../Pages/Projects'
+import Contact from '../Pages/Contact'
+import Canvas from '../components/Segments/Canvas'
 // import Resume from '../Resume'
 // import SortingPage from '../SortingPage'
 
