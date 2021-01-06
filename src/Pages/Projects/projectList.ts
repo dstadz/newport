@@ -63,5 +63,6 @@ export const projectList = [
       'Refactored code to use Recoil in place of Redux',
       ''
     ],
+    link:'https://suspicious-boyd-55e5cc.netlify.app/'
   }
 ]
